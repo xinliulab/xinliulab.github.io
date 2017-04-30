@@ -1,0 +1,54 @@
+html{
+/* How to define Html lang */
+}
+
+body {
+    background-color: white;
+    font-family: "Lucida Grande";
+}
+
+/*introduction*/
+    div.introduction{
+    	background-color: white;
+        color: black;
+    }
+
+    h1 {
+        color: black;
+        text-align:left;
+    }
+
+    p.introduction  {
+        color: black;
+        text-align:left;
+    }
+
+
+/*nav-tabls*/
+    ul.nav-tabs {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li.nav-tabs {
+        float: left;
+    }
+
+    li.nav-tabs a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+/*home*/
+    pre  {
+        text-align:center;
+    }
+
+        text-align:right;
+    }
