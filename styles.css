@@ -50,5 +50,7 @@ body {
         text-align:center;
     }
 
-        text-align:right;
+/*counter*/
+    img.counter {
+        float:right;
     }
