@@ -45,6 +45,16 @@ body {
         text-decoration: none;
     }
 
+    li.nav-tabs a.active {
+        background-color: #4CAF50;
+    }
+
+    li.nav-tabs a:hover:not(.active) {
+        background-color: #4C8250;
+    }
+
+
+
 /*home*/
     pre  {
         text-align:center;
