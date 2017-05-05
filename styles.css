@@ -55,9 +55,17 @@ body {
 
 
 
-/*home*/
-    pre  {
-        text-align:center;
+/*content*/
+    #content_home  {
+        display:initial;
+    }
+    
+    #content_publication  {
+        display:none;
+    }
+    
+    #content_project  {
+        display:none;
     }
 
 /*counter*/

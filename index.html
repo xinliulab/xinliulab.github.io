@@ -18,7 +18,7 @@
             <img src="figure.JPG" alt="MyFigure" style="width:160px" align="right"><!-- how to define the image attribute in CSS -->
             <h1 title = "name"    > Xin Liu </h1>
             <blockquote>
-<!--                 In my eyes the most valuable skill to have is the ability to learn, closely followed by the ability to know when you don't know something. -->
+                <!-- For ten years, I have been devoting my energy into signal processing, embedded system and hardware design. Now, I am learning computer science from the view of a hardware engineer. To my best knowledge, I believe the machine learning is a good tool, but not the best tool.  -->
             </blockquote>   
             <p  class = "introduction"  > Ph.D.            </p>
             <p  class = "introduction"  > UMBC             </p>
@@ -31,25 +31,25 @@
             <ul class="nav-tabs"> 
                 
                 <li class="nav-tabs">
-                    <a class="active" href="./index.html">
+                    <a id="home" onclick="display_home()" class = "active">
                         Home
                     </a>
                 </li>
 
                 <li class="nav-tabs">
-                    <a href="./publication.html">
+                    <a id="publication" onclick="display_publication()" class = "state_idle">
                         Publication
                     </a>
                 </li>
                 
                 <li class="nav-tabs">
-                    <a href="./project.html">
+                    <a id="project" onclick="display_project()" class = "state_idle">
                         Project
                     </a>
                 </li>
 
                 <li class="nav-tabs">
-                    <a href="./continue.html">
+                    <a id="continue" onclick="display_continue()" class = "state_idle">
                         Continue
                     </a>
                 </li>
@@ -57,10 +57,10 @@
             </ul>
         </div>
 
-        <div class="home">
+       <div id = "content_home">
             
-            <ul class="home">
-                <p class="home">
+            <ul>
+                <p>
                     Education:
                 </p>
                     <ul class="place">
@@ -97,7 +97,7 @@
                             </ul>
                     </ul>
 
-                <p class="home">
+                <p>
                     Experience:
                 </p>
                     <ul class="place">
@@ -125,6 +125,31 @@
             </ul>
         </div>
 
+        <div id = "content_publication">
+            <ul>
+                    <p>
+                        Publication:
+                    </p>
+                        <ul>
+                            <p>
+                                <cite>Real-time algorithm for SIFT based on distributed shared memory architecture with homogeneous multi-core DSP</cite>
+                            </p>
+                        </ul>                   
+            </ul>
+        </div>
+
+        <div id = "content_project">
+            <ul>
+                    <p>
+                        Project:
+                    </p>
+                        <ul>
+                            <p>
+                            </p>
+                        </ul>                   
+            </ul>
+        </div>
+
     <script>
         (function(i,s,o,g,r,a,m)
             {
@@ -143,13 +168,14 @@
         (window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-98339320-1', 'auto');
         ga('send', 'pageview');
-    </script>
+    </script>  
 
     <div class = "counter">
         <a href="http://s11.flagcounter.com/more/1cRi">
             <img class = "counter" src="http://s11.flagcounter.com/count2/1cRi/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
         </a>
     </div>
-
+        
+        <script src="myScript.js"></script>
     </body>
 </html>
