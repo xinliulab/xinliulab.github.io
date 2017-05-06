@@ -2,6 +2,11 @@
 var strings_id_nav_tab = ["home", "publication", "project", "continue"];
 var strings_id_content = ["content_home", "content_publication", "content_project"];
 
+var time = new Date();
+document.getElementById("timer").innerHTML = time;
+var benchmark = time.getMilliseconds();
+console.log(benchmark);
+
 function display_home() {
 		document.getElementById(strings_id_nav_tab[0]).className = "active";  
 		document.getElementById(strings_id_nav_tab[1]).className = "state_idle";
