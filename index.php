@@ -37,8 +37,8 @@
                 <a href="https://en.wikipedia.org/wiki/Zizhi_Tongjian" target="_blank">
                     <img class="bookcover" id="b4" src="https://images-na.ssl-images-amazon.com/images/I/819-zVoqzaL.jpg" alt="Jian">
                 </a>
-                <a href="http://baike.baidu.com/item/%E6%98%A5%E7%A7%8B%E5%A4%A7%E4%B9%89/3551818" target="_blank">
-                    <img class="bookcover" id="b5" src="https://imgsa.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=7be27855ce3d70cf58f7a25f99b5ba65/562c11dfa9ec8a1367fb7d8cf003918fa1ecc0fc.jpg" alt="Yi">
+                <a href="https://book.douban.com/subject/2363834/" target="_blank">
+                    <img class="bookcover" id="b5" src="https://img3.doubanio.com/lpic/s2831603.jpg" alt="Yi">
                 </a>
                 <a href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four" target="_blank">
                     <img class="bookcover" id="b6" src="https://upload.wikimedia.org/wikipedia/en/c/c3/1984first.jpg" alt="1984">
