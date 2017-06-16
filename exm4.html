@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        function init()
+        {
+
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.appendChild(document.createTextNode("function functionOne(){alert(\"成功运行\"); }"));
+            document.body.appendChild(myScript);
+            //此处发现可以运行
+            functionOne();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="测试按钮" onclick="init()"/>
+</body>
+</html>

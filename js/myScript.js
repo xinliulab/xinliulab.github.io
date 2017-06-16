@@ -1,6 +1,6 @@
 
 var strings_id_nav_tab = ["home", "publication", "project", "continue"];
-var strings_id_content = ["content_home", "content_publication", "content_project"];
+var strings_id_content = ["content_home", "content_publication", "content_project", "content_continue"];
 
 var time = new Date();
 document.getElementById("timer").innerHTML = time;
@@ -15,6 +15,7 @@ function display_home() {
 		document.getElementById(strings_id_content[0]).style.display = "initial";
 		document.getElementById(strings_id_content[1]).style.display = "none";
 		document.getElementById(strings_id_content[2]).style.display = "none";
+		document.getElementById(strings_id_content[3]).style.display = "none";
 }
 
 function display_publication() {
@@ -25,6 +26,7 @@ function display_publication() {
 		document.getElementById(strings_id_content[0]).style.display = "none";
 		document.getElementById(strings_id_content[1]).style.display = "initial";
 		document.getElementById(strings_id_content[2]).style.display = "none";
+		document.getElementById(strings_id_content[3]).style.display = "none";
 }
 
 function display_project() {
@@ -35,6 +37,7 @@ function display_project() {
 		document.getElementById(strings_id_content[0]).style.display = "none";
 		document.getElementById(strings_id_content[1]).style.display = "none";
 		document.getElementById(strings_id_content[2]).style.display = "initial";
+		document.getElementById(strings_id_content[3]).style.display = "none";
 }
 
 function display_continue() {
@@ -45,4 +48,5 @@ function display_continue() {
 		document.getElementById(strings_id_content[0]).style.display = "none";
 		document.getElementById(strings_id_content[1]).style.display = "none";
 		document.getElementById(strings_id_content[2]).style.display = "none";
+		document.getElementById(strings_id_content[3]).style.display = "initial";
 }

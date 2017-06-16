@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        function init()
+        {
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.src="package.js";
+            document.body.appendChild(myScript);
+            //如果马上使用会找不到，因为还没有加载进来
+            functionOne();
+        }
+        function operation()
+        {
+            //可以运行，显示“成功加载”
+            functionOne();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="测试按钮" onclick="init()"/>
+    <input type="button" value="测试运行效果" onclick="operation()"/>
+</body>
+</html>
