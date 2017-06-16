@@ -7,6 +7,32 @@ document.getElementById("timer").innerHTML = time;
 var benchmark = time.getMilliseconds();
 console.log(benchmark);
 
+// function load(){
+// 	var objTo = document.getElementById("3DJS");
+//     var myScript= document.createElement("p");
+//     // myScript.type = "text/javascript";
+//     myScript.appendChild(document.createTextNode("function functionOne(){alert(\"成功运行\"); }"));
+//     objTo.appendChild(myScript);
+//     // functionOne();
+// }
+
+// function load() {
+//     var objTo = document.getElementById("content_continue")
+//     var divtest = document.createElement("p");
+//     divtest.innerHTML = "new div"
+//     objTo.appendChild(divtest)
+// }
+
+function load() {
+    var objTo = document.getElementById("content_continue")
+    var divtest = document.createElement("div");
+    divtest.innerHTML = "<script src = \"js/three.js\"> </script>"
+    // divtest.type = "text/javascript";
+    // var divtest.appendChild(document.createTextNode("abc"));
+    objTo.insertBefore(divtest, objTo.childNodes[0]);
+}
+
+
 function display_home() {
 		document.getElementById(strings_id_nav_tab[0]).className = "active";  
 		document.getElementById(strings_id_nav_tab[1]).className = "state_idle";
@@ -49,4 +75,7 @@ function display_continue() {
 		document.getElementById(strings_id_content[1]).style.display = "none";
 		document.getElementById(strings_id_content[2]).style.display = "none";
 		document.getElementById(strings_id_content[3]).style.display = "initial";
+		// document.getElementById("abc").innerHTML = load();
 }
+
+
