@@ -56,3 +56,6 @@ function loadJS(id,url){
         return false;
     }
 }
+
+loadJS("threeJS","js/three.js")
+loadJS("rendererJs","js/renderer.js")
