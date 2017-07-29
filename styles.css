@@ -94,10 +94,6 @@ img.bookcover{
     float: left;
 }
 
-img.counter {
-    float:right;
-}
-
 /*#b1{
     top: 0;
     left: 0;
@@ -123,4 +119,20 @@ img.counter {
 
 #content_continue {
     display:none;
+}
+
+div.counter {
+    float: right;
+}
+
+#counter1  {
+    display:none;
+}
+
+#counter2  {
+    display:none;
+}
+
+#counter3  {
+
 }
