@@ -125,3 +125,17 @@ img.bookcover{
 div.counter {
     float: right;
 }
+
+#counter1{
+    display:none; 
+    border:none;
+}
+
+#counter2{
+    display:none; 
+    border:none;
+}
+
+#counter3{ 
+    border:none;
+}
