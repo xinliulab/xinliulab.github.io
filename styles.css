@@ -121,6 +121,9 @@ img.bookcover{
     display:none;
 }
 
+div.share{
+    float: left;
+}
 
 div.counter {
     float: right;
