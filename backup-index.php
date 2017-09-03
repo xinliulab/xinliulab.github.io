@@ -356,6 +356,7 @@
 
         <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
         <script src="dist/js/jquery.share.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/myScript.js"></script>
         <script src="js/load.js"> </script>
         
