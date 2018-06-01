@@ -21,10 +21,11 @@
                 <p  class = "introduction"  > Ph.D.            </p>
                 <p  class = "introduction"  > UMBC             </p>
                 <p  class = "introduction"  > xinliu1@umbc.edu </p>
-                <a href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=zh-CN" target="_blank"> My Google Scholar </a>&nbsp;
-                <a href="https://github.com/EMDCYY" target="_blank"> My Github </a>
+                <a href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=zh-CN" target="_blank" style="color:black;font-weight: bolder;"> My Google Scholar </a>&nbsp;
+                <a href="https://github.com/EMDCYY" target="_blank" style="color:black;font-weight: bolder;"> My Github </a>
             </div>
 
+        
             <div class="network">
                 <a href="https://en.wikipedia.org/wiki/The_Crowd:_A_Study_of_the_Popular_Mind" target="_blank">
                     <img class="bookcover" id="b1" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Bilan_fin_de_si%C3%A8cle.jpg" alt="Crowd">
@@ -179,9 +180,8 @@
                 <a href="https://en.wikipedia.org/wiki/Out_of_Control:_The_New_Biology_of_Machines,_Social_Systems,_and_the_Economic_World" target="_blank">
                     <img class="bookcover" id="b51" src="https://images-na.ssl-images-amazon.com/images/I/518ROMCpZBL.jpg" alt="Control">
                 </a>
-
-
             </div>
+        
 
             <div class="myfigure">
                 <img id="myfigure" src="Figure/MyFigure.JPG" alt="MyFigure">
@@ -191,16 +191,16 @@
         <section class="tabs">
             <div class="nav-tabs">
                 <ul class="nav-tabs"> 
-                    
+ 
                     <li class="nav-tabs">
-                        <a id="home" onclick="display_home()" class = "active">
-                            Home
+                        <a id="publication" onclick="display_publication()" class = "active">
+                            Publication
                         </a>
                     </li>
 
                     <li class="nav-tabs">
-                        <a id="publication" onclick="display_publication()" class = "state_idle">
-                            Publication
+                        <a id="experience" onclick="display_experience()" class = "state_idle">
+                            Experience
                         </a>
                     </li>
                     
@@ -210,52 +210,81 @@
                         </a>
                     </li>
 
+                
                     <li class="nav-tabs">
                         <a id="continue" onclick="display_continue()" class = "state_idle">
                             Continue
                         </a>
                     </li>
                 
+                
                 </ul>
             </div>
         </section>
 
-        <section class="content">
+        <section class="content">         
 
-           <div id = "content_home">
-                
+            <div id = "content_publication">
+                <ul>
+<!--                         <p>
+                            Publication:
+                        </p> -->
+                            <ul>
+                                <p>
+                                <div>
+                                    <a class = paper>Aegis: An Interference-Negligible RF Sensing Shield</a><br>
+                                     <a class = author>Yao Yao, Yan Li, <a class=me>Xin Liu</a>, Zicheng Chi, Wei Wang, Tiantian Xie, and Ting Zhu</a><br>
+                                     <a class = conf>INFOCOM 2018</a>
+                                </div><br>
+
+                                <div>
+                                    <a class = paper>ECT: Exploiting Cross-Technology Concurrent Transmission for Reducing Packet Delivery Delay in IoT Networks</a><br>
+                                    <a class = author>Wei Wang, Tiantian Xie, <a class=me>Xin Liu</a> and Ting Zhu</a><br>
+                                    <a class = conf>INFOCOM 2018</a>
+                                </div><br>
+
+                                <div>
+                                    <a class = paper>Real-time algorithm for SIFT based on distributed shared memory architecture with homogeneous multi-core DSP</a><br>
+                                    <a class = author><a class=me>Xin Liu</a>, Wenjie Chen, Tao Ma, and Lishuang Xu</a><br>
+                                    <a class = conf>ICICIP 2011</a>
+                                </div><br>
+                            </ul>                   
+                </ul>
+            </div>
+
+            <div id = "content_experience">               
                 <ul>
                     <p>
                         Education:
                     </p>
                         <ul class="place">
                             <p>
-                                <a href="http://www.umbc.edu/">UMBC</a>
+                                <a href="http://www.umbc.edu/" class="link">UMBC</a>
                             </p>
                                 <ul class="degree">
                                     <p>
                                         Ph.D.
-                                        in <a href="https://www.csee.umbc.edu/">Computer Engineering</a> 
+                                        in <a href="https://www.csee.umbc.edu/" class="link">Computer Engineering</a> 
                                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                                         2016 - Present
                                     </p>
                                 </ul>
 
                             <p>
-                                <a href="http://english.bit.edu.cn/">Beijing Institute of Technology</a>
+                                <a href="http://english.bit.edu.cn/" class="link">Beijing Institute of Technology</a>
                             </p>
                                 <ul class="degree">
                                     <p>
                                         M.S.
                                         &nbsp;
-                                        in <a href="http://pris.bit.edu.cn/home/index.htm">Pattern Recognition and Intelligent System</a>
+                                        in <a href="http://pris.bit.edu.cn/home/index.htm" class="link">Pattern Recognition and Intelligent System</a>
                                         &nbsp;
                                         2009 - 2012
                                     </p>
                                     <p>
                                         B.S.
                                         &nbsp;&nbsp;
-                                        in <a href="http://ac.bit.edu.cn/english/abouschool/index.htm">Automation</a>
+                                        in <a href="http://ac.bit.edu.cn/english/abouschool/index.htm" class="link">Automation</a>
                                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
                                         2005 - 2009
                                     </p>
@@ -267,7 +296,7 @@
                     </p>
                         <ul class="place">
                             <p>
-                                <a href="http://english.aoe.cas.cn/"> Academy of Opto-Electronics, Chinese Academy of Sciences</a>
+                                <a href="http://english.aoe.cas.cn/" class="link"> Academy of Opto-Electronics, Chinese Academy of Sciences</a>
                             </p>
                                 <ul class="degree">
                                     <p>
@@ -286,24 +315,13 @@
                                     </p>
                                 </ul>                           
                         </ul>
-
                 </ul>
             </div>
 
-            <div id = "content_publication">
-                <ul>
-                        <p>
-                            Publication:
-                        </p>
-                            <ul>
-                                <p>
-                                    <cite>Real-time algorithm for SIFT based on distributed shared memory architecture with homogeneous multi-core DSP</cite>
-                                </p>
-                            </ul>                   
-                </ul>
+            <div id = "content_project">               
             </div>
 
-            <div id = "content_project">
+            <div id = "content_continue">
                 <ul>
                         <p>
                             Project:
@@ -316,9 +334,7 @@
                 </ul>
             </div>
 
-            <div id = "content_continue">
-               
-            </div>
+
         </section>
 
         <section>
@@ -332,11 +348,13 @@
                 ga('send', 'pageview');
             </script>
 
+        <!--
             <div class = "share"> 
                 <p class="social-share" data-mode="prepend">
                     <a href="javascript:" class="social-share-icon icon-heart"></a>
                 </p>
             </div>
+        -->
 
             <div class = "counter">
 

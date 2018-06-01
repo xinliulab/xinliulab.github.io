@@ -1,6 +1,6 @@
 
-var strings_id_nav_tab = ["home", "publication", "project", "continue"];
-var strings_id_content = ["content_home", "content_publication", "content_project", "content_continue"];
+var strings_id_nav_tab = ["publication", "experience", "project", "continue"];
+var strings_id_content = ["content_publication", "content_experience", "content_project", "content_continue"];
 
 var time = new Date();
 document.getElementById("timer").innerHTML = time;
@@ -8,9 +8,9 @@ var benchmark = time.getMilliseconds();
 console.log(benchmark);
 
 
-function display_home() {
+function display_publication() {
 		document.getElementById(strings_id_nav_tab[0]).className = "active";  
-		document.getElementById(strings_id_nav_tab[1]).className = "state_idle";
+		document.getElementById(strings_id_nav_tab[1]).className = "state_idle"; 	
 		document.getElementById(strings_id_nav_tab[2]).className = "state_idle";
 		document.getElementById(strings_id_nav_tab[3]).className = "state_idle";
 		document.getElementById(strings_id_content[0]).style.display = "initial";
@@ -19,9 +19,9 @@ function display_home() {
 		document.getElementById(strings_id_content[3]).style.display = "none";
 }
 
-function display_publication() {
+function display_experience() {
 		document.getElementById(strings_id_nav_tab[0]).className = "state_idle";  
-		document.getElementById(strings_id_nav_tab[1]).className = "active"; 	
+		document.getElementById(strings_id_nav_tab[1]).className = "active";
 		document.getElementById(strings_id_nav_tab[2]).className = "state_idle";
 		document.getElementById(strings_id_nav_tab[3]).className = "state_idle";
 		document.getElementById(strings_id_content[0]).style.display = "none";

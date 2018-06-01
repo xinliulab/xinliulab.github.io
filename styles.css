@@ -3,7 +3,7 @@ html{
 }
 
 body {
-    background-color: white;
+    background-color: #DCDCDC;
     font-family: "Lucida Grande";
 }
 
@@ -24,21 +24,18 @@ section.content{
 }
 
 div.introduction{
-    background-color: white;
     color: black;
     float: left;
     width: 21%;
 }
 
 div.network{
-    background-color: white;
     float: left;
     width: 65%;
     height: 195px;
 }
 
 div.myfigure{
-    background-color: white;
     float: left;
     width: 14%;
     height: 195px;
@@ -73,18 +70,20 @@ li.nav-tabs {
 
 li.nav-tabs a {
     display: block;
-    color: white;
+    color: #C0C0C0;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li.nav-tabs a.active {
-    background-color: #4CAF50;
+    background-color: #333;
+    color: white;
 }
 
 li.nav-tabs a:hover:not(.active) {
-    background-color: #4C8250;
+    background-color: #333;
+    color: #DCDCDC;
 }
 
 img.bookcover{
@@ -105,11 +104,11 @@ img.bookcover{
     float: right;
 }
 
-#content_home  {
+#content_publication  {
     display:initial;
 }
 
-#content_publication  {
+#content_experience  {
     display:none;
 }
 
@@ -127,6 +126,38 @@ div.share{
 
 div.counter {
     float: right;
+}
+
+a.paper{
+    font-family: serif;
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+}
+
+a.author{
+    font-family: arial;
+    font-size: 16px;
+    color: black;
+}
+
+a.conf{
+    font-family: arial;
+    font-size: 16px;
+    color: black;
+}
+
+a.me{
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bolder;
+    color: black;
+}
+
+a.link{
+/*    font-weight: bolder;*/
+    color: black;
+    text-decoration:none;
 }
 
 #counter1{
