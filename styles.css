@@ -160,6 +160,11 @@ a.link{
     text-decoration:none;
 }
 
+sup {
+    vertical-align: super;
+    font-size: 10px;
+}
+
 #counter1{
     display:none; 
     border:none;
