@@ -76,6 +76,7 @@ li.nav-tabs a {
     text-decoration: none;
 }
 
+
 li.nav-tabs a.active {
     background-color: #333;
     color: white;
@@ -156,8 +157,7 @@ a.me{
 
 a.link{
 /*    font-weight: bolder;*/
-    color: black;
-    text-decoration:none;
+    color: red;
 }
 
 sup {
@@ -178,3 +178,4 @@ sup {
 #counter3{ 
     border:none;
 }
+
