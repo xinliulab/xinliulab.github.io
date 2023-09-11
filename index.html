@@ -12,6 +12,9 @@
             .navbar-fixed-top {min-height: 60px;}
             .navbar-nav>li>a {padding-top: 0px;padding-bottom: 0px;line-height: 70px;font-size: 18px;}
             hr.hrThick {border: 0px solid red;}
+            .hidden-content {
+                display: none;
+            }
         </style>
     </head>
 
@@ -67,8 +70,12 @@
     <h3  id="News" style="padding-top: 80px; margin-top: -60px;">News</h3>
 
     <div class="row" style="padding-left: 40px; padding-top: 10px; padding-bottom: 20px; font-size: 18px;">
+        [Aug 2023] As a co-chair, I organized the first SPARKS event for AI-EDGE, connecting 70+ Ph.D. students and postdocs across 8 universities. Amazed by their brilliance!<br>
         [Aug 2023] Our work 'LightThief' got accepted by USENIX Security'23. Who knew my optical engineering skills from 7 years ago would come back into play? <br>
-        [Aug 2023] I've joined the AI-EDGE Institute at OSU for my postdoctoral work. Looks like I'll be mingling with AI from now on—let's hope it likes me as much as I'm fascinated by it! <br>
+        [Jul 2023] My two undergraduate students successfully presented their research in the REU program. Over the past two months, they've been diligently learning about wireless networking, reinforcement learning, and deep learning. Wishing them a bright future ahead!<br>
+        [Jan 2023] I organized the AMC 8 Math Competition for students at Ohio State. It was heartwarming to see young students' enthusiasm for STEM. Who knows, some of them may be my future Ph.D. students!<br>
+        <div class="hidden-content">
+        [Aug 2022] I've joined the AI-EDGE Institute at OSU for my postdoctoral work. Looks like I'll be mingling with AI from now on—let's hope it likes me as much as I'm fascinated by it! <br>
         [Nov 2021] Our work 'ICSL' got accepted by ACM CCS'21. Buckle up, folks! We're taking a detour into the wild world of cybersecurity—wish us luck! <br>
         [Apr 2021] Our work 'TScatter' finally found its home in USENIX NSDI'21. After so many revisions, the one thing I forgot to revise was the name. Now everyone keeps asking me why it's called 'TScatter'. 'T' stands for 'Transfer,' as in FFT. Yes, we're transferring information through time and frequency domains!—all without a battery!<br>
         [Jun 2020] I brought the oscilloscope home and set up an experimental station in the basement. Now I have a perfect 'scientific' excuse to dodge some quality time with my wife!<br>
@@ -77,6 +84,11 @@
         [Nov 2019]  Our work 'PIC' was awarded <font color=#297AB5>Best Paper Award Candidate</font> at ACM SenSys'19. It's like our CTC 'farewell tour', but don't worry—I'll be back! <br>
         [Nov 2018]  Our work 'Passive-ZigBee' snagged <font color=#297AB5>Best Paper Runner-Up Award</font> at ACM SenSys'18. Believe it or not, we're the first team to try and marry CTC with backscatter technologies. It's like a techy blind date—awkward but promising!
 <br>
+
+        </div>
+
+        <!-- Read More button -->
+        <button id="read-more-btn">Read More</button>
         <br>
     </div>
 </div> 
@@ -530,6 +542,19 @@
             </div> -->
         </section>
 
+        <script>
+            // Toggle the hidden content
+            document.getElementById('read-more-btn').addEventListener('click', function() {
+                const hiddenContent = document.querySelector('.hidden-content');
+                if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+                    hiddenContent.style.display = 'block';
+                    this.innerHTML = 'Read Less';
+                } else {
+                    hiddenContent.style.display = 'none';
+                    this.innerHTML = 'Read More';
+                }
+            });
+        </script>
         <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
         <script src="dist/js/jquery.share.min.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
