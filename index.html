@@ -15,7 +15,17 @@
             .hidden-content {
                 display: none;
             }
+            .thumb-img {
+                cursor: pointer;
+                padding: 2px; /* added padding for aesthetics */
+                border: 1px solid #ddd; /* added border for thumbnails */
+                margin-bottom: 1px; /* added margin for spacing between thumbnails */
+            }
+            .no-padding-left {
+                padding-left: 0;
+            }
         </style>
+
     </head>
 
 
@@ -409,46 +419,152 @@
 <div class="container">
     <h3 id="Expertise" style="padding-top: 80px; margin-top: -80px;">Cross-Domain Expertise</h3>
 
-    <!-- Tracker -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/Tracker.png" alt=""> 
+
+<!-- Tracker -->
+<div class="image-set" id="set1">    
+    <div class="container mt-4">
+        <div class="row">
+            
+        <div class="col-md-3"> 
+                <div class="d-flex flex-column align-items-center">
+                    <img class="main-image img-responsive img-rounded" src="./figure/LaserTracker_Product.jpg" alt="Functional Schematic and Product Image" onclick="enlargeImage(this, 'set1')" style="cursor: pointer;">
+                </div>
         </div>
+
+
+        <div class="col-md-1 no-padding-left">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserTracker_Product.jpg" alt="Functional Schematic and Product Image" onclick="changeImage(this, 'set1')" style="cursor: pointer;">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserTracker_Cabinet.jpg" alt="Prototype Electrical Control Cabinet with Modular Slots (Modular boards not shown due to intellectual property considerations)" onclick="changeImage(this, 'set1')" style="cursor: pointer; ">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserTracket_Circuits.jpg" alt="Showcase of Selected Non-Core, Early Prototype, and Non-Commercial Circuitry (Chosen with intellectual property considerations)" onclick="changeImage(this, 'set1')" style=" cursor: pointer; ">
+                </div>
+        </div>
+
+            <div class="col-md-8 no-padding-left">
+                <a target="_blank" href="">
+                    </font><b>High-Precision Laser Tracker</b><br>
+                </a>
+                <!-- Electrical and Electronic Engineer in Academy of Opto-Electronics</font><br> -->
+                <i>Jul 2012 - Jun 2016</i><br>
+                &#9679; Sole responsibility for electronic circuitry development and integration<br>
+                &#9679; Collaborative design control systems, rotational mechanics, and optical paths</font><br>
+                <span>Papers</span>
+                <a target="_blank" href="./publication/Paper_Tracker_1.pdf">[1]</a>
+                <a target="_blank" href="./publication/Paper_Tracker_2.pdf">[2]</a>
+                <span>/ Patents</span>
+                <a target="_blank" href="https://patents.google.com/patent/CN105444700B/en?oq=CN105444700B">[1]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN104296654B/en?oq=CN104296654B">[2]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN104296643B/en?oq=CN104296643B">[3]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN104296655B/en?oq=CN104296655B">[4]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN104296644B/en?oq=CN104296644B">[5]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN104897076A/en?oq=CN104897076A">[6]</a>
+                <a target="_blank" href="https://patents.google.com/patent/CN103196419A/en?oq=CN103196419A">[7]</a>
+                <br>
+                <a target="_blank" href="https://github.com/EMDCYY/Laser-Measurement-with-FFT-on-FPGA/tree/master/code">[Selected Sample Code]</a>
+                <a target="_blank" href="https://github.com/EMDCYY/Laser-Measurement-with-FFT-on-FPGA/tree/master/circuit">[Selected Sample Circuit]</a>
+            </div>
+        </div>
+    </div>
+</div><hr class="hrThick">
+
+<!-- Projector -->
+<div class="image-set" id="set2">
+    <div class="container mt-4">
+        <div class="row">
+            
+        <div class="col-md-3"> 
+                <div class="d-flex flex-column align-items-center">
+                    <img class="main-image img-responsive img-rounded" src="./figure/LaserDriver_Product.jpg" alt="Functional Schematic and Product Image" onclick="enlargeImage(this, 'set2')" style="cursor: pointer;">
+                </div>
+        </div>
+
+        <div class="col-md-1 no-padding-left">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserDriver_Product.jpg" alt="Functional Schematic and Product Image" onclick="changeImage(this, 'set2')" style="cursor: pointer;">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserDriver_Integration.jpg" alt="RGB Laser Diode Power Supply and Water Cooling Prototype (Chosen after intellectual property considerations)" onclick="changeImage(this, 'set2')" style="cursor: pointer; ">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/LaserDriver_Module.jpg" alt="Showcase of Selected Early Prototype Circuitry and Module (Chosen with intellectual property considerations)" onclick="changeImage(this, 'set2')" style=" cursor: pointer; ">
+                </div>
+        </div>
+
+            <div class="col-md-8 no-padding-left">
+                <a target="_blank" href="">
+                    <b>High-Power Laser Display</b><br>
+                </a>
+                <i>Dec 2014 - Jun 2016</i><br>
+                &#9679; Designed high-precision, high-power supplies for RGB laser diodes (ripple factor < 0.1% @ 30V, 2A)<br>
+                &#9679; Developed a management system for controlling power supplies for hundreds of diodes<br>
+                &#9679; Engineered a water cooling control system<br>
+                My self-designed power supply system was successfully deployed in a space launch control center. <a target="_blank" href="http://www.aoe.cas.cn/xwzx/gdyw/201607/t20160707_4637386.html">[News]</a><br>
+                <a target="_blank" href="https://github.com/EMDCYY/Current-and-Temperature-Controller-for-Large-Laser-Projector/tree/master/Code"> [Selected Sample Code]</a>
+                <a target="_blank" href="https://github.com/EMDCYY/Current-and-Temperature-Controller-for-Large-Laser-Projector/tree/master/Circuit">[Selected Sample Circuit]</a>
+            </div>
+        </div>
+    </div>
+</div><hr class="hrThick">
+
+
+<!-- Platform -->
+<!-- <div class="row" style="padding-left: 20px;"> 
+        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/platform.png" alt=""> </div>
         <div class="col-md-9"> 
             <a target="_blank" href="">
-                </font><b>Femtosecond Laser Tracker</b><br>
+                </font><b>Multi-core HD Video Processing Platform</b><br>
             </a>
-            <!-- Electrical and Electronic Engineer in Academy of Opto-Electronics</font><br> -->
-            <i>Jul 2012 - Jun 2016</i><br>
-            Designed embedded controller, signal processing module, motor driver, and power supply</font><br>
-            <a target="_blank" href="./publication/Tracker.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN105444700B/en?oq=CN105444700B"> <small>[Patent1]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN104296654B/en?oq=CN104296654B"> <small>[Patent2]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN104296643B/en?oq=CN104296643B"> <small>[Patent3]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN104296655B/en?oq=CN104296655B"> <small>[Patent4]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN104296644B/en?oq=CN104296644B"> <small>[Patent5]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN104897076A/en?oq=CN104897076A"> <small>[Patent6]</small></a>
-            <a target="_blank" href="https://patents.google.com/patent/CN103196419A/en?oq=CN103196419A"> <small>[Patent7]</small></a>
+            Jul 2010 - May 2012</font><br>
+            <i>Master's Degree Final Project</i><br>
+            <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/code"> <small>[Code]</small></a>
+            <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/circuit"> <small>[Circuit]</small></a>
         </div>
-    </div><hr class="hrThick">
-
-
-    <!-- Projector -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/projector.jpg" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="">
-                </font><b>Power and Thermal Management Systems for Large-Scale Laser Displays</b><br>
-            </a>
-            <i>Dec 2014 - Jun 2016</i><br>
-            &#9679; Designed high-precision, high-power supplies for RGB laser diodes (ripple factor < 0.1% @ 30V, 12A)</font><br>
-            &#9679; Developed a management system for controlling power supplies for over a thousand diodes</font><br>
-            &#9679; Engineered a water cooling control system</font><br>
-            I solely designed the system that was successfully deployed in aerospace launch control centers. </font> <a target="_blank" href="http://www.aoe.cas.cn/xwzx/gdyw/201607/t20160707_4637386.html"> <small>[News]</small></a><br>
-            <a target="_blank" href="https://github.com/EMDCYY/Current-and-Temperature-Controller-for-Large-Laser-Projector/tree/master/Code"> <small>[Sample Code]</small></a>
-            <a target="_blank" href="https://github.com/EMDCYY/Current-and-Temperature-Controller-for-Large-Laser-Projector/tree/master/Circuit"> <small>[Sample Circuit]</small></a>
-
+</div><hr class="hrThick"> -->
+<div class="image-set" id="set3">
+    <div class="container mt-4">
+        <div class="row">
+            
+        <div class="col-md-3"> 
+                <div class="d-flex flex-column align-items-center">
+                    <img class="main-image img-responsive img-rounded" src="./figure/Platform_Circuit.jpg" alt="Platform Hardware" onclick="enlargeImage(this, 'set3')" style="cursor: pointer;">
+                </div>
         </div>
-    </div><hr class="hrThick">
+
+        <div class="col-md-1 no-padding-left">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/Platform_Circuit.jpg" alt="Platform Hardware" onclick="changeImage(this, 'set3')" style="cursor: pointer;">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/Platform_Mother.jpg" alt="Platform Architecture" onclick="changeImage(this, 'set3')" style="cursor: pointer; ">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/Platform_Daughter.jpg" alt="Architecture of Daughterboard" onclick="changeImage(this, 'set3')" style=" cursor: pointer; ">
+                    <img class="img-responsive img-rounded thumb-img" src="./figure/Platform_Happy.jpg" alt="When I got my hands on these boards back then, it felt just as thrilling as you receiving an A100 GPU today. The difference is, these boards were designed by me." onclick="changeImage(this, 'set3')" style=" cursor: pointer; ">
+                </div>
+        </div>
+
+            <div class="col-md-8 no-padding-left">
+                <a target="_blank" href="">
+                    <b>Heterogeneous Multi-Chip HD Video Processing Platform with FPGA and Multi-Core DSPs</b><br>
+                </a>
+                <i>Master's Graduation Project (Before July 2012)</i><br>
+                &#9679; Designing PCB layouts for high-frequency circuits (6.25Gbps Throughput)<br>
+                &#9679; Developing drivers for hardware-software integration<br>
+                Over a decade ago, I somewhat dismissed GPUs, finding their design philosophy too brute-force. Immersed in the world of FPGA and DSP, I was captivated by the bold integrations on Xilinx and TI chips, and the clever melding of assembly and C programming. I was convinced that only through the combination of FPGA with multi-core DSPs could one create the fastest high-definition video processing platforms. This belief held strong until one day, I realized that GPUs were outpacing Moore's Law.<br>
+                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/code"> <small>[Code]</small></a>
+                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/circuit"> <small>[Circuit]</small></a>
+            </div>
+        </div>
+    </div>
+</div><hr class="hrThick">
+
+<div class="modal" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
     <!-- Rangefinder -->
 <!--     <div class="row" style="padding-left: 20px;"> 
@@ -465,22 +581,10 @@
         </div>
     </div><hr class="hrThick"> -->
 
-    <!-- Platform -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/platform.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="">
-                </font><b>Multi-core HD Video Processing Platform</b><br>
-            </a>
-            Jul 2010 - May 2012</font><br>
-            <i>Master's Degree Final Project</i><br>
-            <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/code"> <small>[Code]</small></a>
-            <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/circuit"> <small>[Circuit]</small></a>
-        </div>
-    </div><hr class="hrThick">
+
 
     <!-- lowPower -->
-    <div class="row" style="padding-left: 20px;"> 
+<!--     <div class="row" style="padding-left: 20px;"> 
         <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/lowPower.png" alt=""> </div>
         <div class="col-md-9"> 
             <a target="_blank" href="">
@@ -490,7 +594,7 @@
             <i>Bachelor's Degree Final Project</i><br>
             <a target="_blank" href="https://github.com/EMDCYY/Low-Power-Design-for-Postioning-System/tree/main/circuit"> <small>[Circuit]</small></a>
         </div>
-    </div><hr class="hrThick">
+    </div><hr class="hrThick"> -->
 
 
 <!--     <div class="row" style="padding-left: 20px;"> 
@@ -565,5 +669,49 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/myScript.js"></script>
         <script src="js/load.js"> </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+            function changeImage(imgElement, setId) {
+                    var imageSet = document.getElementById(setId);
+                    var mainImage = imageSet.querySelector('.main-image');
+                    mainImage.src = imgElement.src;
+                    mainImage.alt = imgElement.alt; // Also update the alt attribute
+            }
+
+            function enlargeImage(imgElement) {
+                var modalImage = document.getElementById('modal-image');
+                var modalTitle = document.getElementById('modal-title'); // 获取模态框标题元素
+                modalImage.src = imgElement.src;
+                modalTitle.textContent = imgElement.alt; // 将模态框标题设置为点击图片的alt属性
+                var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                imageModal.show();
+            }
+
+        </script>
+        <script type="text/javascript">
+                window.onload = function() {
+                    adjustThumbnailHeights();
+                };
+
+                function adjustThumbnailHeights() {
+                    // Find all image sets
+                    var imageSets = document.getElementsByClassName('image-set');
+
+                    // Iterate over each image set
+                    Array.from(imageSets).forEach(function(imageSet) {
+                        // Get the main image and thumbnails within this set
+                        var mainImage = imageSet.getElementsByClassName('main-image')[0];
+                        var thumbImages = imageSet.getElementsByClassName('thumb-img');
+                        var mainImageHeight = mainImage.clientHeight;
+
+                        // Calculate and set the height of thumbnails within this set
+                        Array.from(thumbImages).forEach(function(thumbImage) {
+                            thumbImage.style.height = mainImageHeight / thumbImages.length + 'px';
+                        });
+                    });
+                };
+        </script>
+
     </body>
 </html>
