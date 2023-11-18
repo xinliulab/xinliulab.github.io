@@ -24,6 +24,17 @@
             .no-padding-left {
                 padding-left: 0;
             }
+            .magnifier-icon {
+                position: absolute;
+                bottom: 2px;
+                right: 2px; 
+                cursor: pointer; 
+            }
+
+            .magnifier-icon img {
+                width: 30px; 
+                height: 30px; 
+            }
         </style>
 
     </head>
@@ -58,7 +69,7 @@
         <div class="col-md-9">
         <br>
             <p>
-                I am currently a Postdoctoral Scholar at <a target="_blank" href="https://aiedge.osu.edu///">AI-EDGE Institute</a> at <a target="_blank" class="link" href="https://www.ohio.edu///">The Ohio State University (OSU)</a> , where I have the privilege of working under the joint guidance of <a target="_blank" class="link" href="http://newslab.ece.ohio-state.edu/home/">Prof. Ness Shroff</a>, <a target="_blank" href="https://u.osu.edu/ekici/">Prof. Eylem Ekici</a>, and <a target="_blank" href="http://web.cse.ohio-state.edu/~athreya.14/">Prof. Kannan Srinivasan (Athreya)</a>. Prior to joining OSU, I completed my Ph.D. at the <a target="_blank" href="https://www.umbc.edu/">University of Maryland, Baltimore County (UMBC)</a>, where I was mentored by <a target="_blank" href="https://www.csee.umbc.edu/~zt/">Prof. Ting Zhu</a>.
+                I am currently a Postdoctoral Scholar at <a target="_blank" href="https://aiedge.osu.edu///">AI-EDGE Institute</a> at <a target="_blank" class="link" href="https://www.ohio.edu///">The Ohio State University (OSU)</a> , where I have the privilege of working under the joint guidance of <a target="_blank" class="link" href="http://newslab.ece.ohio-state.edu/home/">Prof. Ness Shroff</a>, <a target="_blank" href="https://u.osu.edu/ekici/">Prof. Eylem Ekici</a>, <a target="_blank" href="http://web.cse.ohio-state.edu/~athreya.14/">Prof. Kannan Srinivasan (Athreya)</a>. Prior to joining OSU, I completed my Ph.D. at the <a target="_blank" href="https://www.umbc.edu/">University of Maryland, Baltimore County (UMBC)</a>, where I was mentored by <a target="_blank" href="https://www.csee.umbc.edu/~zt/">Prof. Ting Zhu</a>.
             </p>
 
             <p>
@@ -424,13 +435,15 @@
 <div class="image-set" id="set1">    
     <div class="container mt-4">
         <div class="row">
-            
-        <div class="col-md-3"> 
-                <div class="d-flex flex-column align-items-center">
-                    <img class="main-image img-responsive img-rounded" src="./figure/LaserTracker_Product.jpg" alt="Functional Schematic and Product Image" onclick="enlargeImage(this, 'set1')" style="cursor: pointer;">
-                </div>
-        </div>
 
+        <div class="col-md-3"> 
+            <div class="d-flex flex-column align-items-center magnifier-wrapper" onclick="enlargeImage('set1')">
+                <img class="main-image img-responsive img-rounded" src="./figure/LaserTracker_Product.jpg" alt="Functional Schematic and Product Image" style="cursor: pointer;">
+                <span class="magnifier-icon">
+                    <img src="./figure/glass.png" alt="Magnifier" style="cursor: pointer;">
+                </span>
+            </div>
+        </div>
 
         <div class="col-md-1 no-padding-left">
                 <div class="d-flex flex-column align-items-center">
@@ -472,11 +485,17 @@
     <div class="container mt-4">
         <div class="row">
             
+
         <div class="col-md-3"> 
-                <div class="d-flex flex-column align-items-center">
-                    <img class="main-image img-responsive img-rounded" src="./figure/LaserDriver_Product.jpg" alt="Functional Schematic and Product Image" onclick="enlargeImage(this, 'set2')" style="cursor: pointer;">
-                </div>
+            <div class="d-flex flex-column align-items-center magnifier-wrapper" onclick="enlargeImage('set2')">
+                <img class="main-image img-responsive img-rounded" src="./figure/LaserDriver_Product.jpg" alt="Functional Schematic and Product Image" style="cursor: pointer;">
+                <span class="magnifier-icon">
+                    <img src="./figure/glass.png" alt="Magnifier" style="cursor: pointer;">
+                </span>
+            </div>
         </div>
+
+
 
         <div class="col-md-1 no-padding-left">
                 <div class="d-flex flex-column align-items-center">
@@ -519,11 +538,14 @@
 <div class="image-set" id="set3">
     <div class="container mt-4">
         <div class="row">
-            
+
         <div class="col-md-3"> 
-                <div class="d-flex flex-column align-items-center">
-                    <img class="main-image img-responsive img-rounded" src="./figure/Platform_Circuit.jpg" alt="Platform Hardware" onclick="enlargeImage(this, 'set3')" style="cursor: pointer;">
-                </div>
+            <div class="d-flex flex-column align-items-center magnifier-wrapper" onclick="enlargeImage('set3')">
+                <img class="main-image img-responsive img-rounded" src="./figure/Platform_Circuit.jpg" alt="Functional Schematic and Product Image" style="cursor: pointer;">
+                <span class="magnifier-icon">
+                    <img src="./figure/glass.png" alt="Magnifier" style="cursor: pointer;">
+                </span>
+            </div>
         </div>
 
         <div class="col-md-1 no-padding-left">
@@ -543,8 +565,8 @@
                 &#9679; Designing PCB layouts for high-frequency circuits (6.25Gbps Throughput)<br>
                 &#9679; <!-- Developing drivers for hardware-software integration<br>
                 Over a decade ago, I somewhat dismissed GPUs, finding their design philosophy too brute-force. Immersed in the world of FPGA and DSP, I was captivated by the bold integrations on Xilinx and TI chips, and the clever melding of assembly and C programming.  -->I was convinced that only through the combination of FPGA with multi-core DSPs could one create the fastest high-definition video processing platforms. This belief held strong until one day, I realized that GPUs were outpacing Moore's Law.<br>
-                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/code"> <small>[Code]</small></a>
-                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/circuit"> <small>[Circuit]</small></a>
+                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/code"> [Code]</a>
+                <a target="_blank" href="https://github.com/EMDCYY/Multi-Core-HD-Video-Processing-Platform/tree/main/circuit"> Circuit]</a>
             </div>
         </div>
     </div>
@@ -679,11 +701,15 @@
                     mainImage.alt = imgElement.alt; // Also update the alt attribute
             }
 
-            function enlargeImage(imgElement) {
+            function enlargeImage(setId) {
+                var imageSet = document.getElementById(setId);
+                var mainImage = imageSet.querySelector('.main-image');
                 var modalImage = document.getElementById('modal-image');
-                var modalTitle = document.getElementById('modal-title'); // 获取模态框标题元素
-                modalImage.src = imgElement.src;
-                modalTitle.textContent = imgElement.alt; // 将模态框标题设置为点击图片的alt属性
+                var modalTitle = document.getElementById('modal-title');
+
+                modalImage.src = mainImage.src;
+                modalTitle.textContent = mainImage.alt;
+
                 var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
                 imageModal.show();
             }
