@@ -1,107 +1,101 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Xin Liu</title>
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-
-        <style>
-            html {scroll-behavior: smooth;}
-            body {font-size: 16px;}
-            .navbar-fixed-top {min-height: 60px;}
-            .navbar-nav>li>a {padding-top: 0px;padding-bottom: 0px;line-height: 70px;font-size: 18px;}
-            hr.hrThick {border: 0px solid red;}
-            .hidden-content {
-                display: none;
-            }
-            .thumb-img {
-                cursor: pointer;
-                padding: 2px; /* added padding for aesthetics */
-                border: 1px solid #ddd; /* added border for thumbnails */
-                margin-bottom: 1px; /* added margin for spacing between thumbnails */
-            }
-            .no-padding-left {
-                padding-left: 0;
-            }
-            .magnifier-icon {
-                position: absolute;
-                bottom: 2px;
-                right: 2px; 
-                cursor: pointer; 
-            }
-
-            .magnifier-icon img {
-                width: 30px; 
-                height: 30px; 
-            }
-        </style>
-
-    </head>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Liu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {font-size: 18px; line-height: 1.6;}
+        .navbar-light .navbar-brand {font-size: 28px; font-weight: bold;}
+        .navbar-light .navbar-nav .nav-link {font-size: 18px;}
+        .card {border: none;}
+        .card-body {font-size: 16px;}
+        .rounded {border-radius: 8px;}
+        .shadow {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+        .my-4 {margin-top: 1.5rem; margin-bottom: 1.5rem;}
+        h3 {margin-top: 60px;}
+        .container {max-width: 960px;}
+    </style>
+</head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-                <span class="icon-bar"></span>
-            </button>
-            <h1 style="font-size: 35px; color:#FAFAFA;">Xin Liu</h1>
-        </div>
-        <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="nav-link"><a href="#Home">Home</a></li>
-                <li><a  class="nav-link" href="#News">News</a></li>
-                <li><a  class="nav-link" href="#Publications">Publications</a></li>
-                <!-- <li><a  class="nav-link" href="#Expertise">Expertise</a></li> -->
+        <!-- <a class="navbar-brand" href="#">Xin Liu (刘鑫)</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#News">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Publications">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Publications">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="#AboutMe">About Me</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-
-<div class="container" style="padding-top: 80px; font-size: 20px" id="Home">
-    <div class="row">
-        <div class="col-md-3" style="padding-left: 40px; padding-right: 40px; padding-top: 25px;padding-bottom: 10px;">
-            <img class="img-responsive img-rounded" src="./figure/myFigure.jpg" alt="">
+<div class="container" style="padding-top: 100px;" id="Home">
+    <div class="row align-items-center">
+        <div class="col-md-3">
+            <img class="img-fluid rounded shadow" src="./figure/myFigure.jpg" alt="Profile Picture">
         </div>
-        <div class="col-md-9">
-        <br>
-            <p>
-                I am currently an Assistant Professor in the <a target="_blank" href="https://www.cs.fsu.edu/">Computer Science Department</a> at <a target="_blank" class="link" href="https://www.fsu.edu/">Florida State University (FSU)</a>. 
-            </p>
-
-            <p>
-                Before joining FSU, I was a Postdoctoral Scholar at <a target="_blank" href="https://aiedge.osu.edu/">AI-EDGE Institute</a> at <a target="_blank" class="link" href="https://www.osu.edu/">The Ohio State University (OSU)</a> , where I had the privilege of working under the joint guidance of <a target="_blank" class="link" href="https://cse.osu.edu/people/shroff.11">Prof. Ness Shroff</a>, <a target="_blank" href="https://u.osu.edu/ekici/">Prof. Eylem Ekici</a>, and <a target="_blank" href="http://web.cse.ohio-state.edu/~athreya.14/">Prof. Kannan Srinivasan (Athreya)</a>. I completed my Ph.D. at the <a target="_blank" href="https://www.umbc.edu/">University of Maryland, Baltimore County (UMBC)</a>, where I was mentored by <a target="_blank" href="https://u.osu.edu/zhu1/">Prof. Ting Zhu</a> (now at OSU).
-
-            </p>
-
-            <p>
-                <a target="_blank" href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=en">
-                    <img src="./figure/google-scholar.svg" alt="Google Scholar" width="35">
-                </a>
-
-                <a target="_blank" href="https://github.com/EMDCYY">
-                    <img src="./figure/GitHub-Logo.svg" alt="GitHub" width="66">
-                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                Email: xl24j[at]fsu[dot]edu
-            </p>
-
-
+        <div class="col-md-9" style="line-height: 1.3;">
+            <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Xin Liu</h1> 
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Assistant Professor, Florida State University</h2> 
+            <p class="lead mb-3">Focusing on next-generation wireless networks, AI-driven distributed systems, and transformative IoT applications.</p>
             
+            <p class="mb-2">
+                <a href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=en">
+                    <img src="./figure/google-scholar-2.svg" alt="Google Scholar" width="26">
+                </a>
+                <a href="https://github.com/EMDCYY">
+                    <img src="./figure/GitHub-Logo.svg" alt="GitHub" width="52">
+                </a>
+                <a><img src="./figure/email.svg" alt="Email" width="36">xinliu [at] cs [dot] fsu [dot] edu</a>
+            </p>
+            
+            <address class="mb-2" style="font-style: normal;">
+                Department of Computer Science,<br>
+                253 Love Building,<br>
+                Florida State University,<br>
+                Tallahassee, FL 32306-4530
+            </address>
         </div>
     </div>
 </div>
 
 
-<div class="container" >
-    <h3  id="News" style="padding-top: 80px; margin-top: -60px;">News</h3>
+<div class="container">
+    <h3 id="Openings" class="my-4">Openings</h3>
 
-    <div class="row" style="padding-left: 40px; padding-top: 10px; padding-bottom: 20px; font-size: 18px;">
-        [Mar 2024] I'm thrilled to announce my latest adventure. This August, I'll be joining the Computer Science Department at Florida State University as an Assistant Professor. <br>
+    <div class="mb-4">
+        <h5>Ph.D. Student Positions</h5>
+        <ul>
+            <li>Multiple Ph.D. student positions starting in Spring/Fall 2025.</li>
+            <li>If you're passionate about 5G/6G, LLMs, Starlink networking, autonomous driving, multi-modal fusion, or cybersecurity, let's explore together!</li>
+            <li>The GRE requirement is waived for 2025 admissions.</li>
+        </ul>
+    </div>
+
+    <div class="mb-4">
+        <h5>Undergraduate Research Opportunities</h5>
+        <p>Enthusiastic undergraduate students are encouraged to engage in our research through the <a href="https://cre.fsu.edu/node/1116/webform/submission/14231">UROP</a> program.</p>
+    </div>
+    
+</div>
+
+
+
+<div class="container">
+    <h3 id="News" class="my-4">News</h3>
+    <div class="news-list">
+        [Aug 2024] Kicked off my journey as a professor at FSU. Go Noles!<br>
         <div class="hidden-content">
+        [Mar 2024] I'm thrilled to announce my latest adventure. This August, I'll be joining the Computer Science Department at Florida State University as an Assistant Professor.<br>
         [Aug 2023] As a co-chair, I organized the first SPARKS event for AI-EDGE, connecting 70+ Ph.D. students and postdocs across 8 universities. Amazed by their brilliance!<br>
         [Aug 2023] Our work 'LightThief' got accepted by USENIX Security'23. Who knew my optical engineering skills from 7 years ago would come back into play? <br>
         [Jul 2023] My two undergraduate students successfully presented their research in the REU program. Over the past two months, they've been diligently learning about wireless networking, reinforcement learning, and deep learning. Wishing them a bright future ahead!<br>
@@ -122,166 +116,24 @@
         <button id="read-more-btn">Read More</button>
         <br>
     </div>
-</div> 
+</div>
 
 
 <div class="container">
-    <h3 id="Publications" style="padding-top: 80px; margin-top: -80px;">Selected Publications 
-        <!-- <a target="_blank" href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=en">(Full List)</a> -->
-    </h3>
-
-
-    <!-- SEC -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/LightThief.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_LightThief.pdf">
-                </font><b>LightThief : Your Optical Communication Information is Stolen behind the Wall</b><br>
-            </a>
-            Xin Liu <font color="#C0C0C0">, Wei Wang, Guanqun Song, Ting Zhu</font><br>
-            <i>USENIX Security'23 <!--(15.9% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://github.com/EMDCYY/LightThief"> [Code]</a>
-            <a target="_blank" href="https://github.com/EMDCYY/LightThief"> [Circuit]</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=d0JTDeCj-us"> [Talk]</a>   -->   
-            <!-- <a target="_blank" href="https://www.usenix.org/system/files/nsdi21-liu-xin.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://www.usenix.org/system/files/nsdi21_slides_liu-xin.pdf"> <small>[Slides]</small></a>
-            <a target="_blank" href="https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/nsdi21/videos/_wednesday/3_wireless/4_nsdi21_video_liu.mp4"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-    <!-- TScatter -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/TScatter.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_TScatter.pdf">
-                </font><b>Verification and Redesign of OFDM Backscatter</b><br>
-            </a>
-            Xin Liu <font color="#C0C0C0">, Zicheng Chi, Wei Wang, Yao Yao, Pei Hao, Ting Zhu</font><br>
-            <i>USENIX NSDI'21 <!--(15.9% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://github.com/EMDCYY/TScatter"> [Code]</a>
-            <a target="_blank" href="https://github.com/pengyuzhang/HitchHike"> [Circuit]</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=He8KyfwjxqYr"> [Talk]</a> -->
-<!--             <a target="_blank" href="https://www.usenix.org/system/files/nsdi21-liu-xin.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://www.usenix.org/system/files/nsdi21_slides_liu-xin.pdf"> <small>[Slides]</small></a>
-            <a target="_blank" href="https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/nsdi21/videos/_wednesday/3_wireless/4_nsdi21_video_liu.mp4"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-    <!-- VMscatter -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/VMscatter.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_VMscatter.pdf">
-                </font><b>VMscatter: A Versatile MIMO Backscatter</b><br>
-            </a>
-            Xin Liu<font color="#C0C0C0">, Zicheng Chi, Wei Wang, Yao Yao, Ting Zhu</font><br>
-            <i>USENIX NSDI'20 <!--(18.3% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://github.com/EMDCYY/VMscatter"> [Code]</a>
-            <a target="_blank" href="https://github.com/EMDCYY/VMscatter"> [Circuit]</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=VmTwuIvwjZ8"> [Talk]</a> -->
-<!--             <a target="_blank" href="https://www.usenix.org/system/files/nsdi20-paper-liu.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://www.usenix.org/sites/default/files/conference/protected-files/nsdi20_slides_liu.pdf"> <small>[Slides]</small></a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=VmTwuIvwjZ8&t=41s"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-    <!-- LScatter -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/LScatter.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_LScatter.pdf">
-                </font><b>Leveraging Ambient LTE Traffic for Ubiquitous Passive Communication</b><br>
-            </a>
-            <font color="#C0C0C0">Zicheng Chi,</font> Xin Liu (co-primary)<font color="#C0C0C0">, Wei Wang, Yao Yao, Ting Zhu</font><br>
-            <i>ACM SIGCOMM'20 <!--(21.6% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="./publication/LScatter.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="./publication/LScatterSlide.pdf"> <small>[Slides]</small></a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=_SWOPAcvafA"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-    <!-- CCS -->
-    <div class="row" style="padding-left: 20px;"> 
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/ICSL.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_ICSL.pdf">
-                </font><b> I Can See the Light: Attacks on Autonomous Vehicles Using Invisible Lights</b><br>
-            </a>
-            <font color="#C0C0C0">Wei Wang, Yao Yao, </font> Xin Liu<font color="#C0C0C0">, Xiang Li, Hao Pei, Ting Zhu</font><br>
-            <i>ACM CCS'21 <!--(15.9% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://dl.acm.org/doi/pdf/10.1145/3460120.3484766"> <small>[Paper]</small></a>
-            <a target="_blank" href=""> <small>[Slides]</small></a>
-            <a target="_blank" href=""> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-
-
-
-    <!-- PIC -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/PIC.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_PIC.pdf">
-                </font><b>Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge</b><br>
-            </a>
-            <font color="#C0C0C0">Zicheng Chi, Yan Li,</font> Xin Liu<font color="#C0C0C0">, Yao Yao, Yanchao Zhang, Ting Zhu</font><br>
-            <i>ACM SenSys'19 (<font color=#297AB5>Best Paper Award Candidate</font><!--, 19.4% acceptance rate-->)</i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://dl.acm.org/doi/pdf/10.1145/3356250.3360046"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=9t7QBbaVl08"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-    <!-- Chiron -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/Chiron.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_Chiron.pdf">
-                </font><b>Chiron: Concurrent High Throughput Communication for IoT Devices</b><br>
-            </a>
-            <font color="#C0C0C0">Yan Li, Zicheng Chi,</font> Xin Liu<font color="#C0C0C0">, Ting Zhu</font><br>
-            <i>ACM MobiSys'18 <!--(26.8% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="./publication/Chiron.pdf"> <small>[Paper]</small></a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=BLw7NDg_0Oo"> <small>[Presentation]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-    <!-- PassiveZigbee -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/PassiveZigbee.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_PassiveZigBee.pdf">
-                </font><b>Passive-ZigBee: Enabling ZigBee Communication in IoT Networks with 1000X+ Less Power Consumption</b><br>
-            </a>
-            <font color="#C0C0C0">Yan Li, Zicheng Chi,</font> Xin Liu<font color="#C0C0C0">, Ting Zhu</font><br>
-            <i>ACM SenSys'18 (<font color=#297AB5>Best Paper Runner-up Award</font><!--, 15.6% acceptance rate-->)</i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://dl.acm.org/doi/pdf/10.1145/3274783.3274846"> <small>[Paper]</small></a>
-            <a target="_blank" href="./publication/Slides_PassiveZigBee.pdf"> <small>[Slides]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
-
-
-    <!-- EAR -->
-    <div class="row" style="padding-left: 20px;">
-        <div class="col-md-3"> <img class="img-responsive img-rounded" src="./figure/EAR.png" alt=""> </div>
-        <div class="col-md-9"> 
-            <a target="_blank" href="./publication/Paper_EAR.pdf">
-                </font><b>EAR: Exploit Uncontrollable Ambient RF Signals in Heterogeneous Networks for Gesture Recognition</b><br>
-            </a>
-            <font color="#C0C0C0">Zicheng Chi, Yao Yao, Tiantian Xie,</font> Xin Liu<font color="#C0C0C0">, Zhichuan Huang, Wei Wang, Ting Zhu</font><br>
-            <i>ACM SenSys'18 <!--(15.6% acceptance rate)--></i>&nbsp;&nbsp;
-<!--             <a target="_blank" href="https://par.nsf.gov/servlets/purl/10111302"> <small>[Paper]</small></a>
-            <a target="_blank" href="./publication/Slides_EAR.pdf"> <small>[Slides]</small></a> -->
-        </div>
-    </div><hr class="hrThick">
+    <h3 id="Publications" class="my-4">Publications (Selected)</h3>
+    <div class="row">
+        <!-- Add publication sections here using similar card style -->
+    </div>
 </div>
 
-      <script>
+<div class="container">
+    <h3 id="AboutMe" class="my-4">About Me</h3>
+    <p>Before joining FSU, I was a Postdoctoral Scholar at the <a href="https://aiedge.osu.edu/">AI-EDGE Institute</a> at <a href="https://www.osu.edu/">The Ohio State University (OSU)</a>, where I had the privilege of working under the joint guidance of Prof. Ness Shroff, Prof. Eylem Ekici, and Prof. Kannan Srinivasan. I completed my Ph.D. at the <a href="https://www.umbc.edu/">University of Maryland, Baltimore County (UMBC)</a>, where I was mentored by Prof. Ting Zhu (now at OSU).</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<script>
             // Toggle the hidden content
             document.getElementById('read-more-btn').addEventListener('click', function() {
                 const hiddenContent = document.querySelector('.hidden-content');
@@ -293,59 +145,9 @@
                     this.innerHTML = 'Read More';
                 }
             });
-        </script>
-        <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
-        <script src="dist/js/jquery.share.min.js"></script>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/myScript.js"></script>
-        <script src="js/load.js"> </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <script>
-            function changeImage(imgElement, setId) {
-                    var imageSet = document.getElementById(setId);
-                    var mainImage = imageSet.querySelector('.main-image');
-                    mainImage.src = imgElement.src;
-                    mainImage.alt = imgElement.alt; // Also update the alt attribute
-            }
 
-            function enlargeImage(setId) {
-                var imageSet = document.getElementById(setId);
-                var mainImage = imageSet.querySelector('.main-image');
-                var modalImage = document.getElementById('modal-image');
-                var modalTitle = document.getElementById('modal-title');
 
-                modalImage.src = mainImage.src;
-                modalTitle.textContent = mainImage.alt;
+</script>
 
-                var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-                imageModal.show();
-            }
-
-        </script>
-        <script type="text/javascript">
-                window.onload = function() {
-                    adjustThumbnailHeights();
-                };
-
-                function adjustThumbnailHeights() {
-                    // Find all image sets
-                    var imageSets = document.getElementsByClassName('image-set');
-
-                    // Iterate over each image set
-                    Array.from(imageSets).forEach(function(imageSet) {
-                        // Get the main image and thumbnails within this set
-                        var mainImage = imageSet.getElementsByClassName('main-image')[0];
-                        var thumbImages = imageSet.getElementsByClassName('thumb-img');
-                        var mainImageHeight = mainImage.clientHeight;
-
-                        // Calculate and set the height of thumbnails within this set
-                        Array.from(thumbImages).forEach(function(thumbImage) {
-                            thumbImage.style.height = mainImageHeight / thumbImages.length + 'px';
-                        });
-                    });
-                };
-        </script>
-
-    </body>
+</body>
 </html>
