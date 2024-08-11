@@ -16,6 +16,41 @@
         .my-4 {margin-top: 1.5rem; margin-bottom: 1.5rem;}
         h3 {scroll-margin-top: 80px;}
         .container {max-width: 960px;}
+        .hiring-sign {
+            position: relative;
+            background-color: red;
+            color: white;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.5rem; 
+            padding: 10px; 
+            text-align: center;
+            border: 3px solid black; 
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 250px; 
+            margin: 20px 0 40px 0; 
+            left: 0; 
+            transform: translateY(20px); 
+        }
+
+        .rope-left, .rope-right {
+            position: absolute;
+            top: -30px; 
+            width: 2px;
+            height: 30px; 
+            background-color: black;
+        }
+
+        .rope-left {
+            left: 25%;
+            transform: rotate(-20deg);
+        }
+
+        .rope-right {
+            right: 25%;
+            transform: rotate(20deg);
+        }
     </style>
 </head>
 <body>
@@ -70,14 +105,19 @@
 
 
 <div class="container">
-    <h3 id="Openings" class="my-4" style="font-weight: bold;">*** Openings ***</h3>
+    <div class="hiring-sign">
+        WE ARE HIRING!
+        <div class="rope-left"></div>
+        <div class="rope-right"></div>
+    </div>
+    <!-- <h3 id="Openings" class="my-4" style="font-weight: bold;">*** Openings ***</h3> -->
 
     <div class="mb-4">
         <h5>Ph.D. Student Positions</h5>
         <ul>
             <li>Multiple Ph.D. student positions starting in Spring/Fall 2025.</li>
             <li>If you're passionate about <strong>5G/6G</strong>, <strong>LLMs</strong>, <strong>Starlink networking</strong>, <strong>autonomous driving</strong>, <strong>multi-modal fusion</strong>, or <strong>cybersecurity</strong>, let's explore together!</li>
-            <li>If interested, please send your CV, TOEFL scores, and any supporting documents to my email. For more details, visit <a href="https://www.cs.fsu.edu/admissions/graduate-admissions/">Graduate Admissions</a>.</li>
+            <li>Please send your CV, TOEFL scores, and any supporting documents to my email. For more details, visit <a href="https://www.cs.fsu.edu/admissions/graduate-admissions/">Graduate Admissions</a>.</li>
             <li>The GRE requirement is waived for 2025 admissions.</li>
         </ul>
     </div>
