@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74MLRBYPN3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-74MLRBYPN3');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xin Liu</title>
@@ -364,50 +374,5 @@
         <script src="js/load.js"> </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <script>
-            function changeImage(imgElement, setId) {
-                    var imageSet = document.getElementById(setId);
-                    var mainImage = imageSet.querySelector('.main-image');
-                    mainImage.src = imgElement.src;
-                    mainImage.alt = imgElement.alt; // Also update the alt attribute
-            }
-
-            function enlargeImage(setId) {
-                var imageSet = document.getElementById(setId);
-                var mainImage = imageSet.querySelector('.main-image');
-                var modalImage = document.getElementById('modal-image');
-                var modalTitle = document.getElementById('modal-title');
-
-                modalImage.src = mainImage.src;
-                modalTitle.textContent = mainImage.alt;
-
-                var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-                imageModal.show();
-            }
-
-        </script>
-        <script type="text/javascript">
-                window.onload = function() {
-                    adjustThumbnailHeights();
-                };
-
-                function adjustThumbnailHeights() {
-                    // Find all image sets
-                    var imageSets = document.getElementsByClassName('image-set');
-
-                    // Iterate over each image set
-                    Array.from(imageSets).forEach(function(imageSet) {
-                        // Get the main image and thumbnails within this set
-                        var mainImage = imageSet.getElementsByClassName('main-image')[0];
-                        var thumbImages = imageSet.getElementsByClassName('thumb-img');
-                        var mainImageHeight = mainImage.clientHeight;
-
-                        // Calculate and set the height of thumbnails within this set
-                        Array.from(thumbImages).forEach(function(thumbImage) {
-                            thumbImage.style.height = mainImageHeight / thumbImages.length + 'px';
-                        });
-                    });
-                };
-        </script>
 </body>
 </html>
