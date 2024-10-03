@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.cs.fsu.edu/~cop4610/cop4610-f24-p1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project 1: Shell Programming</title>
+	<style type="text/css">
+		.style1 {list-style-type: none;}
+		.style2 {list-style-type: circle;}
+		.style3 {font-family: 'Courier New', Courier, monospace;}
+		.style4 {font-size: 1.5rem;}
+    .word-break {word-break: break-all;}
+	</style>
+</head>
+<body><p>
+	</p><h1>Project 1: Shell</h1>
+	<h2>COP4610: Operating Systems</h2>
+	<p class="style4">Due: Thursday, October 3rd, 2024, at 11:59pm</p>
+	<hr>
+	<h2>Project Objectives</h2>
+	<ol>
+		<li>Design and develop a shell interface that supports input/output redirection, piping, background processing, and a set of built-in functions. </li>
+		<li>Gain in-depth knowledge of process control mechanics, including parent-child relationships, process creation, and user-input parsing and verification.</li>
+		<li>Enhance understanding of command-line parsing techniques and strategies.</li>
+		<li>Design and implement error handling mechanisms to gracefully handle various types of errors that may occur during shell execution.</li>
+	</ol>
+
+	<h2>Project Description</h2>
+	<p>
+		The purpose of this project is to design and develop a comprehensive shell interface that enhances process control, user interaction, and error handling mechanisms. By constructing this shell, you will gain valuable insights into the intricacies of operating system processes, command-line parsing, and the robustness required for error-free execution.
+	</p>
+	<p>
+		The project encompasses several key objectives. Firstly, you will delve into process control mechanics, acquiring in-depth knowledge of parent-child relationships, process creation, and the crucial aspects of user-input parsing and verification. Understanding these mechanics is essential for building an effective shell that can manage and execute user commands.
+	</p>
+	<p>
+		Next, you will delve into the execution of external commands by implementing path search and expanding tildes and environment variables. Path search involves searching for the executable file of a command by scanning through directories specified in the <span class="style3">$PATH</span> environment variable. This functionality ensures that the shell can locate and execute commands regardless of the current working directory. Additionally, the expansion of tildes and environment variables enables the shell to interpret and replace tilde (~) symbols and environment variable references (such as $HOME) with their corresponding absolute paths or values.
+	</p>
+	<p>
+		Lastly, the project focuses on the design and implementation of the shell interface itself. The shell should support essential features such as input/output redirection, allowing users to redirect standard input and output streams to files. Piping functionality should also be included, enabling the seamless flow of data between processes. Additionally, background processing support will allow users to execute commands concurrently.
+	</p>
+	<p>
+		By successfully completing this project, you will not only gain practical experience in process control, command-line parsing, and error handling, but also have the opportunity to build a robust and user-friendly shell interface that empowers users to efficiently interact with the operating system.
+	</p>
+
+	<h2>Division of Labor</h2>
+	<p>Submit your division of labor document on Canvas by 9/11/24.</p>
+  <h2>Part 0: Tokenization</h2>
+  <p>You do not have to worry about implementing a lexer to parse inputs into tokens.
+  You can use the files provided on Canvas as a starting point.</p>
+  <p>The zip is called shell.zip and is under the Project 1 Modules</p>
+  <p>Note: you do not have to use the provided files. You can implement your own lexer if you'd like.</p>
+	<p>If you are programming in Rust, you will have to start from scratch.</p>
+	<h2>Part 1: Prompt</h2>
+	<p>The user will be greeted with a prompt that should indicate the absolute working directory, the user name, and the
+    machine name. You can do this by expanding the $USER, $MACHINE, $PWD environment variables. The user will type on the same line as the prompt.</p>
+	<blockquote class="style3">USER@MACHINE:PWD&gt;</blockquote>
+	<p>
+		Here is an example:
+	</p>
+	<blockquote class="style3 word-break">mnguyen@linprog2.cs.fsu.edu:/home/grads/mnguyen&gt;</blockquote>
+
+  <h2>Part 2: Environment Variables</h2>
+  <p>In the context of program execution within its own environment, you will undertake the task of replacing tokens prefixed with the dollar sign character ($) with their corresponding values. Within the bash shell, you can utilize the 'env' command to display a comprehensive list of your environmental variables. Your objective is to implement a mechanism that automatically expands tokens starting with the dollar sign into their respective values.</p>
+  <p>For instance, given the command ["echo", "$USER"], the token "$USER" should be expanded to its corresponding value, resulting in the output ["echo", "mnguyen"]. This expansion applies universally to any command, ensuring consistent token replacement throughout the shell. To accomplish this, you can utilize the getenv() function, the usage details of which can be found in its man page.</p>
+  <p>It's important to note that this token expansion occurs regardless of the command being executed, providing a seamless integration of environment variable values within commands and generating the expected output.</p>
+
+  <h2>Part 3: Tilde Expansion</h2>
+  <p>In Bash, tilde (~) may appear at the beginning of a path, and it expands to the environment variable $HOME. For example, tokens [“ls”, “~/dir1”] should expand to [“ls”, “/home/grads/mnguyen/dir1”]. An output example of tilde expansion is:</p>
+  <blockquote class="style3 word-break">~ → /home/grads/mnguyen</blockquote>
+  <p>You will only have to handle the tilde expansion of a token if "~" a standalone or if it begins with "~/".</p>
+
+  <h2>Part 4: $PATH Search</h2>
+  <p>
+    In Bash, when a command like "ls" is entered, the shell is able to execute the corresponding program/executable located at "<u>/usr/bin/ls</u>" through a process called path search. This path search is not magical, but rather a straightforward search conducted within a predefined list of directories. The list of directories is specified in the environment variable $PATH.
+	</p>
+  <p>
+    For commands that do not include a slash (/) and are not built-in functions (covered in part 9), it becomes necessary to search each directory specified in <span class="style3">$PATH</span>. It's important to note that <span class="style3">$PATH</span> is a string containing multiple directories delimited by a colon. To perform the search, you will need to employ string operations to extract and examine each directory in the <span class="style3">$PATH</span> variable.
+  </p>
+	<p>
+		If you type in the command <span class="style3">echo $PATH</span> in your terminal you should get something like this:
+	</p>
+	<blockquote class="style3 word-break">/home/grads/mnguyen/.bin:/home/grads/mnguyen/.scripts:/usr/local/bin:/opt/sfw/bin:/usr/sfw/bin:/bin:/usr/bin:/usr/ccs/bin:/usr/ucb:.</blockquote>
+	<p>
+    In the event that the command is not found in any of the directories listed in $PATH, an error message should be displayed. In Bash, this typically results in the familiar "command not found" error message. Handling this scenario involves proper error detection and reporting, ensuring a clear indication when a command is not available within the directories specified in $PATH.
+  </p>
+
+  <h2>Part 5: External Command Execution</h2>
+  <p>
+    Once you have obtained the path to the program you intend to execute, either because the command included a slash or through the <span class="style3">$PATH</span> search, the next step is to execute the external command. However, executing an external command requires more than just a single line of code using the <span class="style3">execv()</span> function.
+  </p>
+  <p>
+    To accomplish this, a two-step process is involved. First, you need to <span class="style3">fork()</span> to create a child process. The child process will be responsible for executing the desired command using the <span class="style3">execv()</span> function. This separation between the parent and child processes ensures that the execution of the command does not interfere with the operation of the shell itself.
+  </p>
+  <p>
+    It's important to note that you must handle commands with arguments correctly. This means that commands such as "ls -al" with multiple arguments should be properly processed and executed in the child process.
+  </p>
+  <p>
+    By following this approach of forking and executing the command within the child process, you can ensure the proper execution of external commands, including those with arguments, within your shell. This separation of processes allows for efficient and accurate command execution while maintaining the stability and functionality of the shell as a whole.
+  </p>
+
+  <h2>Part 6: I/O Redirection</h2>
+	<p>
+    In this section, we will focus on implementing input/output (I/O) redirection from/to a file. By default, the shell receives input from the keyboard and outputs to the screen. However, with I/O redirection, we can replace the keyboard with input from a specified file and redirect output to a designated file.
+  </p>
+    <p>The behavior of I/O redirection should adhere to the following guidelines:</p>
+    <ul>
+      <li>
+        <strong>cmd &gt; file_out</strong><br>
+        cmd writes its standard output to the file_out.<br>
+        If file does not exist, it will be created.<br>
+        If file already exists, it will be overwritten.
+      </li>
+      <li>
+        <strong>cmd &lt; file_in</strong><br>
+        cmd receives its standard input from file_in.<br>
+        An error will be signaled if file does not exist or is not a regular file.
+      </li>
+      <li>
+        <strong>cmd &lt; file_in &gt; file_out</strong><br>
+        cmd receives standard input from file_in<br>
+        cmd writes its standard output to file_out<br>
+      </li>
+      <li>
+        <strong>cmd &gt; file_out &lt; file_in</strong><br>
+        Same as above.
+      </li>
+    </ul>
+    <p>
+      These combinations follow the aforementioned rules for input and output redirection.
+      By implementing I/O redirection, we empower the shell to efficiently manage input and output streams, allowing users to redirect command output to files and read command input from files. This functionality greatly enhances the versatility and flexibility of the shell when interacting with external commands.
+    </p>
+    <p>
+      In the process of implementing I/O redirection, you will need to check/assign appropriate file permissions to the files you create/read when redirecting inputs and outputs. You can consult UNIX file permissions and open file permissions here: <a href="https://www.gnu.org/software/libc/manual/html_node/Permission-Bits.html">Permission Bits</a> and <a href="https://pubs.opengroup.org/onlinepubs/7908799/xsh/open.html">Open Flags</a>
+    </p>
+    <p>Likewise, you should follow these standard guidelines when implementing I/O redirection.</p>
+    <ul>
+      <li>Your processes should not modify the contents of the input file whatsoever (assign the correct permissions when reading in).</li>
+      <li>Output redirection should create a new file with the following file permissions: <span class="style3">-rw-------</span>.</li>
+      <li>Output redirection should overwrite (not append) files with the same name and with the same permissions listed above.</li>
+    </ul>
+    <p><i>Note: Careful consideration should be given to the parsing of tokens, particularly in scenarios like CMD &gt; FILE_OUT &lt; FILE_IN. In this case, it is important to prioritize the order of operations. The input file (FILE_IN) should be read first and then passed as input to the command (CMD), which will execute using that input. The resulting output will be redirected to the output file (FILE_OUT). Paying attention to the correct sequencing and handling of tokens ensures that the desired input and output redirection behavior is achieved in complex scenarios like this.</i></p>
+
+  <h2>Part 7: Piping</h2>
+  <p>
+    Beyond simple I/O redirection, we will explore the concept of piping, a more sophisticated form of I/O manipulation. Contrary to regular I/O redirection, piping involves the simultaneous execution of multiple commands, with the input and output of these commands interconnected. This setup allows the output generated by the initial command to be seamlessly passed as input to the subsequent command.
+  </p>
+  <p>
+    In this project, we will handle a maximum of two pipes in any given command. Piping behavior should follow the following guidelines:
+  </p>
+  <ul>
+    <li><strong>cmd1 | cmd2</strong><br>
+        cmd1 redirects its standard output to the standard input of cmd2.
+    </li>
+    <li>
+      <strong>cmd1 | cmd2 | cmd3</strong><br>
+        cmd1 redirects its standard output to the standard input of cmd2.<br>
+        cmd2 redirects its standard output to the standard input of cmd3.
+    </li>
+  </ul>
+  <p>
+    By implementing piping functionality, we enable the seamless flow of data between commands, enhancing the flexibility and power of the shell. Piping allows for the creation of command pipelines, where the output of one command becomes the input for the next. This feature promotes the construction of complex and efficient command sequences, enabling sophisticated data processing and manipulation within the shell environment.
+  </p>
+  <p>Remember that each command is an independent process that runs concurrently, so you must fork a new process for each command with the correct redirections. You can assume that each of the piped commands in the test cases will be logical (each command will take an input and provide an output).</p>
+
+  <h2>Part 8: Background Processing</h2>
+  <p>
+    The final functionality we will incorporate is background processing. Thus far, the shell has been waiting to prompt for additional user input whenever there were external commands running. Background processing allows the shell to execute external commands without waiting for their completion. However, it is still essential for the shell to keep track of their completion status periodically.
+  </p>
+  <p>
+    It's worth noting that background processing should seamlessly integrate with I/O redirection and piping functionalities. This means that background processing can be used in conjunction with I/O redirection or within command pipelines.
+  </p>
+  <p>
+    Background processing behavior should adhere to the following guidelines:
+  </p>
+  <ul>
+    <li>
+      <strong>cmd &amp;</strong><br>
+      Execute cmd in the background.<br>
+      Upon execution start, print [Job number] [cmd's PID].<br>
+      Upon completion, print [Job number]  + done [cmd's command line].
+    </li>
+    <li>
+      <strong>cmd1 | cmd2 &amp;</strong><br>
+      Execute cmd1 | cmd2 in the background.<br>
+      Upon execution start, print [Job number] [cmd2's PID].<br>
+      Upon completion, print [Job number]  + done [cmd1 | cmd2's command line].
+    </li>
+  </ul>
+  <p>Background processing also supports redirection functionalities:</p>
+  <ul>
+    <li>
+      <strong>cmd &gt; file &amp;</strong><br>
+      cmd writes its standard output to file in the background.
+    </li>
+    <li>
+      <strong>cmd &lt; file &amp;</strong><br>
+      cmd receives its standard input from file in the background.
+    </li>
+    <li>
+      <strong>cmd &lt; file_in &gt; file_out &amp;</strong><br>
+      cmd receives its standard input from file_in and writes its standard output to file_out in the background.
+    </li>
+  </ul>
+	<p>Additionally, all background processes executed by the shell must be kept track of with a relative job number starting from 1 and incrementing so forth. Job numbers will not be reused. You can also assume that there will not be more than 10 background processes running concurrently.</p>
+  <p>
+    By implementing background processing, the shell gains the capability to execute commands concurrently, improving overall efficiency. Background processing, in combination with I/O redirection and piping, enables the execution of complex command sequences while providing informative feedback about job status to the user.
+  </p>
+  <p>The standard way to check for finished processes would be to use signals. In this instance, you do not to need to implement process checking via signals. You can just check the list of finished processes in the main loop after execution.</p>
+
+  <h2>Part 9: Internal Command Execution</h2>
+  <p>Having completed external command execution, the next aspect to address is the implementation of internal commands, often referred to as built-in functions. These functions are natively supported by the shell and will be integrated into your implementation.</p>
+  <ul>
+    <li><strong>exit</strong><br>
+      If any background processes are still running, you must wait for them to finish.<br>
+			You can assume that each command is less than 200 characters long.<br>
+      Display the last three valid commands.<br>
+      If there were less than three valid commands, print the last valid one.<br>
+			If there are no valid commands, say so.<br>
+    </li>
+    <li><strong>cd PATH</strong><br>
+      Changes the current working directory.<br>
+      If no arguments are supplied, change the current working directory to $HOME.<br>
+      Signal an error if more than one argument is present.<br>
+      Signal an error if the target is not a directory.<br>
+      Signal an error if the target does not exist.
+    </li>
+    <li><strong>jobs</strong><br>
+      Outputs a list of active background processes.<br>
+			If there are no active background processes, say so.<br>
+			Format:<br>
+      [Job number]+ [CMD's PID] [CMD's command line]
+    </li>
+  </ul>
+
+
+  <h2>Extra Credit</h2>
+  <p>For those seeking additional challenges and opportunities to earn extra credit, the following options are available:</p>
+  <ul>
+    <li><strong>Support unlimited number of pipes [2]</strong><br>
+      Expand the functionality of your shell to support an unlimited number of pipes in a single command. This allows for more complex command pipelines and advanced data processing.</li>
+    <li><strong>Support piping and I/O redirection in a single command [2]</strong><br>
+      Enhance your shell to handle both piping and I/O redirection simultaneously within a single command. This provides increased flexibility and allows for more advanced command compositions.</li>
+    <li><strong>Shell-ception: Execute your shell from within a running shell process repeatedly [1]</strong><br>
+      Implement the ability to execute your shell from within an already running shell process. This recursive execution allows for nested instances of your shell and demonstrates advanced control flow within the shell environment.</li>
+  </ul>
+  <p>*Extra credit activities must be documented in the README to receive credit*</p>
+
+  <h2>Assumptions</h2>
+  <p>Error messages do not need to match the exact wording of Bash, but should indicate the general cause of the error</p>
+  <p>No more than two pipes (|) will appear in a single command</p>
+  <p>You do not need to handle globs, regular expressions, special characters (other than the ones specified), quotes, escaped characters, etc.</p>
+  <p>There will be no more than 10 background processes at the same time</p>
+  <p>Piping and I/O redirection will not occur together in a single command</p>
+  <p>Multiple redirections of the same type will not appear in a single command</p>
+  <p>You do not need to implement auto-complete</p>
+  <p>You only need to expand environment variables given as whole arguments</p>
+  <p>The above decomposition of the project tasks is only a suggestion, you can implement the requirements in any order</p>
+
+  <h2>Restrictions</h2>
+  <p>You are only allowed to use C or Rust (no C++).</p>
+  <p>You can only use fork() and execv() to spawn new processes.</p>
+	<p>You can not use system(), or any other exec family of system calls (execl, execlp, execle, execvp, execvpe, etc).</p>
+  <p>If you decide to use Rust, you can access the system calls, fork() and execv(), by using the “nix” or “libc” crate. <i>Note: you should not use std::process.</i> (you must be able to demonstrate that they provide access to these system calls in a functionally
+equivalent way; no extra features that make executing commands any easier).</p>
+  <p>You are not allowed to use any external libraries, except for Rust, where you can use nix, libc, signal_hook, and regex.</p>
+  <p>You may not use execv() in any of the built-ins (must be implemented from scratch)</p>
+
+	<h2><b>Rubric</b></h2>
+	<p>A program with compilation errors will get 0 points (we must be
+	able to compile and run your program on <b>linprog</b>)!</p>
+  <p>Please refer to the standard project guidelines: <a href="https://www.cs.fsu.edu/~cop4610/project-syllabus-f24.html">Project Syllabus</a></p>
+  <p>Total points: 105</p>
+  <ul>
+    <li>Implementation (70 + 5)</li>
+    <li>Documentation (30)</li>
+  </ul>
+  <h3>Implementation</h3>
+	<ol>
+		<li>prompt (2)</li>
+		<li>environment variables (3) </li>
+		<li>tilde expansion (5)</li>
+		<li>$PATH search (5)</li>
+		<li>external command execution (15)</li>
+		<li>I/O redirection (10)</li>
+		<li>piping (10)</li>
+		<li>background processing (10)</li>
+    <li>internal command execution (10)
+      <ul>
+        <li>exit [2]</li>
+        <li>cd [5]</li>
+        <li>jobs [3]</li>
+      </ul>
+    </li>
+    <li>extra credit (5)
+      <ul>
+        <li>unlimited piping [2]</li>
+        <li>piping &amp; i/o redirection [2]</li>
+        <li>shell-ception [1]</li>
+      </ul>
+	</li></ol>
+  <h3>Documentation</h3>
+  <ul>
+    <li>division of labor (before) (5)</li>
+    <li>readme.md (10)
+      <ul>
+        <li>division of labor (after) [5]</li>
+				<li>file listing [3]</li>
+        <li>description of how to compile and run program [2]</li>
+      </ul>
+    </li>
+    <li>project structure (5)
+      <ul>
+        <li>source files are properly split into modular components according to functionality [2]</li>
+        <li>files are appropriately placed in the correct directory following guidelines [2]</li>
+        <li>executables produced in bin/ directory [1]</li>
+      </ul>
+    </li>
+    <li>format &amp; organization (10)
+      <ul>
+        <li>include all relevant files [2]</li>
+        <li>doesn't include binaries or executables [2]</li>
+        <li>readability (indentation, white space, max column-width &lt; 100 chars) [2]</li>
+        <li>submission does not contain unnecessary print statements [2]</li>
+        <li>variable/functions names indicate purpose with appropriate comments [2]</li>
+      </ul>
+    </li>
+  </ul>
+
+	<h2>Helpful Resources</h2>
+  <h3>Linux</h3>
+  <ul>
+    <li><a href="https://ubuntu.com/download/desktop">Ubuntu download</a></li>
+				<li><a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a></li>
+  </ul>
+  <h3>Git</h3>
+  <ul>
+    <li><a href="https://git-scm.com/docs/gittutorial">Basic Git</a></li>
+    <li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Setting up an SSH key on GitHub</a></li>
+  </ul>
+  <h3>C</h3>
+  <ul>
+    <li><a href="https://man7.org/linux/man-pages/index.html">C documentation</a></li>
+    <li><a href="https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">Makefile tutorial</a></li>
+    <li><a href="https://cs.baylor.edu/~donahoo/tools/gdb/tutorial.html">Debugging with gdb</a></li>
+    <li><a href="http://cs.ecs.baylor.edu/~donahoo/tools/valgrind/">Debugging with valgrind</a></li>
+  </ul>
+  <h3>Rust</h3>
+  <ul>
+    <li><a href="https://www.rust-lang.org/tools/install">Rust installation </a>(for local machines; already installed on linprog).</li>
+    <li><a href="https://doc.rust-lang.org/book/">Rust introduction</a></li>
+    <li><a href="https://doc.rust-lang.org/std/index.html">Rust documentation</a></li>
+    <li><a href="https://docs.rs/nix/latest/nix/">nix crate</a></li>
+    <li><a href="https://docs.rs/libc/0.2.139/libc/index.html">libc crate</a></li>
+  </ul>
+  <h3>Shell</h3>
+  <ul>
+    <li><a href="https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf">Create your own shell</a> (use the command table as reference; using anything else is too complicated).</li>
+  </ul>
+
+	<h2>Deliverables</h2>
+  <p>You should have the following files/directories in your Git repository:</p>
+  <ul>
+    <li>src</li>
+    <li>include</li>
+    <li>Makefile</li>
+    <li>README.md</li>
+  </ul>
+  <p>If you are using Rust, the standard Rust project structure (in rubric) will suffice (you do not need to create a makefile; the cargo build system will suffice).</p>
+  <p>Do not include your final executable(s) in your repository, doing so will result in a deduction!</p>
+  <p>Your makefile produice one executable, named <span class="style3">shell</span>. This executable should be placed in the bin/ directory.</p>
+
+	<h2>Submissions</h2>
+	<p>Program submissions will be done through GitHub Classroom. Ensure that you have the deliverables in your Git repository by/after the due date. The latest commit will be used, so please account for late deductions (you can rollback to earlier work if you do not want to take any late deductions).</p>
+  <p>Additionally, make sure your project will compile in the linprog environment.</p>
+<p></p>
+
+</body></html>
