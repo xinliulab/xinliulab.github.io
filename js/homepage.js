@@ -55,7 +55,7 @@ const teachingItems = [
     ]
   },
   {
-    name: "CIS 4(5)930: Future Edge Networks and Distributed Intelligence",
+    name: "CIS 4930/5930: Future Edge Networks and Distributed Intelligence",
     href: "https://xinliulab.github.io/FSU-CIS4930-CIS5930-Future-Edge-Networks/",
     evaluations: [
       { label: "S26", href: "" }
@@ -128,6 +128,20 @@ const publications = [
     ]
   },
   {
+    title: "Energy-Efficient Paging for Duty-Cycled LTE Backscatter",
+    href: "./publication/Paper_PScatter.pdf",
+    authors: "Yunyun Feng, Xin Liu, Jia Zhao, Yuan Ding, Gongpu Wang, Wei Gong",
+    venue: "IEEE INFOCOM 2025",
+    year: 2025,
+    citations: null,
+    selected: false,
+    image: "./Figure/pscatter.png",
+    area: "Battery-Free IoT"
+    // links: [
+    //   { label: "Code / Dataset", href: "" }
+    // ]
+  },
+  {
     title: "O-JRC: An Open Source Software Platform for mmWave Joint Radar-Communication Development and Experimentation",
     href: "https://doi.org/10.1016/j.comnet.2025.111337",
     authors: "Xin Liu, Haocheng Zhu, Eylem Ekici",
@@ -143,14 +157,14 @@ const publications = [
     ]
   },
   {
-    title: "Key Establishment for Secure Asymmetric Cross-Technology Communication",
-    href: "",
+    title: "Key Establishment for Secure Asymmetric Shared-Spectrum Wireless Network",
+    href: "https://dl.acm.org/doi/10.1145/3634737.3637670",
     authors: "Wei Wang, Xin Liu, Zicheng Chi, Stuart Ray, Ting Zhu",
     venue: "ACM ASIACCS 2024",
     year: 2024,
     citations: null,
-    image: "./Figure/ftp.png",
-    area: ["Cross-Technology Communication", "Security & Privacy"]
+    image: "./Figure/kep.png",
+    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"]
   },
   {
     title: "FTP: Enabling Fast Beam-Training for Optimal mmWave Beamforming",
@@ -162,18 +176,34 @@ const publications = [
     image: "./Figure/ftp.png",
     area: "Millimeter Wave",
     links: [
-      { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP" }
+      { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
     ]
   },
   {
+    title: "Efficient Two-Way Edge Backscatter with Commodity Bluetooth",
+    href: "./publication/Paper_EffBlue.pdf",
+    authors: "Maoran Jiang, Xin Liu, Li Dong, Wei Gong",
+    venue: "IEEE INFOCOM 2024",
+    year: 2024,
+    citations: null,
+    image: "./Figure/effblue.png",
+    area: "Battery-Free IoT"
+    // links: [
+    //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP" }
+    // ]
+  },
+  {
     title: "Fast and Optimal Beam Alignment for Off-the-Shelf mmWave Devices",
-    href: "",
-    authors: "Wei-Han Chen, Xin Liu (co-primary), Kannan Srinivasan, Srinivasan Parthasarathy",
+    href: "./publication/Paper_Swift.pdf",
+    authors: "Wei-Han Chen, Xin Liu, Kannan Srinivasan, Srinivasan Parthasarathy",
     venue: "ACM MobiWac 2023",
     year: 2023,
     citations: null,
-    image: "",
+    image: "./Figure/swift.png",
     area: "Millimeter Wave"
+    // links: [
+    //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
+    // ]
   },
   {
     title: "LightThief: Your Optical Communication Information is Stolen behind the Wall",
@@ -188,13 +218,13 @@ const publications = [
   },
   {
     title: " A Secured Protocol for IoT Devices in Tactical Networks",
-    href: "",
+    href: "./publication/Paper_MILCOM.pdf",
     authors: "wei Wang, Zicheng Chi, Xin Liu, Ananth Vishnu Bhaskar, Ankit Baingane, Ryan Jahnige, Qingquan Zhang, Ting Zhu",
     venue: "IEEE MILCOM 2022",
     year: 2022,
     citations: null,
-    image: "",
-    area: ["Cross-Technology Communication", "Security & Privacy"]
+    image: "./Figure/milcom.png",
+    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"]
   },
   {
     title: "I Can See the Light: Attacks on Autonomous Vehicles Using Invisible Lights",
@@ -208,13 +238,13 @@ const publications = [
   },
   {
     title: "Exploiting Wi-Fi AP for Simultaneous Data Dissemination among Wi-Fi and ZigBee Devices",
-    href: "",
+    href: "./publication/Paper_ETC.pdf",
     authors: "Wei Wang, Xin Liu, Yao Yao, Ting Zhu",
     venue: "IEEE ICNP 2021",
     year: 2021,
     citations: null,
-    image: "",
-    area: ["Cross-Technology Communication"]
+    image: "./Figure/etc.png",
+    area: ["Shared-Spectrum Wireless Network"]
   },
   {
     title: "Verification and Redesign of OFDM Backscatter",
@@ -234,13 +264,13 @@ const publications = [
   },
    {
     title: "Countering Cross-Technology Jamming Attack",
-    href: "",
+    href: "./publication/Paper_WiSec20.pdf",
     authors: "Zicheng Chi, Yan Li, Xin Liu, Wei Wang, Yao Yao, Ting Zhu, Yanchao Zhang",
     venue: "ACM WiSec 2020",
     year: 2020,
     citations: null,
-    image: "",
-    area: ["Cross-Technology Communication", "Security & Privacy"],
+    image: "Figure/WiSec20.png",
+    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"],
   }, 
   {
     title: "VMscatter: A Versatile MIMO Backscatter",
@@ -278,18 +308,18 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/PIC.png",
-    area: "Cross-Technology Communication",
+    area: "Shared-Spectrum Wireless Network",
     award: "Best Paper Award Candidate"
   },
   {
     title: "CRF: Coexistent Routing and Flooding using Wi-Fi Packets in Heterogeneous IoT Networks",
-    href: "",
+    href: "./publication/Paper_CRF.pdf",
     authors: "Wei Wang, Xin Liu, Yao Yao, Yan Pan, Zicheng Chi, Ting Zhu",
     venue: "IEEE INFOCOM 2019",
     year: 2019,
     citations: null,
     image: "./Figure/CRF.png",
-    area: "Cross-Technology Communication",
+    area: "Shared-Spectrum Wireless Network",
   },
   {
     title: "Passive-ZigBee: Enabling ZigBee Communication in IoT Networks with 1000X+ Less Power Consumption",
@@ -300,7 +330,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/PassiveZigbee.png",
-    area: ["Battery-Free IoT", "Cross-Technology Communication"],
+    area: ["Battery-Free IoT", "Shared-Spectrum Wireless Network"],
     award: "Best Paper Runner-up Award"
   },
   {
@@ -321,7 +351,7 @@ const publications = [
     year: 2018,
     citations: null,
     image: "./Figure/Chiron.png",
-    area: "Cross-Technology Communication"
+    area: "Shared-Spectrum Wireless Network"
   },
     {
     title: "Aegis: An Interference-Negligible RF Sensing Shield",
@@ -339,7 +369,7 @@ const orderedAreas = [
   "Integrated Sensing and Communication",
   "Battery-Free IoT",
   "Millimeter Wave",
-  "Cross-Technology Communication",
+  "Shared-Spectrum Wireless Network",
   "Security & Privacy"
 ];
 
