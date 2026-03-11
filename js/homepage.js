@@ -605,26 +605,39 @@ function renderPublicationCard(pub) {
 }
 
 function setupNavHighlight() {
-  const sections = [...document.querySelectorAll("main section")];
+  const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".section-link")];
+  if (!sections.length || !navLinks.length) {
+    return;
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
+  const defaultSectionId = sections.some((section) => section.id === "about")
+    ? "about"
+    : sections[0].id;
 
-        const id = entry.target.getAttribute("id");
-        navLinks.forEach((link) => {
-          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-        });
-      });
-    },
-    { threshold: 0.35 }
-  );
+  const setActiveLink = (sectionId) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
+    });
+  };
 
-  sections.forEach((section) => observer.observe(section));
+  const updateActiveSection = () => {
+    const activationOffset = 180;
+    let activeSectionId = defaultSectionId;
+
+    sections.forEach((section) => {
+      if (window.scrollY + activationOffset >= section.offsetTop) {
+        activeSectionId = section.id;
+      }
+    });
+
+    setActiveLink(activeSectionId);
+  };
+
+  setActiveLink(defaultSectionId);
+  updateActiveSection();
+  window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("resize", updateActiveSection);
 }
 
 function setupAudioButton() {
