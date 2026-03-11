@@ -93,7 +93,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/2FiA.png",
-    area: "Integrated Sensing and Communication",
+    area: ["Integrated Sensing and Communication", "Security & Privacy"],
     links: [
       { label: "Code / Dataset", href: "https://zenodo.org/records/17361618" }
     ],
