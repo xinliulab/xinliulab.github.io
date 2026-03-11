@@ -276,31 +276,11 @@ a {
 .timeline-item {
   border-left: 3px solid #bcc9da;
   padding-left: 12px;
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  gap: 10px;
-  align-items: start;
+  display: block;
 }
 
 .timeline-item strong {
   color: var(--accent-strong);
-}
-
-.news-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 7px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #dbe3ee;
-  color: var(--accent-strong);
-  border: 1px solid #bcc9da;
-}
-
-.news-icon svg {
-  width: 14px;
-  height: 14px;
 }
 
 .pub-controls {

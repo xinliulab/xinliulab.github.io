@@ -415,17 +415,6 @@ function emphasizeMyName(authors) {
     .replace(/\bXing Liu\b/g, '<strong class="author-self">Xing Liu</strong>');
 }
 
-function newsIconSvg(name) {
-  const icons = {
-    award: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='8' r='4'/><path d='m8 14 1.5 6L12 18l2.5 2 1.5-6'/></svg>",
-    cloud: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M7 18h10a4 4 0 0 0 0-8 5 5 0 0 0-9.7-1.4A4 4 0 0 0 7 18z'/></svg>",
-    paper: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M6 2h9l5 5v15H6z'/><path d='M14 2v6h6'/></svg>",
-    grant: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='8'/><path d='M8 12h8M12 8v8'/></svg>",
-    flag: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M5 3v18'/><path d='M5 4h11l-2 4 2 4H5'/></svg>"
-  };
-  return icons[name] || icons.paper;
-}
-
 function renderNews() {
   const container = document.getElementById("news-list");
   container.innerHTML = newsItems
@@ -435,7 +424,6 @@ function renderNews() {
         .join(" | ");
       return `
         <article class="timeline-item">
-          <span class="news-icon" aria-hidden="true">${newsIconSvg(item.icon)}</span>
           <div><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}</div>
         </article>
       `;
