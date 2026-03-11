@@ -223,6 +223,32 @@ a {
   max-width: 64ch;
 }
 
+.hero-actions {
+  margin: 0 0 16px;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.cv-btn:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
