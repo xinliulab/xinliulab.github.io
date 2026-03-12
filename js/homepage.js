@@ -360,7 +360,7 @@ const publications = [
     venue: "IEEE INFOCOM 2018",
     year: 2018,
     citations: null,
-    image: "./Figure/Aegis.png",
+    image: "./Figure/aegis.png",
     area: ["Integrated Sensing and Communication", "Security & Privacy"],
   }
 ];
