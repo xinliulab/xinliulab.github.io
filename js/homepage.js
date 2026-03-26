@@ -114,7 +114,7 @@ const publications = [
     area: "Integrated Sensing and Communication"
   },
   {
-    title: "Ocal:  Zero-Cost Calibration for mmWave Networks",
+    title: "0cal:  Zero-Cost Calibration for mmWave Networks",
     href: "",
     authors: "Xin Liu, Wei-Han Chen, Kannan Srinivasan",
     venue: "ACM SenSys 2026",
