@@ -346,7 +346,7 @@ a {
 .pub-authors,
 .pub-venue,
 .eval-links,
-.student-list li {
+.student-list {
   font-size: 1.03rem;
 }
 
@@ -558,13 +558,75 @@ a {
   font-size: 0.95rem;
 }
 
-.student-list {
-  margin: 0;
-  padding-left: 20px;
+.eval-label {
+  font-weight: 700;
 }
 
-.student-list li + li {
-  margin-top: 8px;
+.student-list {
+  --student-name-width: max-content;
+  --student-role-width: max-content;
+  --student-period-width: max-content;
+  --student-publications-width: minmax(22rem, 1fr);
+  --student-initial-width: max-content;
+  --student-column-gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns:
+    var(--student-name-width)
+    var(--student-role-width)
+    var(--student-period-width)
+    var(--student-publications-width)
+    var(--student-initial-width);
+  column-gap: var(--student-column-gap);
+  row-gap: 10px;
+  align-items: start;
+  overflow-x: auto;
+}
+
+.student-row {
+  display: contents;
+}
+
+.student-cell {
+  min-width: 0;
+  color: #3b4b63;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.student-name {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.student-name-link {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.student-name-link:hover {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.student-publications {
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.student-publication {
+  display: inline-block;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {
@@ -611,5 +673,15 @@ a {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .student-list {
+    --student-name-width: max-content;
+    --student-role-width: max-content;
+    --student-period-width: max-content;
+    --student-publications-width: minmax(16rem, 1fr);
+    --student-initial-width: max-content;
+    --student-column-gap: 10px;
+    row-gap: 12px;
   }
 }

@@ -1,4 +1,21 @@
 const newsItems = [
+    
+  {
+    date: "Apr 2026",
+    icon: "award",
+    text: "Glad to see my students Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
+    links: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7448819669890875393/?originTrackingId=8j7J6DlmpvFNWquACaqPew%3D%3D"
+      }
+    ]
+  },
+  {
+    date: "Apr 2026",
+    icon: "paper",
+    text: "Zhankai's first paper was accepted to IEEE FG 2026. Congratulations, Zhankai!"
+  },
   {
     date: "Mar 2026",
     icon: "award",
@@ -7,7 +24,13 @@ const newsItems = [
   {
     date: "Feb 2026",
     icon: "cloud",
-    text: "Honored to be awarded the FSU-AWS Research Acceleration Award. We will leverage $20K AWS cloud credits to accelerate research on large-scale wireless channel rendering."
+    text: "Honored to be awarded the FSU-AWS Research Acceleration Award. We will leverage AWS cloud to accelerate research on physics-guided learning for NextG channel modeling.",
+    links: [
+      {
+        label: "News",
+        href: "https://news.fsu.edu/news/university-news/2026/03/06/florida-state-university-celebrates-partnership-with-amazon-web-services/"
+      }
+    ]
   },
   {
     date: "Sep 2025",
@@ -31,7 +54,7 @@ const newsItems = [
     text: "Kicked off my journey as a professor at FSU.",
     links: [
       {
-        label: "Go Noles",
+        label: "YouTube",
         href: "https://www.youtube.com/watch?v=KXL7cCtC9Xc"
       }
     ]
@@ -66,24 +89,71 @@ const teachingItems = [
 const students = [
   {
     name: "Zhuoyuan Liu",
-    role: "Ph.D. student",
-    period: "Fall 2025 - now"
-  },
-  {
-    name: "Bofan Li",
-    role: "Ph.D. student",
-    period: "Spring 2025 - now",
-    href: "https://bofan1120.github.io/"
+    href: "",
+    currentRole: "Ph.D.",
+    period: "2025 - now",
+    initialPosition: "",
+    publications: []
   },
   {
     name: "Zhankai Ye",
-    role: "Ph.D. student",
-    period: "Fall 2024 - now"
+    href: "https://jye16.github.io",
+    currentRole: "Ph.D.",
+    period: "2024 - now",
+    initialPosition: "",
+    publications: [
+      {
+        title: "FG'26",
+        href: ""
+      }
+    ]
+  },
+  {
+    name: "Bofan Li",
+    href: "https://bofan1120.github.io/",
+    currentRole: "Ph.D.",
+    period: "2024 - 2026",
+    initialPosition: "",
+    publications: [
+      {
+        title: "Ubicomp'26",
+        href: "https://lnkd.in/eNtfr_v7"
+      },
+      {
+        title: "S&P'26",
+        href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
+      }
+    ]
   }
 ];
 
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
+    {
+    title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
+    href: "https://arxiv.org/abs/2601.07632",
+    authors: "Zhankai Ye, Bofan Li, Yukai Jin, Shuoqiu Li, Wei Wang, Yanfu Zhang, Shangqian Gao, Xin Liu",
+    venue: "arXiv 2026",
+    year: 2026,
+    citations: null,
+    selected: true,
+    image: "./Figure/geomotiongpt.png",
+    area: ["Foundation Models & AI"],
+    links: [
+      { label: "Code & Models", href: "https://github.com/JYe16/GeoMotionGPT" }
+    ]
+  },
+    {
+    title: "ARiSE: Efficient Mesh-Based Action Recognition from Wi-Fi Sensing on Edge Devices",
+    href: "",
+    authors: "Zhankai Ye, Shuoqiu Li, Bofan Li, Yili Ren, Bo Mei, Shangqian Gao, Xin Liu",
+    venue: "IEEE FG 2026",
+    year: 2026,
+    citations: null,
+    selected: true,
+    image: "./Figure/arise.png",
+    area: ["Integrated Sensing and Communication", "Foundation Models & AI"]
+  },
   {
     title: "2FiA: Towards WiFi Sensing-Based Authentication with Unique Biometrics",
     href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w",
@@ -122,10 +192,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/0cal.png",
-    area: "Millimeter Wave", 
-    links: [
-      { label: "Code / Dataset", href: "" }
-    ]
+    area: "Millimeter Wave"
   },
   {
     title: "Energy-Efficient Paging for Duty-Cycled LTE Backscatter",
@@ -370,7 +437,8 @@ const orderedAreas = [
   "Battery-Free IoT",
   "Millimeter Wave",
   "Shared-Spectrum Wireless Network",
-  "Security & Privacy"
+  "Security & Privacy",
+  "Foundation Models & AI"
 ];
 
 const publicationOrder = new Map(publications.map((pub, index) => [pub.title, index]));
@@ -438,9 +506,9 @@ function renderTeaching() {
       const evalHtml = course.evaluations
         .map((item) => {
           if (!item.href) {
-            return `<span>${item.label}</span>`;
+            return `<span class="eval-label">${item.label}</span>`;
           }
-          return `<a href="${item.href}" target="_blank" rel="noopener noreferrer">${item.label}</a>`;
+          return `<a href="${item.href}" target="_blank" rel="noopener noreferrer"><span class="eval-label">${item.label}</span></a>`;
         })
         .join(" ");
       return `
@@ -460,9 +528,26 @@ function renderStudents() {
   container.innerHTML = students
     .map((student) => {
       const name = student.href
-        ? `<a href="${student.href}" target="_blank" rel="noopener noreferrer">${student.name}</a>`
+        ? `<a class="student-name-link" href="${student.href}" target="_blank" rel="noopener noreferrer">${student.name}</a>`
         : student.name;
-      return `<li>${name}, ${student.role}, ${student.period}</li>`;
+      const publications = (student.publications || [])
+        .map((publication) => {
+          if (!publication.href) {
+            return `<span class="student-publication">${publication.title}</span>`;
+          }
+          return `<a class="student-publication" href="${publication.href}" target="_blank" rel="noopener noreferrer">${publication.title}</a>`;
+        })
+        .join("");
+
+      return `
+        <li class="student-row">
+          <div class="student-cell student-name">${name}</div>
+          <div class="student-cell">${student.currentRole || ""}</div>
+          <div class="student-cell">${student.period || ""}</div>
+          <div class="student-cell student-publications">${publications}</div>
+          <div class="student-cell">${student.initialPosition || ""}</div>
+        </li>
+      `;
     })
     .join("");
 }
