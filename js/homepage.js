@@ -1,5 +1,9 @@
 const newsItems = [
-    
+  {
+    date: "Apr 2026",
+    icon: "service",
+    text: "Honored to serve as a Session Chair at IEEE S&P 2026. I look forward to serving the community and facilitating thoughtful and engaging discussions in security and privacy.",
+  },
   {
     date: "Apr 2026",
     icon: "award",
