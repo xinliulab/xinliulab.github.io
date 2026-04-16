@@ -192,7 +192,11 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/0cal.png",
-    area: "Millimeter Wave"
+    area: "Millimeter Wave",
+    links: [
+      { label: "Code / Dataset", href: "https://zenodo.org/records/19609817" },
+      { label: "Slides", href: "./publication/Slides_0cal.pdf" }
+    ],
   },
   {
     title: "Energy-Efficient Paging for Duty-Cycled LTE Backscatter",
