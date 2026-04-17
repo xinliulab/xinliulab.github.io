@@ -1,11 +1,6 @@
 const newsItems = [
   {
     date: "Apr 2026",
-    icon: "service",
-    text: "Honored to serve as a Session Chair at IEEE S&P 2026. I look forward to serving the community and facilitating thoughtful and engaging discussions in security and privacy.",
-  },
-  {
-    date: "Apr 2026",
     icon: "award",
     text: "Glad to see my students Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
     links: [
