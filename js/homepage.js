@@ -735,6 +735,7 @@ function renderPublications() {
 
 function renderPublicationCard(pub) {
   const formattedAuthors = formatPublicationAuthors(pub.authors);
+  const imageSrc = pub.thumbnail || pub.image;
   const links = (pub.links || [])
     .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`)
     .join(" ");
@@ -745,8 +746,10 @@ function renderPublicationCard(pub) {
 
   return `
     <article class="pub-item" data-area="${getAreas(pub).join(", ")}">
-      <img src="${pub.image}" alt="${pub.title}">
-      <div>
+      <div class="pub-thumb" aria-hidden="${imageSrc ? "false" : "true"}">
+        ${imageSrc ? `<img src="${imageSrc}" alt="${pub.title}">` : ""}
+      </div>
+      <div class="pub-content">
         <div class="pub-title"><a href="${pub.href}" target="_blank" rel="noopener noreferrer">${pub.title}</a></div>
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
