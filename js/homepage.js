@@ -119,14 +119,15 @@ const students = [
     period: "2024 - 2026",
     initialPosition: "",
     publications: [
+    {
+        title: "S&P'26",
+        href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
+      },
       {
         title: "Ubicomp'26",
         href: "https://dl.acm.org/doi/10.1145/3790111"
-      },
-      {
-        title: "S&P'26",
-        href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
       }
+
     ]
   }
 ];
