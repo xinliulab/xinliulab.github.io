@@ -189,7 +189,7 @@ const publications = [
     venue: "ACM SenSys 2026",
     year: 2026,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
     links: [
@@ -218,7 +218,7 @@ const publications = [
     venue: "Computer Networks 2025",
     year: 2025,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/ojrc.png",
     area: ["Integrated Sensing and Communication", "Millimeter Wave"], 
     links: [
@@ -282,7 +282,7 @@ const publications = [
     venue: "USENIX Security 2023",
     year: 2023,
     citations: null,
-    selected: true,
+    selected: false,
     image: "./Figure/LightThief.png",
     area: ["Battery-Free IoT", "Integrated Sensing and Communication", "Security & Privacy"],
   },
@@ -323,7 +323,7 @@ const publications = [
     venue: "USENIX NSDI 2021",
     year: 2021,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/TScatter.png",
     area: "Battery-Free IoT",
     links: [
@@ -349,7 +349,7 @@ const publications = [
     venue: "USENIX NSDI 2020",
     year: 2020,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/VMscatter.png",
     area: "Battery-Free IoT",
     links: [
@@ -365,7 +365,7 @@ const publications = [
     venue: "ACM SIGCOMM 2020",
     year: 2020,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/LScatter.png",
     area: "Battery-Free IoT",
   },
@@ -376,7 +376,7 @@ const publications = [
     venue: "ACM SenSys 2019",
     year: 2019,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/PIC.png",
     area: "Shared-Spectrum Wireless Network",
     award: "Best Paper Award Candidate"
@@ -398,7 +398,7 @@ const publications = [
     venue: "ACM SenSys 2018",
     year: 2018,
     citations: null,
-    selected: true,
+    selected: null,
     image: "./Figure/PassiveZigbee.png",
     area: ["Battery-Free IoT", "Shared-Spectrum Wireless Network"],
     award: "Best Paper Runner-up Award"
