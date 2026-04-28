@@ -149,6 +149,20 @@ const publications = [
       { label: "Code / Dataset", href: "https://github.com/JYe16/GeoMotionGPT" }
     ]
   },
+
+  {
+    title: "HyperEdit: Unlocking Instruction-based Text Editing in LLMs via Hypernetworks",
+    href: "",
+    authors: "Yiming Zeng, Jinghan Cao, Zexin Li, Wanhao Yu, Zhankai Ye, Dawei Xiang, Ting Hua, Xin Liu, Shangqian Gao, Tingting Yu",
+    venue: "ACL Findings 2026",
+    year: 2026,
+    citations: null,
+    selected: null,
+    image: "./Figure/HyperEdit.jpeg",
+    area: ["Foundation Models & AI"]
+  },
+
+
     {
     title: "Fresco: A Permissioned Blockchain Framework for Securing Model Context Protocol",
     href: "",
@@ -516,6 +530,17 @@ function emphasizeMyName(authors) {
     .replace(/\bXing Liu\b/g, '<strong class="author-self">Xing Liu</strong>');
 }
 
+function underlineStudentAuthors(authors) {
+  return authors
+    .replace(/\bZhankai Ye\b/g, '<u>Zhankai Ye</u>')
+    .replace(/\bBofan Li\b/g, '<u>Bofan Li</u>')
+    .replace(/\bZhuoyuan Liu\b/g, '<u>Zhuoyuan Liu</u>');
+}
+
+function formatPublicationAuthors(authors) {
+  return underlineStudentAuthors(emphasizeMyName(authors));
+}
+
 function renderNews() {
   const container = document.getElementById("news-list");
   container.innerHTML = newsItems
@@ -709,7 +734,7 @@ function renderPublications() {
 }
 
 function renderPublicationCard(pub) {
-  const formattedAuthors = emphasizeMyName(pub.authors);
+  const formattedAuthors = formatPublicationAuthors(pub.authors);
   const links = (pub.links || [])
     .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`)
     .join(" ");
