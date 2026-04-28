@@ -102,6 +102,10 @@ const students = [
     initialPosition: "",
     publications: [
       {
+        title: "ICCCN'26",
+        href: ""
+      },
+      {
         title: "FG'26",
         href: ""
       }
@@ -110,13 +114,14 @@ const students = [
   {
     name: "Bofan Li",
     href: "https://bofan1120.github.io/",
+    group: "alumni",
     currentRole: "Ph.D.",
     period: "2024 - 2026",
     initialPosition: "",
     publications: [
       {
         title: "Ubicomp'26",
-        href: "https://lnkd.in/eNtfr_v7"
+        href: "https://dl.acm.org/doi/10.1145/3790111"
       },
       {
         title: "S&P'26",
@@ -128,6 +133,7 @@ const students = [
 
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
+
     {
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
     href: "https://arxiv.org/abs/2601.07632",
@@ -139,9 +145,21 @@ const publications = [
     image: "./Figure/geomotiongpt.png",
     area: ["Foundation Models & AI"],
     links: [
-      { label: "Code & Models", href: "https://github.com/JYe16/GeoMotionGPT" }
+      { label: "Code / Dataset", href: "https://github.com/JYe16/GeoMotionGPT" }
     ]
   },
+    {
+    title: "Fresco: A Permissioned Blockchain Framework for Securing Model Context Protocol",
+    href: "",
+    authors: "Zhankai Ye, Yusen Wu, Bingyang Wei, Shixian Shen, Yili Ren, Phuong Nguyen, Yelena Yesha, Xin Liu",
+    venue: "IEEE ICCCN 2026",
+    year: 2026,
+    citations: null,
+    selected: true,
+    image: "./Figure/Fresco.png",
+    area: ["Security & Privacy", "Foundation Models & AI"]
+  },
+
     {
     title: "ARiSE: Efficient Mesh-Based Action Recognition from Wi-Fi Sensing on Edge Devices",
     href: "",
@@ -152,6 +170,17 @@ const publications = [
     selected: true,
     image: "./Figure/arise.png",
     area: ["Integrated Sensing and Communication", "Foundation Models & AI"]
+  },
+  {
+    title: "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication",
+    href: "",
+    authors: "Chiyu Zhou, Zijian Wan, Baodong Chen, Zicheng Chi, Xin Liu, Wei Wang",
+    venue: "IEEE INFOCOM 2026",
+    year: 2026,
+    citations: null,
+    selected: null,
+    image: "./Figure/hydrochirp.png",
+    area: ["Integrated Sensing and Communication"]
   },
   {
     title: "2FiA: Towards WiFi Sensing-Based Authentication with Unique Biometrics",
@@ -189,7 +218,7 @@ const publications = [
     venue: "ACM SenSys 2026",
     year: 2026,
     citations: null,
-    selected: null,
+    selected: true,
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
     links: [
@@ -218,7 +247,7 @@ const publications = [
     venue: "Computer Networks 2025",
     year: 2025,
     citations: null,
-    selected: null,
+    selected: true,
     image: "./Figure/ojrc.png",
     area: ["Integrated Sensing and Communication", "Millimeter Wave"], 
     links: [
@@ -282,7 +311,7 @@ const publications = [
     venue: "USENIX Security 2023",
     year: 2023,
     citations: null,
-    selected: false,
+    selected: true,
     image: "./Figure/LightThief.png",
     area: ["Battery-Free IoT", "Integrated Sensing and Communication", "Security & Privacy"],
   },
@@ -323,13 +352,13 @@ const publications = [
     venue: "USENIX NSDI 2021",
     year: 2021,
     citations: null,
-    selected: null,
+    selected: true,
     image: "./Figure/TScatter.png",
     area: "Battery-Free IoT",
     links: [
       { label: "Code", href: "https://github.com/EMDCYY/TScatter" },
-      { label: "Circuit", href: "https://github.com/pengyuzhang/HitchHike" },
-      { label: "Talk", href: "https://www.youtube.com/watch?v=He8KyfwjxqYr" }
+      // { label: "Circuit", href: "https://github.com/pengyuzhang/HitchHike" },
+      { label: "Presentation", href: "https://www.youtube.com/watch?v=He8KyfwjxqYr" }
     ]
   },
    {
@@ -349,13 +378,13 @@ const publications = [
     venue: "USENIX NSDI 2020",
     year: 2020,
     citations: null,
-    selected: null,
+    selected: true,
     image: "./Figure/VMscatter.png",
     area: "Battery-Free IoT",
     links: [
       { label: "Code", href: "https://github.com/EMDCYY/VMscatter" },
-      { label: "Circuit", href: "https://github.com/EMDCYY/VMscatter" },
-      { label: "Talk", href: "https://www.youtube.com/watch?v=VmTwuIvwjZ8" }
+      // { label: "Circuit", href: "https://github.com/EMDCYY/VMscatter" },
+      { label: "Presentation", href: "https://www.youtube.com/watch?v=VmTwuIvwjZ8" }
     ]
   },
   {
@@ -365,7 +394,7 @@ const publications = [
     venue: "ACM SIGCOMM 2020",
     year: 2020,
     citations: null,
-    selected: null,
+    selected: true,
     image: "./Figure/LScatter.png",
     area: "Battery-Free IoT",
   },
@@ -528,31 +557,44 @@ function renderTeaching() {
 
 function renderStudents() {
   const container = document.getElementById("student-list");
-  container.innerHTML = students
-    .map((student) => {
-      const name = student.href
-        ? `<a class="student-name-link" href="${student.href}" target="_blank" rel="noopener noreferrer">${student.name}</a>`
-        : student.name;
-      const publications = (student.publications || [])
-        .map((publication) => {
-          if (!publication.href) {
-            return `<span class="student-publication">${publication.title}</span>`;
-          }
-          return `<a class="student-publication" href="${publication.href}" target="_blank" rel="noopener noreferrer">${publication.title}</a>`;
-        })
-        .join("");
+  const currentStudents = students.filter((student) => student.group !== "alumni");
+  const alumniStudents = students.filter((student) => student.group === "alumni");
 
-      return `
-        <li class="student-row">
-          <div class="student-cell student-name">${name}</div>
-          <div class="student-cell">${student.currentRole || ""}</div>
-          <div class="student-cell">${student.period || ""}</div>
-          <div class="student-cell student-publications">${publications}</div>
-          <div class="student-cell">${student.initialPosition || ""}</div>
-        </li>
-      `;
-    })
-    .join("");
+  const renderStudent = (student) => {
+    const name = student.href
+      ? `<a class="student-name-link" href="${student.href}" target="_blank" rel="noopener noreferrer">${student.name}</a>`
+      : student.name;
+    const publications = (student.publications || [])
+      .map((publication) => {
+        if (!publication.href) {
+          return `<span class="student-publication">${publication.title}</span>`;
+        }
+        return `<a class="student-publication" href="${publication.href}" target="_blank" rel="noopener noreferrer">${publication.title}</a>`;
+      })
+      .join("");
+
+    return `
+      <li class="student-row">
+        <div class="student-cell student-name">${name}</div>
+        <div class="student-cell">${student.currentRole || ""}</div>
+        <div class="student-cell">${student.period || ""}</div>
+        <div class="student-cell student-publications">${publications}</div>
+        <div class="student-cell">${student.initialPosition || ""}</div>
+      </li>
+    `;
+  };
+
+  const alumniHtml = alumniStudents.length
+    ? `
+      <li class="student-alumni-heading">Alumni</li>
+      ${alumniStudents.map(renderStudent).join("")}
+    `
+    : "";
+
+  container.innerHTML = `
+    ${currentStudents.map(renderStudent).join("")}
+    ${alumniHtml}
+  `;
 }
 
 function buildFilters() {
@@ -693,8 +735,15 @@ function renderPublicationCard(pub) {
 }
 
 function setupNavHighlight() {
-  const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".section-link")];
+  const contentArea = document.querySelector("main.content-area");
+  const sections = navLinks
+    .map((link) => {
+      const sectionId = link.getAttribute("href")?.replace("#", "");
+      return sectionId ? document.getElementById(sectionId) : null;
+    })
+    .filter((section) => section && section.matches("main > section[id]"));
+
   if (!sections.length || !navLinks.length) {
     return;
   }
@@ -709,22 +758,151 @@ function setupNavHighlight() {
     });
   };
 
-  const updateActiveSection = () => {
-    const activationOffset = 180;
-    let activeSectionId = defaultSectionId;
+  let pointerPosition = null;
+  let pointerInsideContent = false;
+  let clickedSectionId = null;
+  let clickedSectionTimer = null;
+  const canHover = window.matchMedia?.("(hover: hover) and (pointer: fine)").matches ?? true;
+
+  const clearClickedSection = () => {
+    clickedSectionId = null;
+
+    if (clickedSectionTimer) {
+      clearTimeout(clickedSectionTimer);
+      clickedSectionTimer = null;
+    }
+  };
+
+  const holdClickedSection = (sectionId) => {
+    clickedSectionId = sectionId;
+    setActiveLink(sectionId);
+
+    if (clickedSectionTimer) {
+      clearTimeout(clickedSectionTimer);
+      clickedSectionTimer = null;
+    }
+
+    if (canHover) {
+      return;
+    }
+
+    clickedSectionTimer = setTimeout(() => {
+      clickedSectionId = null;
+      clickedSectionTimer = null;
+      updateActiveSection();
+    }, 1200);
+  };
+
+  const getNavSectionFromPoint = (clientX, clientY) => {
+    const section = document
+      .elementFromPoint(clientX, clientY)
+      ?.closest("main > section[id]");
+
+    return sections.includes(section) ? section : null;
+  };
+
+  const updateActiveSectionFromPointer = () => {
+    if (!pointerInsideContent || !pointerPosition) {
+      return false;
+    }
+
+    const section = getNavSectionFromPoint(pointerPosition.x, pointerPosition.y);
+    if (!section) {
+      return false;
+    }
+
+    setActiveLink(section.id);
+    return true;
+  };
+
+  const updateActiveSectionFromScroll = () => {
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    let activeSection = sections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.bottom > 0;
+    }) || sections[0];
+    let largestVisibleArea = 0;
 
     sections.forEach((section) => {
-      if (window.scrollY + activationOffset >= section.offsetTop) {
-        activeSectionId = section.id;
+      const rect = section.getBoundingClientRect();
+      const visibleArea = Math.max(
+        0,
+        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0)
+      );
+
+      if (visibleArea > largestVisibleArea) {
+        largestVisibleArea = visibleArea;
+        activeSection = section;
       }
     });
 
-    setActiveLink(activeSectionId);
+    setActiveLink(activeSection.id);
   };
+
+  const updateActiveSection = () => {
+    if (canHover && updateActiveSectionFromPointer()) {
+      return;
+    }
+
+    if (clickedSectionId) {
+      setActiveLink(clickedSectionId);
+      return;
+    }
+
+    updateActiveSectionFromScroll();
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const sectionId = link.getAttribute("href")?.replace("#", "");
+      const section = sections.find((item) => item.id === sectionId);
+
+      if (!section) {
+        return;
+      }
+
+      pointerInsideContent = false;
+      pointerPosition = null;
+      holdClickedSection(section.id);
+    });
+  });
+
+  if (canHover && contentArea) {
+    const trackPointer = (event) => {
+      clearClickedSection();
+      pointerInsideContent = true;
+      pointerPosition = {
+        x: event.clientX,
+        y: event.clientY
+      };
+    };
+
+    contentArea.addEventListener("pointermove", (event) => {
+      trackPointer(event);
+      updateActiveSectionFromPointer();
+    });
+
+    contentArea.addEventListener("pointerleave", () => {
+      pointerInsideContent = false;
+    });
+
+    sections.forEach((section) => {
+      section.addEventListener("pointerenter", (event) => {
+        trackPointer(event);
+        setActiveLink(section.id);
+      });
+    });
+  }
 
   setActiveLink(defaultSectionId);
   updateActiveSection();
   window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("scrollend", () => {
+    if (!canHover) {
+      clearClickedSection();
+      updateActiveSection();
+    }
+  });
   window.addEventListener("resize", updateActiveSection);
 }
 

@@ -589,6 +589,14 @@ a {
   display: contents;
 }
 
+.student-alumni-heading {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
 .student-cell {
   min-width: 0;
   color: #3b4b63;
