@@ -256,7 +256,7 @@ const publications = [
     venue: "IEEE INFOCOM 2025",
     year: 2025,
     citations: null,
-    citationFile: "./citations/dutycycleltebackscatter.bib",
+    citationFile: "./citations/pscatter.bib",
     selected: false,
     image: "./Figure/pscatter.png",
     area: "Battery-Free IoT"
