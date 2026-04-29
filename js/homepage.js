@@ -220,7 +220,7 @@ const publications = [
     title: "MURAL-Fi: <u>M</u>ulti-<u>U</u>ser <u>R</u>espiration <u>A</u>uthentication <u>L</u>everaging Wi-<u>Fi</u>",
     href: "https://dl.acm.org/doi/10.1145/3790111",
     authors: "Bofan Li, Xin Liu, Yichao Wang, Yili Ren, Weikuan Yu",
-    venue: "ACM IMWUT/UbiComp, 2026.",
+    venue: "ACM IMWUT/UbiComp 2026",
     year: 2026,
     citations: null,
     image: "./Figure/muralfi.png",
