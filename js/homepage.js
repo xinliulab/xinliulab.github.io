@@ -967,7 +967,6 @@ function setupNavHighlight() {
   }
 
   setActiveLink(defaultSectionId);
-  updateActiveSection();
   window.addEventListener("scroll", updateActiveSection, { passive: true });
   window.addEventListener("scrollend", () => {
     if (!canHover) {
