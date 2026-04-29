@@ -164,7 +164,7 @@ const publications = [
 
 
     {
-    title: "Fresco: A Permissioned Blockchain Framework for Securing Model Context Protocol",
+    title: "Fresco: A Permissioned Blockchain <u>Fr</u>am<u>e</u>work for <u>S</u>ecuring Model <u>Co</u>ntext Protocol",
     href: "",
     authors: "Zhankai Ye, Yusen Wu, Bingyang Wei, Shixian Shen, Yili Ren, Phuong Nguyen, Yelena Yesha, Xin Liu",
     venue: "IEEE ICCCN 2026",
@@ -176,7 +176,7 @@ const publications = [
   },
 
     {
-    title: "ARiSE: Efficient Mesh-Based Action Recognition from Wi-Fi Sensing on Edge Devices",
+    title: "ARiSE: Efficient Mesh-Based <u>A</u>ction <u>R</u>ecognition from Wi-F<u>i</u> <u>S</u>ensing on <u>E</u>dge Devices",
     href: "",
     authors: "Zhankai Ye, Shuoqiu Li, Bofan Li, Yili Ren, Bo Mei, Shangqian Gao, Xin Liu",
     venue: "IEEE FG 2026",
@@ -198,7 +198,7 @@ const publications = [
     area: ["Integrated Sensing and Communication"]
   },
   {
-    title: "2FiA: Towards WiFi Sensing-Based Authentication with Unique Biometrics",
+    title: "2FiA: <u>To</u>wards Wi<u>Fi</u> Sensing-Based <u>A</u>uthentication with Unique Biometrics",
     href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w",
     authors: "Bofan Li, Zhankai Ye, Weikuan Yu, Yongning Tang, Xin Liu",
     venue: "IEEE S&P 2026",
@@ -217,7 +217,7 @@ const publications = [
     ]
   },
   {
-    title: "MURAL-Fi: Multi-User Respiration Authentication Leveraging Wi-Fi",
+    title: "MURAL-Fi: <u>M</u>ulti-<u>U</u>ser <u>R</u>espiration <u>A</u>uthentication <u>L</u>everaging Wi-<u>Fi</u>",
     href: "https://dl.acm.org/doi/10.1145/3790111",
     authors: "Bofan Li, Xin Liu, Yichao Wang, Yili Ren, Weikuan Yu",
     venue: "ACM IMWUT/UbiComp, 2026.",
@@ -227,7 +227,7 @@ const publications = [
     area: "Integrated Sensing and Communication"
   },
   {
-    title: "0cal:  Zero-Cost Calibration for mmWave Networks",
+    title: "0cal:  <u>Zero</u>-Cost <u>Cal</u>ibration for mmWave Networks",
     href: "",
     authors: "Xin Liu, Wei-Han Chen, Kannan Srinivasan",
     venue: "ACM SenSys 2026",
@@ -256,7 +256,7 @@ const publications = [
     // ]
   },
   {
-    title: "O-JRC: An Open Source Software Platform for mmWave Joint Radar-Communication Development and Experimentation",
+    title: "O-JRC: An <u>O</u>pen Source Software Platform for mmWave <u>J</u>oint <u>R</u>adar-<u>C</u>ommunication Development and Experimentation",
     href: "https://doi.org/10.1016/j.comnet.2025.111337",
     authors: "Xin Liu, Haocheng Zhu, Eylem Ekici",
     venue: "Computer Networks 2025",
@@ -281,7 +281,7 @@ const publications = [
     area: ["Spectrum Sharing & Management", "Security & Privacy"]
   },
   {
-    title: "FTP: Enabling Fast Beam-Training for Optimal mmWave Beamforming",
+    title: "FTP: Enabling <u>F</u>ast Beam-<u>T</u>raining for O<u>p</u>timal mmWave Beamforming",
     href: "./publication/Paper_FTP.pdf",
     authors: "Wei-Han Chen, Xin Liu (co-primary), Kannan Srinivasan, Srinivasan Parthasarathy",
     venue: "IEEE INFOCOM 2024",
@@ -387,7 +387,7 @@ const publications = [
     area: ["Spectrum Sharing & Management", "Security & Privacy"],
   }, 
   {
-    title: "VMscatter: A Versatile MIMO Backscatter",
+    title: "VMscatter: A <u>V</u>ersatile <u>M</u>IMO Back<u>scatter</u>",
     href: "./publication/Paper_VMscatter.pdf",
     authors: "Xin Liu, Zicheng Chi, Wei Wang, Yao Yao, Ting Zhu",
     venue: "USENIX NSDI 2020",
@@ -426,7 +426,7 @@ const publications = [
     award: "Best Paper Award Candidate"
   },
   {
-    title: "CRF: Coexistent Routing and Flooding using Wi-Fi Packets in Heterogeneous IoT Networks",
+    title: "CRF: <u>C</u>oexistent <u>R</u>outing and <u>F</u>looding using Wi-Fi Packets in Heterogeneous IoT Networks",
     href: "./publication/Paper_CRF.pdf",
     authors: "Wei Wang, Xin Liu, Yao Yao, Yan Pan, Zicheng Chi, Ting Zhu",
     venue: "IEEE INFOCOM 2019",
@@ -448,7 +448,7 @@ const publications = [
     award: "Best Paper Runner-up Award"
   },
   {
-    title: "EAR: Exploit Uncontrollable Ambient RF Signals in Heterogeneous Networks for Gesture Recognition",
+    title: "EAR: <u>E</u>xploit Uncontrollable <u>A</u>mbient <u>R</u>F Signals in Heterogeneous Networks for Gesture Recognition",
     href: "./publication/Paper_EAR.pdf",
     authors: "Zicheng Chi, Yao Yao, Tiantian Xie, Xin Liu, Zhichuan Huang, Wei Wang, Ting Zhu",
     venue: "ACM SenSys 2018",
@@ -458,7 +458,7 @@ const publications = [
     area: "Integrated Sensing and Communication",
   },
   {
-    title: "Chiron: Concurrent High Throughput Communication for IoT Devices",
+    title: "Chiron: <u>C</u>oncurrent <u>Hi</u>gh Th<u>ro</u>ughput Commu<u>n</u>ication for IoT Devices",
     href: "./publication/Paper_Chiron.pdf",
     authors: "Yan Li, Zicheng Chi, Xin Liu, Ting Zhu",
     venue: "ACM MobiSys 2018",
@@ -468,7 +468,7 @@ const publications = [
     area: "Spectrum Sharing & Management"
   },
     {
-    title: "Aegis: An Interference-Negligible RF Sensing Shield",
+    title: "Aegis: <u>A</u>n Interf<u>e</u>rence-Negli<u>gi</u>ble RF <u>S</u>ensing Shield",
     href: "./publication/Paper_Aegis.pdf",
     authors: "Yao Yao, Yan Li, Xin Liu, Zicheng Chi, Wei Wang, Tiantian Xie, Ting Zhu",
     venue: "IEEE INFOCOM 2018",
