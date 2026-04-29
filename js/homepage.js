@@ -848,17 +848,17 @@ function renderPublicationCard(pub) {
   const formattedAuthors = formatPublicationAuthors(pub.authors);
   const imageSrc = pub.thumbnail || pub.image;
   const citationFile = typeof pub.citationFile === "string" ? pub.citationFile.trim() : "";
-  const links = (pub.links || [])
-    .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`)
-    .join(" ");
+  const linkItems = (pub.links || [])
+    .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`);
 
   const badges = (pub.badges || [])
     .map((badgePath) => `<img src="${badgePath}" alt="Research artifact badge">`)
     .join("");
 
   const citationButton = citationFile
-    ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">Citation</button>`
+    ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
+  const resourceLinks = [...linkItems, citationButton].filter(Boolean).join(" ");
 
   return `
     <article class="pub-item" data-area="${getAreas(pub).join(", ")}">
@@ -870,10 +870,9 @@ function renderPublicationCard(pub) {
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
           <div class="pub-venue">${pub.venue}</div>
-          ${citationButton}
           ${pub.award ? `<div class="award-label">${pub.award}</div>` : ""}
           ${badges ? `<div class="badge-row">${badges}</div>` : ""}
-          ${links ? `<div class="pub-links">${links}</div>` : ""}
+          ${resourceLinks ? `<div class="pub-links">${resourceLinks}</div>` : ""}
         </div>
       </div>
     </article>

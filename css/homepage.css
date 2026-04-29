@@ -585,9 +585,8 @@ a {
   background: transparent;
   color: var(--accent);
   font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: inherit;
+  line-height: inherit;
   padding: 0;
   cursor: pointer;
 }
@@ -746,7 +745,8 @@ a {
   white-space: nowrap;
 }
 
-.pub-links a {
+.pub-links a,
+.pub-citation-open {
   white-space: nowrap;
 }
 
