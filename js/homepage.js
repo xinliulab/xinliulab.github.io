@@ -642,8 +642,9 @@ function buildFilters() {
 
 function buildAreaNav() {
   const areaNav = document.getElementById("area-nav");
+  const isPanelOpen = document.getElementById("publication-area-panel")?.classList.contains("is-open") ?? false;
   areaNav.innerHTML = ["Selected", ...orderedAreas, "All"]
-    .map((area) => `<button class="area-nav-link ${activeArea === area ? "active" : ""}" type="button" data-area="${area}">${area}</button>`)
+    .map((area) => `<button class="area-nav-link ${activeArea === area ? "active" : ""}" type="button" data-area="${area}" tabindex="${isPanelOpen ? "0" : "-1"}">${area}</button>`)
     .join("");
 
   areaNav.querySelectorAll(".area-nav-link").forEach((btn) => {
@@ -653,6 +654,48 @@ function buildAreaNav() {
       publicationsSection.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+}
+
+function setPublicationAreaPanelOpen(isOpen) {
+  const panel = document.getElementById("publication-area-panel");
+  const navZone = document.getElementById("publication-nav-zone");
+
+  if (!panel || !navZone) {
+    return;
+  }
+
+  panel.classList.toggle("is-open", isOpen);
+  navZone.classList.toggle("is-open", isOpen);
+  panel.setAttribute("aria-hidden", String(!isOpen));
+  panel.querySelectorAll(".area-nav-link").forEach((btn) => {
+    btn.tabIndex = isOpen ? 0 : -1;
+  });
+}
+
+function setupPublicationAreaPanel() {
+  const navZone = document.getElementById("publication-nav-zone");
+  const publicationsSection = document.getElementById("publications");
+
+  if (!navZone || !publicationsSection) {
+    return;
+  }
+
+  let hasOpened = false;
+
+  const showPanel = () => {
+    hasOpened = true;
+    setPublicationAreaPanelOpen(true);
+  };
+
+  [navZone, publicationsSection].forEach((zone) => {
+    zone.addEventListener("pointerenter", showPanel);
+  });
+
+  navZone.addEventListener("focusin", showPanel);
+
+  if (!hasOpened) {
+    setPublicationAreaPanelOpen(false);
+  }
 }
 
 function setActiveArea(area) {
@@ -950,6 +993,7 @@ function init() {
   renderStudents();
   buildFilters();
   buildAreaNav();
+  setupPublicationAreaPanel();
   renderPublications();
   setupNavHighlight();
   setupAudioButton();
