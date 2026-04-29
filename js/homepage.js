@@ -142,7 +142,7 @@ const publications = [
     venue: "arXiv 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/geomotiongpt.bib",
+    citationFile: "",
     selected: true,
     image: "./Figure/geomotiongpt.png",
     area: ["Foundation Models and Edge AI"],
@@ -158,7 +158,7 @@ const publications = [
     venue: "ACL Findings 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/hyperedit.bib",
+    citationFile: "",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
     area: ["Foundation Models and Edge AI"]
@@ -172,7 +172,7 @@ const publications = [
     venue: "IEEE ICCCN 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/fresco.bib",
+    citationFile: "",
     selected: true,
     image: "./Figure/Fresco.png",
     area: ["Security & Privacy", "Foundation Models and Edge AI"]
@@ -185,7 +185,7 @@ const publications = [
     venue: "IEEE FG 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/arise.bib",
+    citationFile: "",
     selected: true,
     image: "./Figure/arise.png",
     area: ["Integrated Sensing and Communication", "Foundation Models and Edge AI"]
@@ -197,7 +197,7 @@ const publications = [
     venue: "IEEE INFOCOM 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/hydrochirp.bib",
+    citationFile: "",
     selected: null,
     image: "./Figure/hydrochirp.png",
     area: ["Integrated Sensing and Communication"]
@@ -228,7 +228,7 @@ const publications = [
     authors: "Bofan Li, Xin Liu, Yichao Wang, Yili Ren, Weikuan Yu",
     venue: "ACM IMWUT/UbiComp 2026",
     year: 2026,
-    citations: null,
+    citations: true,
     citationFile: "./citations/muralfi.bib",
     image: "./Figure/muralfi.png",
     area: "Integrated Sensing and Communication"
@@ -240,7 +240,7 @@ const publications = [
     venue: "ACM SenSys 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/0cal.bib",
+    citationFile: "",
     selected: true,
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
@@ -256,7 +256,7 @@ const publications = [
     venue: "IEEE INFOCOM 2025",
     year: 2025,
     citations: null,
-    citationFile: "./citations/pscatter.bib",
+    citationFile: "./citations/dutycycleltebackscatter.bib",
     selected: false,
     image: "./Figure/pscatter.png",
     area: "Battery-Free IoT"
