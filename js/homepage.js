@@ -142,6 +142,7 @@ const publications = [
     venue: "arXiv 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/geomotiongpt.bib",
     selected: true,
     image: "./Figure/geomotiongpt.png",
     area: ["Foundation Models and Edge AI"],
@@ -157,6 +158,7 @@ const publications = [
     venue: "ACL Findings 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/hyperedit.bib",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
     area: ["Foundation Models and Edge AI"]
@@ -170,6 +172,7 @@ const publications = [
     venue: "IEEE ICCCN 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/fresco.bib",
     selected: true,
     image: "./Figure/Fresco.png",
     area: ["Security & Privacy", "Foundation Models and Edge AI"]
@@ -182,6 +185,7 @@ const publications = [
     venue: "IEEE FG 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/arise.bib",
     selected: true,
     image: "./Figure/arise.png",
     area: ["Integrated Sensing and Communication", "Foundation Models and Edge AI"]
@@ -193,6 +197,7 @@ const publications = [
     venue: "IEEE INFOCOM 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/hydrochirp.bib",
     selected: null,
     image: "./Figure/hydrochirp.png",
     area: ["Integrated Sensing and Communication"]
@@ -204,6 +209,7 @@ const publications = [
     venue: "IEEE S&P 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/2fia.bib",
     selected: true,
     image: "./Figure/2FiA.png",
     area: ["Integrated Sensing and Communication", "Security & Privacy"],
@@ -223,6 +229,7 @@ const publications = [
     venue: "ACM IMWUT/UbiComp 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/muralfi.bib",
     image: "./Figure/muralfi.png",
     area: "Integrated Sensing and Communication"
   },
@@ -233,6 +240,7 @@ const publications = [
     venue: "ACM SenSys 2026",
     year: 2026,
     citations: null,
+    citationFile: "./citations/0cal.bib",
     selected: true,
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
@@ -248,6 +256,7 @@ const publications = [
     venue: "IEEE INFOCOM 2025",
     year: 2025,
     citations: null,
+    citationFile: "./citations/pscatter.bib",
     selected: false,
     image: "./Figure/pscatter.png",
     area: "Battery-Free IoT"
@@ -262,6 +271,7 @@ const publications = [
     venue: "Computer Networks 2025",
     year: 2025,
     citations: null,
+    citationFile: "./citations/ojrc.bib",
     selected: true,
     image: "./Figure/ojrc.png",
     area: ["Integrated Sensing and Communication", "Millimeter Wave"], 
@@ -277,6 +287,7 @@ const publications = [
     venue: "ACM ASIACCS 2024",
     year: 2024,
     citations: null,
+    citationFile: "./citations/kep.bib",
     image: "./Figure/kep.png",
     area: ["Spectrum Sharing & Management", "Security & Privacy"]
   },
@@ -287,6 +298,7 @@ const publications = [
     venue: "IEEE INFOCOM 2024",
     year: 2024,
     citations: null,
+    citationFile: "./citations/ftp.bib",
     image: "./Figure/ftp.png",
     area: "Millimeter Wave",
     links: [
@@ -300,6 +312,7 @@ const publications = [
     venue: "IEEE INFOCOM 2024",
     year: 2024,
     citations: null,
+    citationFile: "./citations/effblue.bib",
     image: "./Figure/effblue.png",
     area: "Battery-Free IoT"
     // links: [
@@ -313,6 +326,7 @@ const publications = [
     venue: "ACM MobiWac 2023",
     year: 2023,
     citations: null,
+    citationFile: "./citations/swift.bib",
     image: "./Figure/swift.png",
     area: "Millimeter Wave"
     // links: [
@@ -326,6 +340,7 @@ const publications = [
     venue: "USENIX Security 2023",
     year: 2023,
     citations: null,
+    citationFile: "./citations/lightthief.bib",
     selected: true,
     image: "./Figure/LightThief.png",
     area: ["Battery-Free IoT", "Integrated Sensing and Communication", "Security & Privacy"],
@@ -337,6 +352,7 @@ const publications = [
     venue: "IEEE MILCOM 2022",
     year: 2022,
     citations: null,
+    citationFile: "./citations/milcom.bib",
     image: "./Figure/milcom.png",
     area: ["Spectrum Sharing & Management", "Security & Privacy"]
   },
@@ -347,6 +363,7 @@ const publications = [
     venue: "ACM CCS 2021",
     year: 2021,
     citations: null,
+    citationFile: "./citations/icsl.bib",
     image: "./Figure/ICSL.png",
     area: "Security & Privacy"
   },
@@ -357,6 +374,7 @@ const publications = [
     venue: "IEEE ICNP 2021",
     year: 2021,
     citations: null,
+    citationFile: "./citations/etc.bib",
     image: "./Figure/etc.png",
     area: ["Spectrum Sharing & Management"]
   },
@@ -367,6 +385,7 @@ const publications = [
     venue: "USENIX NSDI 2021",
     year: 2021,
     citations: null,
+    citationFile: "./citations/tscatter.bib",
     selected: true,
     image: "./Figure/TScatter.png",
     area: "Battery-Free IoT",
@@ -383,6 +402,7 @@ const publications = [
     venue: "ACM WiSec 2020",
     year: 2020,
     citations: null,
+    citationFile: "./citations/wisec20.bib",
     image: "Figure/WiSec20.png",
     area: ["Spectrum Sharing & Management", "Security & Privacy"],
   }, 
@@ -393,6 +413,7 @@ const publications = [
     venue: "USENIX NSDI 2020",
     year: 2020,
     citations: null,
+    citationFile: "./citations/vmscatter.bib",
     selected: true,
     image: "./Figure/VMscatter.png",
     area: "Battery-Free IoT",
@@ -409,6 +430,7 @@ const publications = [
     venue: "ACM SIGCOMM 2020",
     year: 2020,
     citations: null,
+    citationFile: "./citations/lscatter.bib",
     selected: true,
     image: "./Figure/LScatter.png",
     area: "Battery-Free IoT",
@@ -420,6 +442,7 @@ const publications = [
     venue: "ACM SenSys 2019",
     year: 2019,
     citations: null,
+    citationFile: "./citations/pic.bib",
     selected: null,
     image: "./Figure/PIC.png",
     area: "Spectrum Sharing & Management",
@@ -432,6 +455,7 @@ const publications = [
     venue: "IEEE INFOCOM 2019",
     year: 2019,
     citations: null,
+    citationFile: "./citations/crf.bib",
     image: "./Figure/CRF.png",
     area: "Spectrum Sharing & Management",
   },
@@ -442,6 +466,7 @@ const publications = [
     venue: "ACM SenSys 2018",
     year: 2018,
     citations: null,
+    citationFile: "./citations/passivezigbee.bib",
     selected: null,
     image: "./Figure/PassiveZigbee.png",
     area: ["Battery-Free IoT", "Spectrum Sharing & Management"],
@@ -454,6 +479,7 @@ const publications = [
     venue: "ACM SenSys 2018",
     year: 2018,
     citations: null,
+    citationFile: "./citations/ear.bib",
     image: "./Figure/EAR.png",
     area: "Integrated Sensing and Communication",
   },
@@ -464,6 +490,7 @@ const publications = [
     venue: "ACM MobiSys 2018",
     year: 2018,
     citations: null,
+    citationFile: "./citations/chiron.bib",
     image: "./Figure/Chiron.png",
     area: "Spectrum Sharing & Management"
   },
@@ -474,6 +501,7 @@ const publications = [
     venue: "IEEE INFOCOM 2018",
     year: 2018,
     citations: null,
+    citationFile: "./citations/aegis.bib",
     image: "./Figure/aegis.png",
     area: ["Integrated Sensing and Communication", "Security & Privacy"],
   }
@@ -539,6 +567,46 @@ function underlineStudentAuthors(authors) {
 
 function formatPublicationAuthors(authors) {
   return underlineStudentAuthors(emphasizeMyName(authors));
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => (
+    {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    }[char]
+  ));
+}
+
+function getCitationFileName(citationFile) {
+  const cleanPath = citationFile.split("#")[0].split("?")[0];
+  return cleanPath.substring(cleanPath.lastIndexOf("/") + 1) || "citation.bib";
+}
+
+function copyTextToClipboard(text) {
+  const copyWithTextarea = () => {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  };
+
+  if (navigator.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => {
+      copyWithTextarea();
+    });
+  }
+
+  copyWithTextarea();
+  return Promise.resolve();
 }
 
 function renderNews() {
@@ -779,6 +847,7 @@ function renderPublications() {
 function renderPublicationCard(pub) {
   const formattedAuthors = formatPublicationAuthors(pub.authors);
   const imageSrc = pub.thumbnail || pub.image;
+  const citationFile = typeof pub.citationFile === "string" ? pub.citationFile.trim() : "";
   const links = (pub.links || [])
     .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`)
     .join(" ");
@@ -786,6 +855,10 @@ function renderPublicationCard(pub) {
   const badges = (pub.badges || [])
     .map((badgePath) => `<img src="${badgePath}" alt="Research artifact badge">`)
     .join("");
+
+  const citationButton = citationFile
+    ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">Citation</button>`
+    : "";
 
   return `
     <article class="pub-item" data-area="${getAreas(pub).join(", ")}">
@@ -797,6 +870,7 @@ function renderPublicationCard(pub) {
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
           <div class="pub-venue">${pub.venue}</div>
+          ${citationButton}
           ${pub.award ? `<div class="award-label">${pub.award}</div>` : ""}
           ${badges ? `<div class="badge-row">${badges}</div>` : ""}
           ${links ? `<div class="pub-links">${links}</div>` : ""}
@@ -804,6 +878,132 @@ function renderPublicationCard(pub) {
       </div>
     </article>
   `;
+}
+
+function setupCitationModal() {
+  const groupedContainer = document.getElementById("publication-groups");
+  const modal = document.getElementById("citation-modal");
+  const citationText = document.getElementById("citation-text");
+  const copyButton = document.getElementById("citation-copy");
+  const downloadButton = document.getElementById("citation-download");
+
+  if (!groupedContainer || !modal || !citationText || !copyButton || !downloadButton) {
+    return;
+  }
+
+  let activeCitationText = "";
+  let activeCitationFile = "";
+  let loadRequestId = 0;
+
+  const setActionState = (enabled) => {
+    copyButton.disabled = !enabled;
+    downloadButton.disabled = !enabled;
+  };
+
+  const openModal = () => {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("citation-modal-open");
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("citation-modal-open");
+  };
+
+  const showUnavailableCitation = (citationFile) => {
+    activeCitationText = "";
+    setActionState(false);
+    citationText.textContent = `Citation file is not available yet.\n\nAdd a BibTeX file at:\n${citationFile}`;
+  };
+
+  const loadCitation = (citationFile) => {
+    const requestId = ++loadRequestId;
+    activeCitationFile = citationFile;
+    activeCitationText = "";
+    citationText.textContent = "Loading citation...";
+    setActionState(false);
+    openModal();
+
+    fetch(citationFile, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Citation file returned ${response.status}`);
+        }
+        return response.text();
+      })
+      .then((text) => {
+        if (requestId !== loadRequestId) {
+          return;
+        }
+
+        if (!text.trim()) {
+          citationText.textContent = `Citation file is empty.\n\nFile:\n${citationFile}`;
+          setActionState(false);
+          return;
+        }
+
+        activeCitationText = text;
+        citationText.textContent = text;
+        setActionState(true);
+      })
+      .catch(() => {
+        if (requestId === loadRequestId) {
+          showUnavailableCitation(citationFile);
+        }
+      });
+  };
+
+  groupedContainer.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : event.target.parentElement;
+    const citationButton = target?.closest(".pub-citation-open");
+
+    if (citationButton?.dataset.citationFile && groupedContainer.contains(citationButton)) {
+      loadCitation(citationButton.dataset.citationFile);
+    }
+  });
+
+  copyButton.addEventListener("click", () => {
+    if (!activeCitationText) {
+      return;
+    }
+
+    copyTextToClipboard(activeCitationText).then(() => {
+      copyButton.textContent = "Copied";
+      setTimeout(() => {
+        if (copyButton.isConnected) {
+          copyButton.textContent = "Copy";
+        }
+      }, 1200);
+    });
+  });
+
+  downloadButton.addEventListener("click", () => {
+    if (!activeCitationText) {
+      return;
+    }
+
+    const blob = new Blob([activeCitationText], { type: "text/x-bibtex;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = getCitationFileName(activeCitationFile);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  });
+
+  modal.querySelectorAll("[data-citation-close]").forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
 }
 
 function setupNavHighlight() {
@@ -994,6 +1194,7 @@ function init() {
   buildAreaNav();
   setupPublicationAreaPanel();
   renderPublications();
+  setupCitationModal();
   setupNavHighlight();
   setupAudioButton();
 }

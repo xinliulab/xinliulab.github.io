@@ -152,6 +152,24 @@
     </main>
   </div>
 
+  <div class="citation-modal" id="citation-modal" aria-hidden="true">
+    <div class="citation-modal-backdrop" data-citation-close></div>
+    <div class="citation-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="citation-modal-title">
+      <div class="citation-modal-head">
+        <div>
+          <h3 id="citation-modal-title">Citation</h3>
+          <div class="citation-modal-format">BibTeX</div>
+        </div>
+        <button class="citation-modal-close" type="button" data-citation-close aria-label="Close citation modal">&times;</button>
+      </div>
+      <div class="citation-modal-actions">
+        <button id="citation-copy" type="button" disabled>Copy</button>
+        <button id="citation-download" type="button" disabled>Download</button>
+      </div>
+      <pre class="citation-modal-body"><code id="citation-text"></code></pre>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
   <script src="js/homepage.js"></script>
