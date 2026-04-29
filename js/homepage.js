@@ -144,7 +144,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/geomotiongpt.png",
-    area: ["Foundation Models & AI"],
+    area: ["Foundation Models and Edge AI"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/JYe16/GeoMotionGPT" }
     ]
@@ -159,7 +159,7 @@ const publications = [
     citations: null,
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
-    area: ["Foundation Models & AI"]
+    area: ["Foundation Models and Edge AI"]
   },
 
 
@@ -172,7 +172,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/Fresco.png",
-    area: ["Security & Privacy", "Foundation Models & AI"]
+    area: ["Security & Privacy", "Foundation Models and Edge AI"]
   },
 
     {
@@ -184,7 +184,7 @@ const publications = [
     citations: null,
     selected: true,
     image: "./Figure/arise.png",
-    area: ["Integrated Sensing and Communication", "Foundation Models & AI"]
+    area: ["Integrated Sensing and Communication", "Foundation Models and Edge AI"]
   },
   {
     title: "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication",
@@ -278,7 +278,7 @@ const publications = [
     year: 2024,
     citations: null,
     image: "./Figure/kep.png",
-    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"]
+    area: ["Spectrum Sharing & Management", "Security & Privacy"]
   },
   {
     title: "FTP: Enabling Fast Beam-Training for Optimal mmWave Beamforming",
@@ -333,12 +333,12 @@ const publications = [
   {
     title: " A Secured Protocol for IoT Devices in Tactical Networks",
     href: "./publication/Paper_MILCOM.pdf",
-    authors: "wei Wang, Zicheng Chi, Xin Liu, Ananth Vishnu Bhaskar, Ankit Baingane, Ryan Jahnige, Qingquan Zhang, Ting Zhu",
+    authors: "Wei Wang, Zicheng Chi, Xin Liu, Ananth Vishnu Bhaskar, Ankit Baingane, Ryan Jahnige, Qingquan Zhang, Ting Zhu",
     venue: "IEEE MILCOM 2022",
     year: 2022,
     citations: null,
     image: "./Figure/milcom.png",
-    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"]
+    area: ["Spectrum Sharing & Management", "Security & Privacy"]
   },
   {
     title: "I Can See the Light: Attacks on Autonomous Vehicles Using Invisible Lights",
@@ -358,7 +358,7 @@ const publications = [
     year: 2021,
     citations: null,
     image: "./Figure/etc.png",
-    area: ["Shared-Spectrum Wireless Network"]
+    area: ["Spectrum Sharing & Management"]
   },
   {
     title: "Verification and Redesign of OFDM Backscatter",
@@ -384,7 +384,7 @@ const publications = [
     year: 2020,
     citations: null,
     image: "Figure/WiSec20.png",
-    area: ["Shared-Spectrum Wireless Network", "Security & Privacy"],
+    area: ["Spectrum Sharing & Management", "Security & Privacy"],
   }, 
   {
     title: "VMscatter: A Versatile MIMO Backscatter",
@@ -422,7 +422,7 @@ const publications = [
     citations: null,
     selected: null,
     image: "./Figure/PIC.png",
-    area: "Shared-Spectrum Wireless Network",
+    area: "Spectrum Sharing & Management",
     award: "Best Paper Award Candidate"
   },
   {
@@ -433,7 +433,7 @@ const publications = [
     year: 2019,
     citations: null,
     image: "./Figure/CRF.png",
-    area: "Shared-Spectrum Wireless Network",
+    area: "Spectrum Sharing & Management",
   },
   {
     title: "Passive-ZigBee: Enabling ZigBee Communication in IoT Networks with 1000X+ Less Power Consumption",
@@ -444,7 +444,7 @@ const publications = [
     citations: null,
     selected: null,
     image: "./Figure/PassiveZigbee.png",
-    area: ["Battery-Free IoT", "Shared-Spectrum Wireless Network"],
+    area: ["Battery-Free IoT", "Spectrum Sharing & Management"],
     award: "Best Paper Runner-up Award"
   },
   {
@@ -465,7 +465,7 @@ const publications = [
     year: 2018,
     citations: null,
     image: "./Figure/Chiron.png",
-    area: "Shared-Spectrum Wireless Network"
+    area: "Spectrum Sharing & Management"
   },
     {
     title: "Aegis: An Interference-Negligible RF Sensing Shield",
@@ -481,11 +481,11 @@ const publications = [
 
 const orderedAreas = [
   "Integrated Sensing and Communication",
-  "Battery-Free IoT",
+  "Foundation Models and Edge AI",
   "Millimeter Wave",
-  "Shared-Spectrum Wireless Network",
-  "Security & Privacy",
-  "Foundation Models & AI"
+  "Battery-Free IoT",
+  "Spectrum Sharing & Management",
+  "Security & Privacy"
 ];
 
 const publicationOrder = new Map(publications.map((pub, index) => [pub.title, index]));
@@ -643,10 +643,10 @@ function buildFilters() {
 function buildAreaNav() {
   const areaNav = document.getElementById("area-nav");
   areaNav.innerHTML = ["Selected", ...orderedAreas, "All"]
-    .map((area) => `<button class="area-chip ${activeArea === area ? "active" : ""}" type="button" data-area="${area}">${area}</button>`)
+    .map((area) => `<button class="area-nav-link ${activeArea === area ? "active" : ""}" type="button" data-area="${area}">${area}</button>`)
     .join("");
 
-  areaNav.querySelectorAll(".area-chip").forEach((btn) => {
+  areaNav.querySelectorAll(".area-nav-link").forEach((btn) => {
     btn.addEventListener("click", () => {
       setActiveArea(btn.dataset.area);
       const publicationsSection = document.getElementById("publications");

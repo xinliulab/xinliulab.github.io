@@ -38,7 +38,7 @@ a {
 
 .site-shell {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 324px minmax(0, 1fr);
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -146,40 +146,73 @@ a {
 }
 
 .area-nav-block {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .area-nav-title {
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   letter-spacing: 0.02em;
   color: var(--muted);
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .area-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
+  display: grid;
+  gap: 2px;
+  margin-left: 3px;
+  padding-left: 13px;
+  border-left: 1px solid rgba(80, 96, 120, 0.32);
 }
 
-.area-chip {
-  border: 1px solid #b9c8da;
-  background: #e9eff6;
-  color: var(--accent-deep);
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  font-weight: 700;
+.area-nav-link {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 2px 0 2px 10px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  white-space: nowrap;
   cursor: pointer;
+  transition: color 0.16s ease, transform 0.16s ease;
 }
 
-.area-chip.active,
-.area-chip:hover {
+.area-nav-link::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 50%;
+  width: 9px;
+  border-top: 1px solid rgba(80, 96, 120, 0.28);
+  transform: translateY(-50%);
+}
+
+.area-nav-link.active,
+.area-nav-link:hover {
+  color: var(--accent-deep);
+  transform: translateX(2px);
+}
+
+.area-nav-link.active {
+  font-weight: 700;
+}
+
+.area-nav-link.active::before,
+.area-nav-link:hover::before {
   border-color: var(--accent);
-  background: var(--accent);
-  color: #ffffff;
+}
+
+.area-nav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .sidebar-meta {
@@ -717,5 +750,11 @@ a {
     --student-initial-width: max-content;
     --student-column-gap: 10px;
     row-gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .area-nav-link {
+    white-space: normal;
   }
 }
