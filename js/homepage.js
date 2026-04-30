@@ -245,7 +245,7 @@ const publications = [
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
     links: [
-      { label: "Code / Dataset", href: "https://zenodo.org/records/19609817" },
+      { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" },
       { label: "Slides", href: "./publication/Slides_0cal.pdf" }
     ],
   },
