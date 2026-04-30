@@ -246,7 +246,7 @@ const publications = [
     area: "Millimeter Wave",
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" },
-      { label: "Slides", href: "./publication/Slides_0cal.pdf" }
+      { label: "Slides", href: "./publication/Slides_0cal_calibration_bilingual_notes.pptx" }
     ],
   },
   {
