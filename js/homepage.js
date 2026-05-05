@@ -80,7 +80,8 @@ const teachingItems = [
     name: "CIS 4930/5930: Future Edge Networks and Distributed Intelligence",
     href: "https://xinliulab.github.io/FSU-CIS4930-CIS5930-Future-Edge-Networks/",
     evaluations: [
-      { label: "S26", href: "" }
+      { label: "S26", href: "" },
+      { label: "F26", href: "" }
     ]
   }
 ];
