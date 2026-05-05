@@ -235,7 +235,7 @@ const publications = [
   },
   {
     title: "0cal:  <u>Zero</u>-Cost <u>Cal</u>ibration for mmWave Networks",
-    href: "./publication/26SenSys-0cal.pdf",
+    href: "./publication/Paper_0cal.pdf",
     authors: "Xin Liu, Wei-Han Chen, Kannan Srinivasan",
     venue: "ACM SenSys 2026",
     year: 2026,
