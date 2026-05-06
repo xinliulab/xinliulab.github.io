@@ -81,7 +81,7 @@ const teachingItems = [
     href: "https://xinliulab.github.io/FSU-CIS4930-CIS5930-Future-Edge-Networks/",
     evaluations: [
       { label: "S26", href: "./publication/CIS4930-0001.sp26SPCLTPCSCOMPSCI_XinLiu.pdf" },
-      { label: "F26", href: "" }
+      { label: "F26", href: "https://xinliulab.github.io/FSU-CIS4930-CIS5930-Future-Edge-Networks/" }
     ]
   }
 ];
