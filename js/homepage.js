@@ -1,5 +1,10 @@
 const newsItems = [
   {
+    date: "May 2026",
+    icon: "grant",
+    text: "Pleased to receive the FSU CRC Spring 2026 Seed Grant for CityWalk, a project I am leading with Dr. Choi."
+  },
+  {
     date: "Apr 2026",
     icon: "award",
     text: "Glad to see my students Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
