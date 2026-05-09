@@ -154,7 +154,7 @@ const publications = [
 
   {
     title: "HyperEdit: Unlocking Instruction-based Text Editing in LLMs via Hypernetworks",
-    href: "",
+    href: "https://arxiv.org/abs/2512.12544",
     authors: "Yiming Zeng, Jinghan Cao, Zexin Li, Wanhao Yu, Zhankai Ye, Dawei Xiang, Ting Hua, Xin Liu, Shangqian Gao, Tingting Yu",
     venue: "ACL Findings 2026",
     year: 2026,
@@ -205,7 +205,7 @@ const publications = [
   },
   {
     title: "2FiA: <u>To</u>wards Wi<u>Fi</u> Sensing-Based <u>A</u>uthentication with Unique Biometrics",
-    href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w",
+    href: "./publication/26sp_2fia.pdf",
     authors: "Bofan Li, Zhankai Ye, Weikuan Yu, Yongning Tang, Xin Liu",
     venue: "IEEE S&P 2026",
     year: 2026,
@@ -225,7 +225,7 @@ const publications = [
   },
   {
     title: "MURAL-Fi: <u>M</u>ulti-<u>U</u>ser <u>R</u>espiration <u>A</u>uthentication <u>L</u>everaging Wi-<u>Fi</u>",
-    href: "https://dl.acm.org/doi/10.1145/3790111",
+    href: "./pubulication/26ubicomp_muralfi.pdf",
     authors: "Bofan Li, Xin Liu, Yichao Wang, Yili Ren, Weikuan Yu",
     venue: "ACM IMWUT/UbiComp 2026",
     year: 2026,
@@ -236,7 +236,7 @@ const publications = [
   },
   {
     title: "0cal:  <u>Zero</u>-Cost <u>Cal</u>ibration for mmWave Networks",
-    href: "./publication/Paper_0cal.pdf",
+    href: "./publication/26sensys_0cal.pdf",
     authors: "Xin Liu, Wei-Han Chen, Kannan Srinivasan",
     venue: "ACM SenSys 2026",
     year: 2026,
@@ -246,13 +246,12 @@ const publications = [
     image: "./Figure/0cal.png",
     area: "Millimeter Wave",
     links: [
-      { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" },
-      { label: "Slides", href: "./publication/Slides_0cal_calibration_bilingual_notes.pptx" }
+      { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" }
     ],
   },
   {
     title: "Energy-Efficient Paging for Duty-Cycled LTE Backscatter",
-    href: "./publication/Paper_PScatter.pdf",
+    href: "./publication/25infocom_pscatter.pdf",
     authors: "Yunyun Feng, Xin Liu, Jia Zhao, Yuan Ding, Gongpu Wang, Wei Gong",
     venue: "IEEE INFOCOM 2025",
     year: 2025,
@@ -267,7 +266,7 @@ const publications = [
   },
   {
     title: "O-JRC: An <u>O</u>pen Source Software Platform for mmWave <u>J</u>oint <u>R</u>adar-<u>C</u>ommunication Development and Experimentation",
-    href: "https://doi.org/10.1016/j.comnet.2025.111337",
+    href: "./publication/25cn_ojrc.pdf",
     authors: "Xin Liu, Haocheng Zhu, Eylem Ekici",
     venue: "Computer Networks 2025",
     year: 2025,
@@ -283,7 +282,7 @@ const publications = [
   },
   {
     title: "Key Establishment for Secure Asymmetric Shared-Spectrum Wireless Network",
-    href: "https://dl.acm.org/doi/10.1145/3634737.3637670",
+    href: "./publication/24asiaccs_kep.pdf",
     authors: "Wei Wang, Xin Liu, Zicheng Chi, Stuart Ray, Ting Zhu",
     venue: "ACM ASIACCS 2024",
     year: 2024,
@@ -294,7 +293,7 @@ const publications = [
   },
   {
     title: "FTP: Enabling <u>F</u>ast Beam-<u>T</u>raining for O<u>p</u>timal mmWave Beamforming",
-    href: "./publication/Paper_FTP.pdf",
+    href: "./publication/25infocom_ftp.pdf",
     authors: "Wei-Han Chen, Xin Liu (co-primary), Kannan Srinivasan, Srinivasan Parthasarathy",
     venue: "IEEE INFOCOM 2024",
     year: 2024,
@@ -308,7 +307,7 @@ const publications = [
   },
   {
     title: "Efficient Two-Way Edge Backscatter with Commodity Bluetooth",
-    href: "./publication/Paper_EffBlue.pdf",
+    href: "./publication/25infocom_effblue.pdf",
     authors: "Maoran Jiang, Xin Liu, Li Dong, Wei Gong",
     venue: "IEEE INFOCOM 2024",
     year: 2024,
@@ -322,7 +321,7 @@ const publications = [
   },
   {
     title: "Fast and Optimal Beam Alignment for Off-the-Shelf mmWave Devices",
-    href: "./publication/Paper_Swift.pdf",
+    href: "./publication/23mobiwac_swift.pdf",
     authors: "Wei-Han Chen, Xin Liu, Kannan Srinivasan, Srinivasan Parthasarathy",
     venue: "ACM MobiWac 2023",
     year: 2023,
@@ -336,7 +335,7 @@ const publications = [
   },
   {
     title: "LightThief: Your Optical Communication Information is Stolen behind the Wall",
-    href: "./publication/Paper_LightThief.pdf",
+    href: "./publication/23sec_lightthief.pdf",
     authors: "Xin Liu, Wei Wang, Guanqun Song, Ting Zhu",
     venue: "USENIX Security 2023",
     year: 2023,
@@ -348,7 +347,7 @@ const publications = [
   },
   {
     title: " A Secured Protocol for IoT Devices in Tactical Networks",
-    href: "./publication/Paper_MILCOM.pdf",
+    href: "./publication/22milcom_secprotocol.pdf",
     authors: "Wei Wang, Zicheng Chi, Xin Liu, Ananth Vishnu Bhaskar, Ankit Baingane, Ryan Jahnige, Qingquan Zhang, Ting Zhu",
     venue: "IEEE MILCOM 2022",
     year: 2022,
@@ -359,7 +358,7 @@ const publications = [
   },
   {
     title: "I Can See the Light: Attacks on Autonomous Vehicles Using Invisible Lights",
-    href: "./publication/Paper_ICSL.pdf",
+    href: "./publication/21ccs_icsl.pdf",
     authors: "Wei Wang, Yao Yao, Xin Liu, Xiang Li, Hao Pei, Ting Zhu",
     venue: "ACM CCS 2021",
     year: 2021,
@@ -370,7 +369,7 @@ const publications = [
   },
   {
     title: "Exploiting Wi-Fi AP for Simultaneous Data Dissemination among Wi-Fi and ZigBee Devices",
-    href: "./publication/Paper_ETC.pdf",
+    href: "./publication/21icnp_etc.pdf",
     authors: "Wei Wang, Xin Liu, Yao Yao, Ting Zhu",
     venue: "IEEE ICNP 2021",
     year: 2021,
@@ -381,7 +380,7 @@ const publications = [
   },
   {
     title: "Verification and Redesign of OFDM Backscatter",
-    href: "./publication/Paper_TScatter.pdf",
+    href: "./publication/21nsdi_tscatter.pdf",
     authors: "Xin Liu, Zicheng Chi, Wei Wang, Yao Yao, Pei Hao, Ting Zhu",
     venue: "USENIX NSDI 2021",
     year: 2021,
@@ -398,7 +397,7 @@ const publications = [
   },
    {
     title: "Countering Cross-Technology Jamming Attack",
-    href: "./publication/Paper_WiSec20.pdf",
+    href: "./publication/20wisec_ctcattack.pdf",
     authors: "Zicheng Chi, Yan Li, Xin Liu, Wei Wang, Yao Yao, Ting Zhu, Yanchao Zhang",
     venue: "ACM WiSec 2020",
     year: 2020,
@@ -409,7 +408,7 @@ const publications = [
   }, 
   {
     title: "VMscatter: A <u>V</u>ersatile <u>M</u>IMO Back<u>scatter</u>",
-    href: "./publication/Paper_VMscatter.pdf",
+    href: "./publication/20nsdi_vmscatter.pdf",
     authors: "Xin Liu, Zicheng Chi, Wei Wang, Yao Yao, Ting Zhu",
     venue: "USENIX NSDI 2020",
     year: 2020,
@@ -426,7 +425,7 @@ const publications = [
   },
   {
     title: "Leveraging Ambient LTE Traffic for Ubiquitous Passive Communication",
-    href: "./publication/Paper_LScatter.pdf",
+    href: "./publication/20sigcomm_lscatter.pdf",
     authors: "Zicheng Chi, Xin Liu (co-primary), Wei Wang, Yao Yao, Ting Zhu",
     venue: "ACM SIGCOMM 2020",
     year: 2020,
@@ -438,7 +437,7 @@ const publications = [
   },
   {
     title: "Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge",
-    href: "./publication/Paper_PIC.pdf",
+    href: "./publication/19sensys_pic.pdf",
     authors: "Zicheng Chi, Yan Li, Xin Liu, Yao Yao, Yanchao Zhang, Ting Zhu",
     venue: "ACM SenSys 2019",
     year: 2019,
@@ -451,7 +450,7 @@ const publications = [
   },
   {
     title: "CRF: <u>C</u>oexistent <u>R</u>outing and <u>F</u>looding using Wi-Fi Packets in Heterogeneous IoT Networks",
-    href: "./publication/Paper_CRF.pdf",
+    href: "./publication/19infocom_crf.pdf",
     authors: "Wei Wang, Xin Liu, Yao Yao, Yan Pan, Zicheng Chi, Ting Zhu",
     venue: "IEEE INFOCOM 2019",
     year: 2019,
@@ -462,7 +461,7 @@ const publications = [
   },
   {
     title: "Passive-ZigBee: Enabling ZigBee Communication in IoT Networks with 1000X+ Less Power Consumption",
-    href: "./publication/Paper_PassiveZigBee.pdf",
+    href: "./publication/18sensys_passivezigbee.pdf",
     authors: "Yan Li, Zicheng Chi, Xin Liu, Ting Zhu",
     venue: "ACM SenSys 2018",
     year: 2018,
@@ -475,7 +474,7 @@ const publications = [
   },
   {
     title: "EAR: <u>E</u>xploit Uncontrollable <u>A</u>mbient <u>R</u>F Signals in Heterogeneous Networks for Gesture Recognition",
-    href: "./publication/Paper_EAR.pdf",
+    href: "./publication/18sensys_ear.pdf",
     authors: "Zicheng Chi, Yao Yao, Tiantian Xie, Xin Liu, Zhichuan Huang, Wei Wang, Ting Zhu",
     venue: "ACM SenSys 2018",
     year: 2018,
@@ -486,7 +485,7 @@ const publications = [
   },
   {
     title: "Chiron: <u>C</u>oncurrent <u>Hi</u>gh Th<u>ro</u>ughput Commu<u>n</u>ication for IoT Devices",
-    href: "./publication/Paper_Chiron.pdf",
+    href: "./publication/18mobisys_chiron.pdf",
     authors: "Yan Li, Zicheng Chi, Xin Liu, Ting Zhu",
     venue: "ACM MobiSys 2018",
     year: 2018,
@@ -497,7 +496,7 @@ const publications = [
   },
     {
     title: "Aegis: <u>A</u>n Interf<u>e</u>rence-Negli<u>gi</u>ble RF <u>S</u>ensing Shield",
-    href: "./publication/Paper_Aegis.pdf",
+    href: "./publication/18infocom_aegis.pdf",
     authors: "Yao Yao, Yan Li, Xin Liu, Zicheng Chi, Wei Wang, Tiantian Xie, Ting Zhu",
     venue: "IEEE INFOCOM 2018",
     year: 2018,
