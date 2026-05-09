@@ -2,7 +2,7 @@ const newsItems = [
   {
     date: "May 2026",
     icon: "grant",
-    text: "Pleased to receive the FSU CRC Spring 2026 Seed Grant for CityWalk, a project I am leading with Dr. Choi."
+    text: "Pleased to receive the FSU CRC Spring 2026 Seed Grant for our collaborative research project."
   },
   {
     date: "Apr 2026",
