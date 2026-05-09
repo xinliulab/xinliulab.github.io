@@ -245,7 +245,7 @@ const publications = [
     authors: "Xin Liu, Wei-Han Chen, Kannan Srinivasan",
     venue: "ACM SenSys 2026",
     year: 2026,
-    citations: null,
+    citations: true,
     citationFile: "./citations/0cal.bib",
     selected: true,
     image: "./Figure/0cal.png",
