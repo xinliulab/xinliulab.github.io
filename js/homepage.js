@@ -225,7 +225,7 @@ const publications = [
   },
   {
     title: "MURAL-Fi: <u>M</u>ulti-<u>U</u>ser <u>R</u>espiration <u>A</u>uthentication <u>L</u>everaging Wi-<u>Fi</u>",
-    href: "./pubulication/26ubicomp_muralfi.pdf",
+    href: "./publication/26ubicomp_muralfi.pdf",
     authors: "Bofan Li, Xin Liu, Yichao Wang, Yili Ren, Weikuan Yu",
     venue: "ACM IMWUT/UbiComp 2026",
     year: 2026,
@@ -293,7 +293,7 @@ const publications = [
   },
   {
     title: "FTP: Enabling <u>F</u>ast Beam-<u>T</u>raining for O<u>p</u>timal mmWave Beamforming",
-    href: "./publication/25infocom_ftp.pdf",
+    href: "./publication/24infocom_ftp.pdf",
     authors: "Wei-Han Chen, Xin Liu (co-primary), Kannan Srinivasan, Srinivasan Parthasarathy",
     venue: "IEEE INFOCOM 2024",
     year: 2024,
@@ -307,7 +307,7 @@ const publications = [
   },
   {
     title: "Efficient Two-Way Edge Backscatter with Commodity Bluetooth",
-    href: "./publication/25infocom_effblue.pdf",
+    href: "./publication/24infocom_effblue.pdf",
     authors: "Maoran Jiang, Xin Liu, Li Dong, Wei Gong",
     venue: "IEEE INFOCOM 2024",
     year: 2024,
