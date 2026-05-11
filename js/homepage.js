@@ -7,7 +7,7 @@ const newsItems = [
   {
     date: "Apr 2026",
     icon: "award",
-    text: "Glad to see my students Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
+    text: "Glad to see Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
     links: [
       {
         label: "LinkedIn",
