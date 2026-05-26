@@ -1,6 +1,17 @@
 const newsItems = [
   {
     date: "May 2026",
+    icon: "award",
+    text: "Our 2FiA paper received the Distinguished Artifact Award at IEEE S&P 2026.",
+    links: [
+      {
+        label: "Official",
+        href: "https://sp2026.ieee-security.org/awards_artifacts.html?utm_source=chatgpt.com"
+      }
+    ]
+  },
+  {
+    date: "May 2026",
     icon: "grant",
     text: "Pleased to receive the FSU CRC Spring 2026 Seed Grant for our collaborative research project."
   },
@@ -226,7 +237,9 @@ const publications = [
       "./Figure/sp_available.png",
       "./Figure/sp_functional.png",
       "./Figure/sp_reproduced.png"
-    ]
+    ],
+    award: "Distinguished Artifact Award",
+    awardHref: "https://sp2026.ieee-security.org/awards_artifacts.html?utm_source=chatgpt.com"
   },
   {
     title: "MURAL-Fi: <u>M</u>ulti-<u>U</u>ser <u>R</u>espiration <u>A</u>uthentication <u>L</u>everaging Wi-<u>Fi</u>",
@@ -864,6 +877,11 @@ function renderPublicationCard(pub) {
     ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
   const resourceLinks = [...linkItems, citationButton].filter(Boolean).join(" ");
+  const awardLabel = pub.award
+    ? pub.awardHref
+      ? `<a class="award-label" href="${pub.awardHref}" target="_blank" rel="noopener noreferrer">${pub.award}</a>`
+      : `<span class="award-label">${pub.award}</span>`
+    : "";
 
   return `
     <article class="pub-item" data-area="${getAreas(pub).join(", ")}">
@@ -875,10 +893,10 @@ function renderPublicationCard(pub) {
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
           <div class="pub-venue">${pub.venue}</div>
-          ${pub.award ? `<div class="award-label">${pub.award}</div>` : ""}
           ${badges ? `<div class="badge-row">${badges}</div>` : ""}
           ${resourceLinks ? `<div class="pub-links">${resourceLinks}</div>` : ""}
         </div>
+        ${awardLabel ? `<div class="pub-award-row">${awardLabel}</div>` : ""}
       </div>
     </article>
   `;

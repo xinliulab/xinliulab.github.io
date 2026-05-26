@@ -740,9 +740,21 @@ a {
 .award-label {
   color: #b3261e;
   font-size: 0.9rem;
-  font-weight: 500;
-  margin-right: 6px;
+  font-weight: 700;
   white-space: nowrap;
+}
+
+.pub-award-row {
+  margin-top: 5px;
+}
+
+.pub-award-row .award-label {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pub-award-row .award-label:hover {
+  text-decoration: underline;
 }
 
 .pub-links a,
