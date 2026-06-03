@@ -50,6 +50,11 @@ const newsItems = [
   {
     date: "Sep 2025",
     icon: "paper",
+    text: "Bofan received the Dean's Award for Doctoral Excellence (DADE) from the College of Arts and Sciences."
+  },
+  {
+    date: "Sep 2025",
+    icon: "paper",
     text: "Our lab's first paper was accepted to IEEE S&P 2026. Congratulations, Bofan!"
   },
   {
