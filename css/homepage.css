@@ -427,7 +427,36 @@ a {
 .timeline-item {
   border-left: 3px solid #bcc9da;
   padding-left: 12px;
-  display: block;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.news-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.news-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.news-copy {
+  min-width: 0;
 }
 
 .timeline-item strong {

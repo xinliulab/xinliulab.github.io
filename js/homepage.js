@@ -1,8 +1,8 @@
 const newsItems = [
   {
     date: "June 2026",
-    icon: "award",
-    text: "Congratulations to Dr. Bofan Li on successfully defending his Ph.D. dissertation and becoming the first Ph.D. graduate from our group."
+    icon: "degree",
+    text: "Congratulations to Dr. Bofan Li on successfully defending his Ph.D. dissertation and becoming the first Ph.D. graduate from our lab."
   },
   {
     date: "May 2026",
@@ -38,12 +38,12 @@ const newsItems = [
   },
   {
     date: "Mar 2026",
-    icon: "award",
+    icon: "grant",
     text: "Honored to receive this summer's Dean's Faculty Travel Award. I will use this opportunity to share our research and further increase FSU's research visibility and impact."
   },
   {
     date: "Feb 2026",
-    icon: "cloud",
+    icon: "grant",
     text: "Honored to be awarded the FSU-AWS Research Acceleration Award. We will leverage AWS cloud to accelerate research on physics-guided learning for NextG channel modeling.",
     links: [
       {
@@ -54,7 +54,7 @@ const newsItems = [
   },
   {
     date: "Sep 2025",
-    icon: "paper",
+    icon: "award",
     text: "Bofan received the Dean's Award for Doctoral Excellence (DADE) from the College of Arts and Sciences."
   },
   {
@@ -75,7 +75,7 @@ const newsItems = [
   },
   {
     date: "Aug 2024",
-    icon: "flag",
+    icon: "football",
     text: "Kicked off my journey as a professor at FSU.",
     links: [
       {
@@ -144,7 +144,7 @@ const students = [
     group: "alumni",
     currentRole: "Ph.D.",
     period: "2024 - 2026",
-    initialPosition: "",
+    initialPosition: "Postdoctoral Scholar, Arizona State University",
     publications: [
     {
         title: "S&P'26",
@@ -546,6 +546,76 @@ const orderedAreas = [
 
 const publicationOrder = new Map(publications.map((pub, index) => [pub.title, index]));
 
+const newsIconMeta = {
+  degree: {
+    label: "Degree milestone",
+    path: `
+      <path d="M3.4 8.7 12 5l8.6 3.7-8.6 3.7-8.6-3.7Z"></path>
+      <path d="M7.5 11v3.1c0 1.2 2 2.4 4.5 2.4s4.5-1.2 4.5-2.4V11"></path>
+      <path d="M19.2 9.4v4.1"></path>
+      <path d="M19.2 13.5c.6.4.8.9.8 1.6"></path>
+    `
+  },
+  paper: {
+    label: "Paper news",
+    path: `
+      <path d="M7 4.5h7.1L18 8.4v11.1H7V4.5Z"></path>
+      <path d="M14 4.7v4h3.8"></path>
+      <path d="M9.5 11.2h5"></path>
+      <path d="M9.5 14h5"></path>
+      <path d="M9.5 16.8h3.4"></path>
+    `
+  },
+  grant: {
+    label: "Grant support",
+    path: `
+      <path d="M4.6 14.3h3.2l2.1 2.2h3.4c.9 0 1.7-.4 2.2-1.1l2.2-3"></path>
+      <path d="M3.5 16.9h5.3l1.5 1.5h5.2c1.1 0 2.1-.5 2.8-1.4l2.2-3"></path>
+      <path d="M12 5.1l.9 1.8 2 .3-1.5 1.4.4 2-1.8-.9-1.8.9.4-2-1.5-1.4 2-.3.9-1.8Z"></path>
+    `
+  },
+  award: {
+    label: "Award news",
+    path: `
+      <path d="M8 4.8h8v4.7a4 4 0 0 1-8 0V4.8Z"></path>
+      <path d="M8 6.3H5.6v2.1A2.6 2.6 0 0 0 8.5 11"></path>
+      <path d="M16 6.3h2.4v2.1A2.6 2.6 0 0 1 15.5 11"></path>
+      <path d="M12 13.5v3"></path>
+      <path d="M8.9 19.2h6.2"></path>
+      <path d="M10 16.5h4"></path>
+    `
+  },
+  football: {
+    label: "FSU kickoff",
+    path: `
+      <path d="M5.3 16.9C4 15.6 4.5 12 7.6 8.9s6.7-3.6 8-2.3c1.3 1.3.8 4.9-2.3 8s-6.7 3.6-8 2.3Z"></path>
+      <path d="M7.2 15 13.7 8.5"></path>
+      <path d="M9.2 13l1.6 1.6"></path>
+      <path d="M10.7 11.5l1.6 1.6"></path>
+      <path d="M12.2 10l1.6 1.6"></path>
+    `
+  },
+  milestone: {
+    label: "Milestone",
+    path: `
+      <path d="M6.5 20V4.5"></path>
+      <path d="M7 5.5h9.9l-1.7 3.1 1.7 3.1H7"></path>
+      <path d="M6.5 20h8"></path>
+    `
+  }
+};
+
+function renderNewsIcon(icon) {
+  const meta = newsIconMeta[icon] || newsIconMeta.milestone;
+  return `
+    <span class="news-icon news-icon-${icon || "milestone"}" title="${meta.label}" aria-label="${meta.label}">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        ${meta.path}
+      </svg>
+    </span>
+  `;
+}
+
 let activeArea = "Selected";
 
 function getAreas(pub) {
@@ -645,8 +715,9 @@ function renderNews() {
         .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`)
         .join(" | ");
       return `
-        <article class="timeline-item">
-          <div><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}</div>
+        <article class="timeline-item news-item">
+          ${renderNewsIcon(item.icon)}
+          <div class="news-copy"><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}</div>
         </article>
       `;
     })
