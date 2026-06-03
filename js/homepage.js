@@ -1,5 +1,10 @@
 const newsItems = [
   {
+    date: "June 2026",
+    icon: "award",
+    text: "Congratulations to Dr. Bofan Li on successfully defending his Ph.D. dissertation and becoming the first Ph.D. graduate from our group."
+  },
+  {
     date: "May 2026",
     icon: "award",
     text: "Our 2FiA paper received the Distinguished Artifact Award at IEEE S&P 2026.",
