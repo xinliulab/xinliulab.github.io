@@ -309,7 +309,7 @@ const publications = [
     ]
   },
   {
-    title: "Key Establishment for Secure Asymmetric Shared-Spectrum Wireless Network",
+    title: "Key Establishment for Secure Asymmetric Cross-Technology Communication",
     href: "./publication/24asiaccs_kep.pdf",
     authors: "Wei Wang, Xin Liu, Zicheng Chi, Stuart Ray, Ting Zhu",
     venue: "ACM ASIACCS 2024",
@@ -522,7 +522,20 @@ const publications = [
     image: "./Figure/Chiron.png",
     area: "Spectrum Sharing & Management"
   },
-    {
+
+  {
+    title: "ECT: <u>E</u>xploiting Cross-Technology </u>C</u>oncurrent </u>T</u>ransmission for Reducing Packet Delivery Delay in IoT Networks",
+    href: "./publication/18infocom_ect.pdf",
+    authors: "Wei Wang, Tiantian Xie, Xin Liu, Ting Zhu",
+    venue: "IEEE INFOCOM 2018",
+    year: 2018,
+    citations: null,
+    citationFile: "./citations/ect.bib",
+    image: "./Figure/ECT.png",
+    area: ["Spectrum Sharing & Management"],
+  },
+
+   {
     title: "Aegis: <u>A</u>n Interf<u>e</u>rence-Negli<u>gi</u>ble RF <u>S</u>ensing Shield",
     href: "./publication/18infocom_aegis.pdf",
     authors: "Yao Yao, Yan Li, Xin Liu, Zicheng Chi, Wei Wang, Tiantian Xie, Ting Zhu",
