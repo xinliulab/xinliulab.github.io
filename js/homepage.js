@@ -304,7 +304,7 @@ const publications = [
     image: "./Figure/ojrc.png",
     area: ["Integrated Sensing and Communication", "Millimeter Wave"], 
     links: [
-      { label: "Website", href: "https://u.osu.edu/ekici/jrc-testbed/" },
+      { label: "Project Page", href: "https://u.osu.edu/ekici/jrc-testbed/" },
       { label: "Code", href: "https://github.com/mmWave-MIMO-Testbed/O-JRC" }
     ]
   },
@@ -372,6 +372,10 @@ const publications = [
     selected: true,
     image: "./Figure/LightThief.png",
     area: ["Battery-Free IoT", "Integrated Sensing and Communication", "Security & Privacy"],
+    links: [
+      { label: "Code", href: "https://github.com/xinliulab/23Security_LightThief" },
+      { label: "Presentation", href: "https://www.usenix.org/conference/usenixsecurity23/presentation/liu-xin" }
+    ]
   },
   {
     title: " A Secured Protocol for IoT Devices in Tactical Networks",
