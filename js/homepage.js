@@ -765,7 +765,11 @@ function renderNewsImages(images) {
         return "";
       }
 
-      return `<img src="${src}" alt="${escapeHtml(alt)}">`;
+      return `
+        <button class="news-media-button" type="button" data-news-image-src="${src}" data-news-image-alt="${escapeHtml(alt)}" aria-label="Open image: ${escapeHtml(alt)}">
+          <img src="${src}" alt="${escapeHtml(alt)}">
+        </button>
+      `;
     })
     .filter(Boolean)
     .join("");
@@ -789,6 +793,64 @@ function renderNews() {
       `;
     })
     .join("");
+}
+
+function setupNewsImageViewer() {
+  const newsList = document.getElementById("news-list");
+  if (!newsList) {
+    return;
+  }
+
+  const modal = document.createElement("div");
+  modal.className = "news-image-modal";
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="news-image-modal-backdrop" data-news-image-close></div>
+    <div class="news-image-modal-dialog" role="dialog" aria-modal="true" aria-label="News image preview">
+      <button class="news-image-modal-close" type="button" data-news-image-close aria-label="Close image preview">&times;</button>
+      <img class="news-image-modal-img" src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const image = modal.querySelector(".news-image-modal-img");
+  const closeButtons = modal.querySelectorAll("[data-news-image-close]");
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("news-image-modal-open");
+    image.removeAttribute("src");
+    image.alt = "";
+  };
+
+  const openModal = (src, alt) => {
+    image.src = src;
+    image.alt = alt;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("news-image-modal-open");
+    modal.querySelector(".news-image-modal-close").focus();
+  };
+
+  newsList.addEventListener("click", (event) => {
+    const button = event.target.closest(".news-media-button");
+    if (!button) {
+      return;
+    }
+
+    openModal(button.dataset.newsImageSrc, button.dataset.newsImageAlt || "News photo");
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
 }
 
 function renderTeaching() {
@@ -1358,6 +1420,7 @@ function setupAudioButton() {
 
 function init() {
   renderNews();
+  setupNewsImageViewer();
   renderTeaching();
   renderStudents();
   buildFilters();

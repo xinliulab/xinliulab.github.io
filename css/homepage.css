@@ -32,7 +32,8 @@ body {
   line-height: 1.72;
 }
 
-body.citation-modal-open {
+body.citation-modal-open,
+body.news-image-modal-open {
   overflow: hidden;
 }
 
@@ -471,14 +472,15 @@ a {
 }
 
 .news-media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 260px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   margin-top: 8px;
 }
 
 .news-media-grid img {
-  width: 100%;
+  width: 260px;
   height: 156px;
   display: block;
   object-fit: cover;
@@ -486,6 +488,27 @@ a {
   border-radius: 8px;
   border: 1px solid var(--line);
   background: #edf2f7;
+}
+
+.news-media-button {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.news-media-button:hover img {
+  border-color: #8fa2bb;
+  box-shadow: 0 10px 24px rgba(47, 62, 86, 0.16);
+}
+
+.news-media-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
 .timeline-item {
@@ -808,6 +831,71 @@ a {
   color: #233044;
   font-size: 0.82rem;
   line-height: 1.45;
+}
+
+.news-image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+}
+
+.news-image-modal.is-open {
+  display: block;
+}
+
+.news-image-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 48, 68, 0.78);
+}
+
+.news-image-modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(1120px, calc(100vw - 48px));
+  max-height: calc(100vh - 48px);
+  transform: translate(-50%, -50%);
+}
+
+.news-image-modal-img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8fafc;
+  box-shadow: 0 24px 80px rgba(8, 13, 24, 0.48);
+}
+
+.news-image-modal-close {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent-deep);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  box-shadow: 0 10px 28px rgba(8, 13, 24, 0.28);
+}
+
+.news-image-modal-close:hover {
+  background: #edf2f8;
+}
+
+.news-image-modal-close:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .pub-group.all-view .pub-group-head {
