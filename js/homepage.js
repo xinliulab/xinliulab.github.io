@@ -145,14 +145,6 @@ const teachingItems = [
 
 const students = [
   {
-    name: "Zhuoyuan Liu",
-    href: "",
-    currentRole: "Ph.D.",
-    period: "2025 - now",
-    initialPosition: "",
-    publications: []
-  },
-  {
     name: "Yihao Huang",
     href: "",
     currentRole: "Ph.D.",
@@ -160,6 +152,15 @@ const students = [
     initialPosition: "",
     publications: []
   },
+  {
+    name: "Zhuoyuan Liu",
+    href: "",
+    currentRole: "Ph.D.",
+    period: "2025 - now",
+    initialPosition: "",
+    publications: []
+  },
+
   {
     name: "Zhankai Ye",
     href: "https://jye16.github.io",
