@@ -23,11 +23,32 @@ const newsItems = [
   {
     date: "Apr 2026",
     icon: "award",
-    text: "Glad to see Bofan and Zhankai win awards at the Mobile Computing Demo Showcase and FSU CS Expo 2026, and even happier to witness their growth in research and presentation.",
+    text: "Glad to see Bofan receive the Best Poster Award and Zhankai receive the Honorable Mention Presentation Award at FSU CS Expo 2026.",
     links: [
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/feed/update/urn:li:activity:7448819669890875393/?originTrackingId=8j7J6DlmpvFNWquACaqPew%3D%3D"
+      }
+    ],
+    images: [
+      {
+        src: "./Figure/news_best_poster_2026.jpg",
+        alt: "Bofan Li's CS Expo 2026 Best Poster Award certificate"
+      },
+      {
+        src: "./Figure/news_honorable_presentation_2026.jpg",
+        alt: "Zhankai Ye's CS Expo 2026 Honorable Mention Presentation Award certificate"
+      }
+    ]
+  },
+  {
+    date: "Apr 2026",
+    icon: "award",
+    text: "Congratulations to Bofan Li for receiving the Graduate Student Research Award 2026 from the FSU Computer Science Department.",
+    images: [
+      {
+        src: "./Figure/news_outstanding_ra_2026.jpg",
+        alt: "Bofan Li's Graduate Student Research Award 2026 certificate"
       }
     ]
   },
@@ -724,6 +745,28 @@ function copyTextToClipboard(text) {
   return Promise.resolve();
 }
 
+function renderNewsImages(images) {
+  if (!Array.isArray(images) || !images.length) {
+    return "";
+  }
+
+  const imageMarkup = images
+    .map((image) => {
+      const src = typeof image === "string" ? image : image.src;
+      const alt = typeof image === "string" ? "News photo" : (image.alt || "News photo");
+
+      if (!src) {
+        return "";
+      }
+
+      return `<img src="${src}" alt="${escapeHtml(alt)}">`;
+    })
+    .filter(Boolean)
+    .join("");
+
+  return imageMarkup ? `<div class="news-media-grid">${imageMarkup}</div>` : "";
+}
+
 function renderNews() {
   const container = document.getElementById("news-list");
   container.innerHTML = newsItems
@@ -731,10 +774,11 @@ function renderNews() {
       const links = (item.links || [])
         .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`)
         .join(" | ");
+      const images = renderNewsImages(item.images);
       return `
         <article class="timeline-item news-item">
           ${renderNewsIcon(item.icon)}
-          <div class="news-copy"><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}</div>
+          <div class="news-copy"><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}${images}</div>
         </article>
       `;
     })

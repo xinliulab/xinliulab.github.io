@@ -424,6 +424,68 @@ a {
   gap: 12px;
 }
 
+.news-panel {
+  --news-visible-height: 340px;
+}
+
+.news-panel .panel-head {
+  margin-bottom: 10px;
+}
+
+.news-scroll {
+  max-height: var(--news-visible-height);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 10px;
+  scrollbar-gutter: stable;
+}
+
+.news-scroll::after {
+  content: "";
+  position: sticky;
+  bottom: -1px;
+  display: block;
+  height: 18px;
+  margin-top: -18px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0), var(--panel-bg));
+}
+
+.news-scroll::-webkit-scrollbar {
+  width: 9px;
+}
+
+.news-scroll::-webkit-scrollbar-track {
+  background: #edf2f7;
+  border-radius: 999px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb {
+  background: #b6c3d4;
+  border-radius: 999px;
+  border: 2px solid #edf2f7;
+}
+
+.news-scroll::-webkit-scrollbar-thumb:hover {
+  background: #8fa2bb;
+}
+
+.news-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.news-media-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #edf2f7;
+}
+
 .timeline-item {
   border-left: 3px solid #bcc9da;
   padding-left: 12px;
@@ -945,6 +1007,10 @@ a {
 
   .panel {
     padding: 18px;
+  }
+
+  .news-panel {
+    --news-visible-height: 300px;
   }
 }
 
