@@ -153,6 +153,14 @@ const students = [
     publications: []
   },
   {
+    name: "Yihao Huang (易豪华)",
+    href: "",
+    currentRole: "Ph.D.",
+    period: "2026 - now",
+    initialPosition: "",
+    publications: []
+  },
+  {
     name: "Zhankai Ye",
     href: "https://jye16.github.io",
     currentRole: "Ph.D.",
