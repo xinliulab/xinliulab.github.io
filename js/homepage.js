@@ -153,7 +153,7 @@ const students = [
     publications: []
   },
   {
-    name: "Yihao Huang (易豪华)",
+    name: "Yihao Huang",
     href: "",
     currentRole: "Ph.D.",
     period: "2026 - now",
