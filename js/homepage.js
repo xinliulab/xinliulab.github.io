@@ -16,8 +16,12 @@ const newsItems = [
     ],
     images: [
       {
-        src: "./Figure/news_2fia_distinguished_artifact_2026.jpg",
+        src: "./Figure/distinguished_artifact_certificate_2026.jpg",
         alt: "2FiA Distinguished Artifact Award certificate at IEEE S&P 2026"
+      },
+      {
+        src: "./Figure/distinguished_artifacts_slide_2026.jpg",
+        alt: "Distinguished Artifacts slide at IEEE S&P 2026"
       }
     ]
   },
@@ -38,11 +42,11 @@ const newsItems = [
     ],
     images: [
       {
-        src: "./Figure/news_best_poster_2026.jpg",
+        src: "./Figure/cs_expo_best_poster_2026.jpg",
         alt: "Bofan Li's CS Expo 2026 Best Poster Award certificate"
       },
       {
-        src: "./Figure/news_honorable_presentation_2026.jpg",
+        src: "./Figure/cs_expo_honorable_presentation_2026.jpg",
         alt: "Zhankai Ye's CS Expo 2026 Honorable Mention Presentation Award certificate"
       }
     ]
@@ -53,7 +57,7 @@ const newsItems = [
     text: "Congratulations to Bofan Li for receiving the Graduate Student Research Award 2026 from the FSU Computer Science Department.",
     images: [
       {
-        src: "./Figure/news_outstanding_ra_2026.jpg",
+        src: "./Figure/graduate_student_research_award_2026.jpg",
         alt: "Bofan Li's Graduate Student Research Award 2026 certificate"
       }
     ]

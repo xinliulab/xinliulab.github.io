@@ -483,7 +483,7 @@ a {
   width: 260px;
   height: 156px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border-radius: 8px;
   border: 1px solid var(--line);
