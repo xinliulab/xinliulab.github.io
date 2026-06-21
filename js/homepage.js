@@ -13,6 +13,12 @@ const newsItems = [
         label: "Official",
         href: "https://sp2026.ieee-security.org/awards_artifacts.html?utm_source=chatgpt.com"
       }
+    ],
+    images: [
+      {
+        src: "./Figure/news_2fia_distinguished_artifact_2026.jpg",
+        alt: "2FiA Distinguished Artifact Award certificate at IEEE S&P 2026"
+      }
     ]
   },
   {
