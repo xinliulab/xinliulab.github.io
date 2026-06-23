@@ -33,19 +33,13 @@
   color: var(--accent);
 }
 
-.analytics-embed-shell {
+.visitor-map-shell {
   border: 1px solid var(--line);
   border-radius: 12px;
   overflow: hidden;
   background: #ffffff;
   min-height: 520px;
-}
-
-#analytics-embed {
-  display: block;
-  width: 100%;
-  min-height: 520px;
-  border: 0;
+  padding: 18px;
 }
 
 @media (max-width: 900px) {
@@ -62,8 +56,7 @@
     align-items: flex-start;
   }
 
-  .analytics-embed-shell,
-  #analytics-embed {
+  .visitor-map-shell {
     min-height: 420px;
   }
 }
