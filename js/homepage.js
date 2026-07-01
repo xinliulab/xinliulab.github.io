@@ -194,11 +194,11 @@ const students = [
         title: "UbiComp'26",
         sublinks: [
           {
-            label: "1",
+            label: "Paper 1",
             href: "https://dl.acm.org/doi/10.1145/3790111"
           },
           {
-            label: "2",
+            label: "Paper 2",
             href: "#publication-bfmscan-enabling-explicit-angle-resolved-sensing-via-beamforming-feedback-matrix"
           }
         ]
@@ -934,7 +934,7 @@ function renderStudents() {
           const sublinks = publication.sublinks
             .filter((link) => link.href)
             .map((link) => (
-              `<a class="student-publication-sublink" href="${link.href}" target="_blank" rel="noopener noreferrer" aria-label="${publication.title} paper ${link.label}">${link.label}</a>`
+              `<a class="student-publication-sublink" href="${link.href}" target="_blank" rel="noopener noreferrer" aria-label="${publication.title} ${link.label}">${link.label}</a>`
             ))
             .join("");
 

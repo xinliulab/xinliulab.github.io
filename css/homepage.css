@@ -1066,8 +1066,10 @@ a {
 
 .student-publication-group {
   display: inline-flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 2px;
+  line-height: 1.05;
 }
 
 .student-publication-title {
@@ -1079,17 +1081,17 @@ a {
 .student-publication-sublinks {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 1px;
-  line-height: 1;
+  gap: 2px;
+  line-height: 1.05;
 }
 
 .student-publication-sublink {
   color: var(--accent);
-  font-size: 0.68rem;
-  font-weight: 700;
-  line-height: 0.9;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
 }
 
