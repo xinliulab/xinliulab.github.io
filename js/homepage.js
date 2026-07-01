@@ -187,16 +187,15 @@ const students = [
     initialPosition: "Postdoctoral Scholar, Arizona State University",
     publications: [
       {
-        title: "UbiComp'26 Y2",
-        href: ""
-      },
-      {
         title: "S&P'26",
         href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
       },
       {
-        title: "UbiComp'26 Y1",
-        href: "https://dl.acm.org/doi/10.1145/3790111"
+        title: "UbiComp'26 x 2",
+        hrefs: [
+          "https://dl.acm.org/doi/10.1145/3790111",
+          "#publication-bfmscan-enabling-explicit-angle-resolved-sensing-via-beamforming-feedback-matrix"
+        ]
       }
 
     ]
@@ -761,6 +760,10 @@ function getCitationFileName(citationFile) {
   return cleanPath.substring(cleanPath.lastIndexOf("/") + 1) || "citation.bib";
 }
 
+function getPublicationId(pub) {
+  return `publication-${pub.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+}
+
 function copyTextToClipboard(text) {
   const copyWithTextarea = () => {
     const textarea = document.createElement("textarea");
@@ -921,10 +924,20 @@ function renderStudents() {
       : student.name;
     const publications = (student.publications || [])
       .map((publication) => {
-        if (!publication.href) {
+        const hrefs = Array.isArray(publication.hrefs)
+          ? publication.hrefs.filter(Boolean)
+          : [publication.href].filter(Boolean);
+
+        if (hrefs.length === 0) {
           return `<span class="student-publication">${publication.title}</span>`;
         }
-        return `<a class="student-publication" href="${publication.href}" target="_blank" rel="noopener noreferrer">${publication.title}</a>`;
+
+        const extraHrefs = hrefs.slice(1);
+        const extraHrefAttribute = extraHrefs.length > 0
+          ? ` data-extra-hrefs="${escapeHtml(JSON.stringify(extraHrefs))}"`
+          : "";
+
+        return `<a class="student-publication" href="${hrefs[0]}"${extraHrefAttribute} target="_blank" rel="noopener noreferrer">${publication.title}</a>`;
       })
       .join("");
 
@@ -950,6 +963,30 @@ function renderStudents() {
     ${currentStudents.map(renderStudent).join("")}
     ${alumniHtml}
   `;
+}
+
+function setupStudentPublicationLinks() {
+  const container = document.getElementById("student-list");
+
+  container.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : event.target.parentElement;
+    const link = target?.closest(".student-publication");
+
+    if (!link || !container.contains(link) || !link.dataset.extraHrefs) {
+      return;
+    }
+
+    try {
+      JSON.parse(link.dataset.extraHrefs)
+        .filter(Boolean)
+        .map((href) => new URL(href, window.location.href).href)
+        .forEach((href) => {
+          window.open(href, "_blank", "noopener,noreferrer");
+        });
+    } catch {
+      // Keep the primary link working if the optional extra-link data is malformed.
+    }
+  });
 }
 
 function buildFilters() {
@@ -1132,7 +1169,7 @@ function renderPublicationCard(pub) {
     : "";
 
   return `
-    <article class="pub-item" data-area="${getAreas(pub).join(", ")}">
+    <article class="pub-item" id="${getPublicationId(pub)}" data-area="${getAreas(pub).join(", ")}">
       <div class="pub-thumb" aria-hidden="${imageSrc ? "false" : "true"}">
         ${imageSrc ? `<img src="${imageSrc}" alt="${pub.title}">` : ""}
       </div>
@@ -1461,6 +1498,7 @@ function init() {
   setupNewsImageViewer();
   renderTeaching();
   renderStudents();
+  setupStudentPublicationLinks();
   buildFilters();
   buildAreaNav();
   setupPublicationAreaPanel();
