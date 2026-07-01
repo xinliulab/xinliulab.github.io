@@ -186,12 +186,16 @@ const students = [
     period: "2024 - 2026",
     initialPosition: "Postdoctoral Scholar, Arizona State University",
     publications: [
-    {
+      {
+        title: "UbiComp'26 Y2",
+        href: ""
+      },
+      {
         title: "S&P'26",
         href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
       },
       {
-        title: "Ubicomp'26",
+        title: "UbiComp'26 Y1",
         href: "https://dl.acm.org/doi/10.1145/3790111"
       }
 
@@ -201,6 +205,22 @@ const students = [
 
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
+
+    {
+    title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
+    href: "",
+    authors: "Bofan Li, Zhuoyuan Liu, Zhankai Ye, Weikuan Yu, Xin Liu",
+    venue: "ACM IMWUT/UbiComp 2026",
+    year: 2026,
+    citations: null,
+    citationFile: "",
+    selected: true,
+    image: "./Figure/BFMScan.png",
+    area: ["Integrated Sensing and Communication"],
+    links: [
+      { label: "Code / Dataset", href: "" }
+    ]
+  },
 
     {
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
@@ -1088,9 +1108,14 @@ function renderPublications() {
 function renderPublicationCard(pub) {
   const formattedAuthors = formatPublicationAuthors(pub.authors);
   const imageSrc = pub.thumbnail || pub.image;
+  const paperHref = typeof pub.href === "string" ? pub.href.trim() : "";
   const citationFile = typeof pub.citationFile === "string" ? pub.citationFile.trim() : "";
   const linkItems = (pub.links || [])
-    .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`);
+    .map((link) => (
+      link.href
+        ? `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`
+        : `<span class="pub-link-placeholder">[${link.label}]</span>`
+    ));
 
   const badges = (pub.badges || [])
     .map((badgePath) => `<img src="${badgePath}" alt="Research artifact badge">`)
@@ -1112,7 +1137,7 @@ function renderPublicationCard(pub) {
         ${imageSrc ? `<img src="${imageSrc}" alt="${pub.title}">` : ""}
       </div>
       <div class="pub-content">
-        <div class="pub-title"><a href="${pub.href}" target="_blank" rel="noopener noreferrer">${pub.title}</a></div>
+        <div class="pub-title">${paperHref ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">${pub.title}</a>` : pub.title}</div>
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
           <div class="pub-venue">${pub.venue}</div>

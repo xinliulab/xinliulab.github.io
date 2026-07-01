@@ -939,8 +939,13 @@ a {
 }
 
 .pub-links a,
+.pub-link-placeholder,
 .pub-citation-open {
   white-space: nowrap;
+}
+
+.pub-link-placeholder {
+  color: var(--muted);
 }
 
 .badge-row {
