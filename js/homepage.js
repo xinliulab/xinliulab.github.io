@@ -5,6 +5,11 @@ const newsItems = [
     text: "Congratulations to Dr. Bofan Li on successfully defending his Ph.D. dissertation and becoming the first Ph.D. graduate from our lab."
   },
   {
+    date: "June 2026",
+    icon: "paper",
+    text: "Our BFM-based WiFi 6 sensing work was accepted to ACM UbiComp 2026. Congratulations, Bofan!"
+  },
+  {
     date: "May 2026",
     icon: "award",
     text: "Our 2FiA paper received the Distinguished Artifact Award at IEEE S&P 2026.",
