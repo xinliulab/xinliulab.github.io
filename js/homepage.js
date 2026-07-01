@@ -7,7 +7,7 @@ const newsItems = [
   {
     date: "June 2026",
     icon: "paper",
-    text: "Our BFM-based WiFi 6 sensing work was accepted to ACM UbiComp 2026. Congratulations, Bofan!"
+    text: "Our BFM-based WiFi sensing work was accepted to UbiComp'26. Congratulations, Bofan!"
   },
   {
     date: "May 2026",
