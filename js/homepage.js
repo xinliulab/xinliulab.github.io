@@ -191,17 +191,8 @@ const students = [
         href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
       },
       {
-        title: "UbiComp'26",
-        sublinks: [
-          {
-            label: "Paper 1",
-            href: "https://dl.acm.org/doi/10.1145/3790111"
-          },
-          {
-            label: "Paper 2",
-            href: "#publication-bfmscan-enabling-explicit-angle-resolved-sensing-via-beamforming-feedback-matrix"
-          }
-        ]
+        title: "UbiComp'26 x 2",
+        href: ""
       }
 
     ]
