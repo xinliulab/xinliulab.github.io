@@ -1064,6 +1064,39 @@ a {
   white-space: nowrap;
 }
 
+.student-publication-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.student-publication-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-publication-sublinks {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  line-height: 1;
+}
+
+.student-publication-sublink {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 0.9;
+  text-decoration: none;
+}
+
+.student-publication-sublink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .site-shell {
     grid-template-columns: 1fr;

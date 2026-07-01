@@ -191,10 +191,16 @@ const students = [
         href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
       },
       {
-        title: "UbiComp'26 x 2",
-        hrefs: [
-          "https://dl.acm.org/doi/10.1145/3790111",
-          "#publication-bfmscan-enabling-explicit-angle-resolved-sensing-via-beamforming-feedback-matrix"
+        title: "UbiComp'26",
+        sublinks: [
+          {
+            label: "1",
+            href: "https://dl.acm.org/doi/10.1145/3790111"
+          },
+          {
+            label: "2",
+            href: "#publication-bfmscan-enabling-explicit-angle-resolved-sensing-via-beamforming-feedback-matrix"
+          }
         ]
       }
 
@@ -924,6 +930,22 @@ function renderStudents() {
       : student.name;
     const publications = (student.publications || [])
       .map((publication) => {
+        if (Array.isArray(publication.sublinks) && publication.sublinks.length > 0) {
+          const sublinks = publication.sublinks
+            .filter((link) => link.href)
+            .map((link) => (
+              `<a class="student-publication-sublink" href="${link.href}" target="_blank" rel="noopener noreferrer" aria-label="${publication.title} paper ${link.label}">${link.label}</a>`
+            ))
+            .join("");
+
+          return `
+            <span class="student-publication student-publication-group">
+              <span class="student-publication-title">${publication.title}</span>
+              <span class="student-publication-sublinks">${sublinks}</span>
+            </span>
+          `;
+        }
+
         const hrefs = Array.isArray(publication.hrefs)
           ? publication.hrefs.filter(Boolean)
           : [publication.href].filter(Boolean);
@@ -963,30 +985,6 @@ function renderStudents() {
     ${currentStudents.map(renderStudent).join("")}
     ${alumniHtml}
   `;
-}
-
-function setupStudentPublicationLinks() {
-  const container = document.getElementById("student-list");
-
-  container.addEventListener("click", (event) => {
-    const target = event.target instanceof Element ? event.target : event.target.parentElement;
-    const link = target?.closest(".student-publication");
-
-    if (!link || !container.contains(link) || !link.dataset.extraHrefs) {
-      return;
-    }
-
-    try {
-      JSON.parse(link.dataset.extraHrefs)
-        .filter(Boolean)
-        .map((href) => new URL(href, window.location.href).href)
-        .forEach((href) => {
-          window.open(href, "_blank", "noopener,noreferrer");
-        });
-    } catch {
-      // Keep the primary link working if the optional extra-link data is malformed.
-    }
-  });
 }
 
 function buildFilters() {
@@ -1498,7 +1496,6 @@ function init() {
   setupNewsImageViewer();
   renderTeaching();
   renderStudents();
-  setupStudentPublicationLinks();
   buildFilters();
   buildAreaNav();
   setupPublicationAreaPanel();
