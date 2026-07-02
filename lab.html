@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XL-Stack Lab | Xin Liu</title>
+  <link rel="icon" type="image/png" href="Figure/headshot.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/homepage.css?v=20260620-news-scroll">
+  <link rel="stylesheet" href="css/lab.css?v=20260702n">
+</head>
+<body class="lab-page">
+  <div class="site-shell">
+    <aside class="sidebar" aria-label="Section Navigation">
+      <div class="sidebar-inner">
+      <div class="brand-block">
+        <h1 class="brand-name">
+          <span class="name-text">Xin Liu</span>
+          <span class="name-meta">
+            <span class="pronunciation" aria-label="Pronunciation">/shin lee-oo/</span>
+            <button class="audio-btn" id="play-name" type="button" aria-label="Play pronunciation" title="Play pronunciation">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 14h4l5 4V6L8 10H4z" fill="currentColor"></path>
+                <path d="M16 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M18.5 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </span>
+        </h1>
+        <p class="brand-role">
+          <button class="brand-role-link" type="button" onclick="window.location.href='https://mapmyvisitors.com/web/1c5sw'" aria-label="Open website visitor analytics page">Assistant Professor</button><br>
+          Florida State University
+        </p>
+        <audio id="name-audio" src="Figure/name_pronun.mp3"></audio>
+      </div>
+        <nav class="section-nav" id="section-nav">
+          <a href="index.html#about" class="section-link">About Me</a>
+          <a href="index.html#news" class="section-link">News</a>
+          <div class="section-nav-item publication-nav-zone" id="publication-nav-zone">
+            <a href="index.html#publications" class="section-link" id="publication-nav-link">Publications</a>
+            <div class="area-nav-block publication-area-panel" id="publication-area-panel" aria-hidden="true">
+              <div id="area-nav-title" class="area-nav-title">Browse by Research Area</div>
+              <nav id="area-nav" class="area-nav" aria-labelledby="area-nav-title">
+                <a class="area-nav-link" href="index.html#publications">Selected</a>
+                <a class="area-nav-link" href="index.html#publications">Integrated Sensing and Communication</a>
+                <a class="area-nav-link" href="index.html#publications">Foundation Models and Edge AI</a>
+                <a class="area-nav-link" href="index.html#publications">Millimeter Wave</a>
+                <a class="area-nav-link" href="index.html#publications">Battery-Free IoT</a>
+                <a class="area-nav-link" href="index.html#publications">Spectrum Sharing &amp; Management</a>
+                <a class="area-nav-link" href="index.html#publications">Security &amp; Privacy</a>
+                <a class="area-nav-link" href="index.html#publications">All</a>
+              </nav>
+            </div>
+          </div>
+          <a href="index.html#teaching" class="section-link">Teaching</a>
+          <a href="lab.html" class="section-link active">XL-Stack Lab</a>
+        </nav>
+        <div class="sidebar-meta">
+          <a href="./publication/cv_xinliu_fsu.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+          <a href="https://scholar.google.com/citations?user=w-GyGM4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/xinliulab" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/xin-liu-57a834229/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.xiaohongshu.com/user/profile/6011a155000000000101c7c3" target="_blank" rel="noopener noreferrer">Xiaohongshu</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content-area lab-content">
+      <header class="lab-hero">
+        <div class="lab-photo-stage lab-photo-carousel" aria-label="XL-Stack Lab photo carousel">
+          <div class="lab-photo-track">
+            <figure class="lab-photo-slide" style="--slide-image: url('Figure/group_2026.jpg');">
+              <button class="lab-photo-open" type="button" data-photo-src="Figure/group_2026.jpg" data-photo-alt="XL-Stack Lab group photo in 2026" aria-label="Open 2026 XL-Stack Lab photo">
+                <img src="Figure/group_2026.jpg" alt="XL-Stack Lab group photo in 2026">
+              </button>
+              <figcaption>
+                <span>2026</span>
+                <span>IEEE S&amp;P poster session</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="lab-hero-copy">
+          <p class="lab-kicker">Florida State University Computer Science</p>
+          <h1>XL-Stack Lab</h1>
+          <p>
+            We build full-stack systems that connect integrated sensing and communication,
+            NextG wireless networks, edge intelligence, and foundation models for Physical AI.
+          </p>
+          <div class="lab-hero-actions">
+            <a href="#people">People</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel lab-focus-panel">
+        <div class="panel-head">
+          <h2>What We Work On</h2>
+        </div>
+        <div class="focus-grid">
+          <article>
+            <h3>Integrated Sensing and Communication</h3>
+            <p>Wi-Fi, mmWave, and NextG systems that sense, communicate, and adapt in real environments.</p>
+          </article>
+          <article>
+            <h3>Foundation Models and Edge AI</h3>
+            <p>Model-driven perception and reasoning that can move closer to physical devices and networks.</p>
+          </article>
+          <article>
+            <h3>Security and Privacy</h3>
+            <p>Robust wireless, sensing, and AI systems that account for adversarial and privacy-sensitive settings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="people" class="panel">
+        <div class="panel-head">
+          <h2>People</h2>
+        </div>
+        <div class="people-grid">
+          <article class="person-card principal-card">
+            <img src="Figure/headshot-team.png?v=20260702b" alt="Xin Liu">
+            <div class="person-copy">
+              <h3>Xin Liu</h3>
+              <p>Principal Investigator</p>
+              <a href="index.html">Profile</a>
+            </div>
+          </article>
+          <article class="person-card">
+            <div class="person-initials">YH</div>
+            <div class="person-copy">
+              <h3>Yihao Huang</h3>
+              <p class="person-meta">Ph.D., 2026 - now</p>
+            </div>
+          </article>
+          <article class="person-card">
+            <div class="person-initials">ZL</div>
+            <div class="person-copy">
+              <h3>Zhuoyuan Liu</h3>
+              <p class="person-meta">Ph.D., 2025 - now</p>
+            </div>
+          </article>
+          <article class="person-card">
+            <img src="Figure/zhankai-ye.jpg" alt="Zhankai Ye">
+            <div class="person-copy">
+              <h3><a href="https://jye16.github.io" target="_blank" rel="noopener noreferrer">Zhankai Ye</a></h3>
+              <p class="person-meta">Ph.D., 2024 - now</p>
+              <p class="person-work">ICCCN'26, FG'26</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Alumni</h2>
+        </div>
+        <div class="alumni-grid">
+          <article class="person-card alumni-card">
+            <img src="Figure/bofan-li.jpg" alt="Bofan Li">
+            <div class="person-copy">
+              <h3><a href="https://bofan1120.github.io/" target="_blank" rel="noopener noreferrer">Bofan Li</a></h3>
+              <p class="person-meta">Ph.D., 2024 - 2026</p>
+              <p class="person-work"><a href="https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w" target="_blank" rel="noopener noreferrer">S&amp;P'26</a>, UbiComp'26 x 2</p>
+              <p class="person-position"><a href="https://labs.engineering.asu.edu/cnsg/" target="_blank" rel="noopener noreferrer">Postdoc, ASU</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <div class="lab-photo-modal" id="lab-photo-modal" aria-hidden="true">
+    <button class="lab-photo-modal-backdrop" type="button" data-lab-photo-close aria-label="Close photo viewer"></button>
+    <div class="lab-photo-modal-dialog" role="dialog" aria-modal="true" aria-label="Team photo viewer">
+      <button class="lab-photo-modal-close" type="button" data-lab-photo-close aria-label="Close photo viewer">&times;</button>
+      <img class="lab-photo-modal-img" id="lab-photo-modal-img" alt="">
+    </div>
+  </div>
+  <script>
+    document.getElementById("play-name")?.addEventListener("click", () => {
+      const audio = document.getElementById("name-audio");
+      if (!audio) {
+        return;
+      }
+      audio.currentTime = 0;
+      audio.play();
+    });
+
+    const photoModal = document.getElementById("lab-photo-modal");
+    const photoModalImg = document.getElementById("lab-photo-modal-img");
+
+    document.querySelectorAll(".lab-photo-open").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!photoModal || !photoModalImg) {
+          return;
+        }
+
+        photoModalImg.src = button.dataset.photoSrc || "";
+        photoModalImg.alt = button.dataset.photoAlt || "XL-Stack Lab photo";
+        photoModal.classList.add("is-open");
+        photoModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lab-photo-modal-open");
+      });
+    });
+
+    const closePhotoModal = () => {
+      if (!photoModal || !photoModalImg) {
+        return;
+      }
+
+      photoModal.classList.remove("is-open");
+      photoModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lab-photo-modal-open");
+      photoModalImg.removeAttribute("src");
+    };
+
+    document.querySelectorAll("[data-lab-photo-close]").forEach((button) => {
+      button.addEventListener("click", closePhotoModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && photoModal?.classList.contains("is-open")) {
+        closePhotoModal();
+      }
+    });
+  </script>
+</body>
+</html>

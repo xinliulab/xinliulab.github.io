@@ -917,6 +917,10 @@ function renderTeaching() {
 
 function renderStudents() {
   const container = document.getElementById("student-list");
+  if (!container) {
+    return;
+  }
+
   const currentStudents = students.filter((student) => student.group !== "alumni");
   const alumniStudents = students.filter((student) => student.group === "alumni");
 
