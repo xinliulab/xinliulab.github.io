@@ -280,7 +280,7 @@ const publications = [
   },
   {
     title: "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication",
-    href: "",
+    href: "./publication/26infocom_hydrochirp.pdf",
     authors: "Chiyu Zhou, Zijian Wan, Baodong Chen, Zicheng Chi, Xin Liu, Wei Wang",
     venue: "IEEE INFOCOM 2026",
     year: 2026,
