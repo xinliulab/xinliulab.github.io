@@ -280,12 +280,12 @@ const publications = [
   },
   {
     title: "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication",
-    href: "./publication/26infocom_hydrochirp.pdf",
+    href: "https://ieeexplore.ieee.org/document/11571577",
     authors: "Chiyu Zhou, Zijian Wan, Baodong Chen, Zicheng Chi, Xin Liu, Wei Wang",
     venue: "IEEE INFOCOM 2026",
     year: 2026,
-    citations: null,
-    citationFile: "",
+    citations: true,
+    citationFile: "./citations/hydrochirp.bib",
     selected: null,
     image: "./Figure/hydrochirp.png",
     area: ["Integrated Sensing and Communication"]
@@ -1220,7 +1220,11 @@ function setupCitationModal() {
   const showUnavailableCitation = (citationFile) => {
     activeCitationText = "";
     setActionState(false);
-    citationText.textContent = `Citation file is not available yet.\n\nAdd a BibTeX file at:\n${citationFile}`;
+    const localFileHint =
+      window.location.protocol === "file:"
+        ? "\n\nThis page is open as a local file, so the browser blocks JavaScript from loading BibTeX files. Preview the site through a local server instead:\n\npython -m http.server 8123\n\nThen open:\nhttp://127.0.0.1:8123/index.html"
+        : "";
+    citationText.textContent = `Citation file is not available yet.\n\nAdd a BibTeX file at:\n${citationFile}${localFileHint}`;
   };
 
   const loadCitation = (citationFile) => {
