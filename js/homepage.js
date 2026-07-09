@@ -241,12 +241,12 @@ const publications = [
 
   {
     title: "HyperEdit: Unlocking Instruction-based Text Editing in LLMs via Hypernetworks",
-    href: "https://arxiv.org/abs/2512.12544",
+    href: "./publication/26findings_hyperedit.pdf",
     authors: "Yiming Zeng, Jinghan Cao, Zexin Li, Wanhao Yu, Zhankai Ye, Dawei Xiang, Ting Hua, Xin Liu, Shangqian Gao, Tingting Yu",
     venue: "ACL Findings 2026",
     year: 2026,
-    citations: null,
-    citationFile: "",
+    citations: true,
+    citationFile: "./citations/hyperedit.bib",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
     area: ["Foundation Models and Edge AI"]
