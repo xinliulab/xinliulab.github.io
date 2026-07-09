@@ -895,6 +895,65 @@ function setupNewsImageViewer() {
   });
 }
 
+function setupPublicationImageViewer() {
+  const groupedContainer = document.getElementById("publication-groups");
+  if (!groupedContainer) {
+    return;
+  }
+
+  const modal = document.createElement("div");
+  modal.className = "publication-image-modal";
+  modal.setAttribute("aria-hidden", "true");
+  modal.innerHTML = `
+    <div class="publication-image-modal-backdrop" data-publication-image-close></div>
+    <div class="publication-image-modal-dialog" role="dialog" aria-modal="true" aria-label="Publication image preview">
+      <button class="publication-image-modal-close" type="button" data-publication-image-close aria-label="Close image preview">&times;</button>
+      <img class="publication-image-modal-img" src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const image = modal.querySelector(".publication-image-modal-img");
+  const closeButtons = modal.querySelectorAll("[data-publication-image-close]");
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("publication-image-modal-open");
+    image.removeAttribute("src");
+    image.alt = "";
+  };
+
+  const openModal = (src, alt) => {
+    image.src = src;
+    image.alt = alt;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("publication-image-modal-open");
+    modal.querySelector(".publication-image-modal-close").focus();
+  };
+
+  groupedContainer.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : event.target.parentElement;
+    const button = target?.closest(".pub-thumb-button");
+    if (!button || !groupedContainer.contains(button)) {
+      return;
+    }
+
+    openModal(button.dataset.publicationImageSrc, button.dataset.publicationImageAlt || "Publication image");
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}
+
 function renderTeaching() {
   const container = document.getElementById("teaching-list");
   container.innerHTML = teachingItems
@@ -1173,7 +1232,11 @@ function renderPublicationCard(pub) {
   return `
     <article class="pub-item" id="${getPublicationId(pub)}" data-area="${getAreas(pub).join(", ")}">
       <div class="pub-thumb" aria-hidden="${imageSrc ? "false" : "true"}">
-        ${imageSrc ? `<img src="${imageSrc}" alt="${pub.title}">` : ""}
+        ${imageSrc ? `
+          <button class="pub-thumb-button" type="button" data-publication-image-src="${escapeHtml(imageSrc)}" data-publication-image-alt="${escapeHtml(pub.title)}" aria-label="Open image: ${escapeHtml(pub.title)}">
+            <img src="${imageSrc}" alt="${escapeHtml(pub.title)}">
+          </button>
+        ` : ""}
       </div>
       <div class="pub-content">
         <div class="pub-title">${paperHref ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">${pub.title}</a>` : pub.title}</div>
@@ -1508,6 +1571,7 @@ function init() {
   buildAreaNav();
   setupPublicationAreaPanel();
   renderPublications();
+  setupPublicationImageViewer();
   setupCitationModal();
   setupNavHighlight();
   setupAudioButton();

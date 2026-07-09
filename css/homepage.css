@@ -33,7 +33,8 @@ body {
 }
 
 body.citation-modal-open,
-body.news-image-modal-open {
+body.news-image-modal-open,
+body.publication-image-modal-open {
   overflow: hidden;
 }
 
@@ -661,6 +662,34 @@ a {
   object-fit: contain;
 }
 
+.pub-thumb-button {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.pub-thumb-button:hover img {
+  transform: scale(1.035);
+}
+
+.pub-thumb-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.pub-thumb-button img {
+  transition: transform 160ms ease;
+}
+
 .pub-content {
   min-width: 0;
 }
@@ -833,24 +862,28 @@ a {
   line-height: 1.45;
 }
 
-.news-image-modal {
+.news-image-modal,
+.publication-image-modal {
   display: none;
   position: fixed;
   inset: 0;
   z-index: 1100;
 }
 
-.news-image-modal.is-open {
+.news-image-modal.is-open,
+.publication-image-modal.is-open {
   display: block;
 }
 
-.news-image-modal-backdrop {
+.news-image-modal-backdrop,
+.publication-image-modal-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(35, 48, 68, 0.78);
 }
 
-.news-image-modal-dialog {
+.news-image-modal-dialog,
+.publication-image-modal-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -859,7 +892,8 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.news-image-modal-img {
+.news-image-modal-img,
+.publication-image-modal-img {
   display: block;
   width: 100%;
   max-height: calc(100vh - 48px);
@@ -869,7 +903,8 @@ a {
   box-shadow: 0 24px 80px rgba(8, 13, 24, 0.48);
 }
 
-.news-image-modal-close {
+.news-image-modal-close,
+.publication-image-modal-close {
   appearance: none;
   -webkit-appearance: none;
   position: absolute;
@@ -889,11 +924,13 @@ a {
   box-shadow: 0 10px 28px rgba(8, 13, 24, 0.28);
 }
 
-.news-image-modal-close:hover {
+.news-image-modal-close:hover,
+.publication-image-modal-close:hover {
   background: #edf2f8;
 }
 
-.news-image-modal-close:focus-visible {
+.news-image-modal-close:focus-visible,
+.publication-image-modal-close:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
 }
