@@ -268,13 +268,13 @@ const publications = [
 
     {
     title: "ARiSE: Efficient Mesh-Based <u>A</u>ction <u>R</u>ecognition from Wi-F<u>i</u> <u>S</u>ensing on <u>E</u>dge Devices",
-    href: "./publication/26fg_arise.pdf",
+    href: "https://ieeexplore.ieee.org/document/11557074",
     authors: "Zhankai Ye, Shuoqiu Li, Bofan Li, Yili Ren, Bo Mei, Shangqian Gao, Xin Liu",
     venue: "IEEE FG 2026",
     year: 2026,
-    citations: null,
-    citationFile: "",
-    selected: true,
+    citations: true,
+    citationFile: "./citations/arise.bib",
+    selected: false,
     image: "./Figure/arise.png",
     area: ["Integrated Sensing and Communication", "Foundation Models and Edge AI"]
   },
