@@ -528,7 +528,7 @@ const publications = [
     year: 2020,
     citations: null,
     citationFile: "./citations/lscatter.bib",
-    selected: true,
+    selected: false,
     image: "./Figure/LScatter.png",
     area: "Battery-Free IoT",
   },
