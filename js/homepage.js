@@ -242,22 +242,22 @@ const publications = [
  
 
 
-    {
-    title: "Fresco: A Permissioned Blockchain <u>Fr</u>am<u>e</u>work for <u>S</u>ecuring Model <u>Co</u>ntext Protocol",
-    href: "./publication/26icccn_fresco.pdf",
-    authors: "Zhankai Ye, Yusen Wu, Bingyang Wei, Shixian Shen, Yili Ren, Phuong Nguyen, Yelena Yesha, Xin Liu",
-    venue: "IEEE ICCCN 2026",
-    year: 2026,
-    citations: null,
-    citationFile: "",
-    selected: false,
-    image: "./Figure/Fresco.png",
-    area: ["Security & Privacy", "Foundation Models and Edge AI"]
-  },
+  //   {
+  //   title: "Fresco: A Permissioned Blockchain <u>Fr</u>am<u>e</u>work for <u>S</u>ecuring Model <u>Co</u>ntext Protocol",
+  //   href: "./publication/26icccn_fresco.pdf",
+  //   authors: "Zhankai Ye, Yusen Wu, Bingyang Wei, Shixian Shen, Yili Ren, Phuong Nguyen, Yelena Yesha, Xin Liu",
+  //   venue: "IEEE ICCCN 2026",
+  //   year: 2026,
+  //   citations: null,
+  //   citationFile: "",
+  //   selected: false,
+  //   image: "./Figure/Fresco.png",
+  //   area: ["Security & Privacy", "Foundation Models and Edge AI"]
+  // },
 
     {
     title: "ARiSE: Efficient Mesh-Based <u>A</u>ction <u>R</u>ecognition from Wi-F<u>i</u> <u>S</u>ensing on <u>E</u>dge Devices",
-    href: "https://ieeexplore.ieee.org/document/11557074",
+    href: "publication/26fg_arise.pdf",
     authors: "Zhankai Ye, Shuoqiu Li, Bofan Li, Yili Ren, Bo Mei, Shangqian Gao, Xin Liu",
     venue: "IEEE FG 2026",
     year: 2026,
@@ -284,7 +284,7 @@ const publications = [
   
   {
     title: "HydroChirp: Dynamic Chirp Shaping for Reliable and Ultra-Long-Range Underwater Communication",
-    href: "https://ieeexplore.ieee.org/document/11571577",
+    href: "publication/26infocom_hydrochirp.pdf",
     authors: "Chiyu Zhou, Zijian Wan, Baodong Chen, Zicheng Chi, Xin Liu, Wei Wang",
     venue: "IEEE INFOCOM 2026",
     year: 2026,
