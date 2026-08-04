@@ -388,6 +388,23 @@
   object-position: center top;
 }
 
+.person-photo-link {
+  display: block;
+  width: 86px;
+  height: 86px;
+  border-radius: 8px;
+}
+
+.person-photo-link:hover img,
+.person-photo-link:focus-visible img {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(42, 93, 143, 0.16);
+}
+
+.person-photo-link:focus-visible {
+  outline: none;
+}
+
 .principal-card img {
   padding: 0;
   object-fit: cover;
@@ -523,6 +540,7 @@
   }
 
   .person-card img,
+  .person-photo-link,
   .person-initials {
     width: 74px;
     height: 74px;
