@@ -207,21 +207,21 @@ const students = [
 // Keep `citations` in sync with Google Scholar to drive ranking in filtered views.
 const publications = [
 
-    {
-    title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
-    href: "",
-    authors: "Bofan Li, Zhuoyuan Liu, Zhankai Ye, Weikuan Yu, Xin Liu",
-    venue: "ACM IMWUT/UbiComp 2026",
-    year: 2026,
-    citations: null,
-    citationFile: "",
-    selected: true,
-    image: "./Figure/BFMScan.png",
-    area: ["Integrated Sensing and Communication"],
-    links: [
-      { label: "Code / Dataset: to appear", href: "" }
-    ]
-  },
+  //   {
+  //   title: "BFMScan: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix",
+  //   href: "",
+  //   authors: "Bofan Li, Zhuoyuan Liu, Zhankai Ye, Weikuan Yu, Xin Liu",
+  //   venue: "ACM IMWUT/UbiComp 2026",
+  //   year: 2026,
+  //   citations: null,
+  //   citationFile: "",
+  //   selected: true,
+  //   image: "./Figure/BFMScan.png",
+  //   area: ["Integrated Sensing and Communication"],
+  //   links: [
+  //     { label: "Code / Dataset: to appear", href: "" }
+  //   ]
+  // },
 
     {
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
