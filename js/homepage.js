@@ -179,7 +179,7 @@ const students = [
       },
       {
         title: "FG'26",
-        href: ""
+        href: "https://doi.org/10.1109/FG67764.2026.11557074"
       }
     ]
   },
@@ -193,11 +193,11 @@ const students = [
     publications: [
       {
         title: "S&P'26",
-        href: "https://www.computer.org/csdl/proceedings-article/sp/2026/606500b617/2bojwh1qN2w"
+        href: "https://doi.org/10.1109/SP63933.2026.00087"
       },
       {
-        title: "UbiComp'26 x 2",
-        href: ""
+        title: "UbiComp'26 Issue 2",
+        href: "https://doi.org/10.1145/3790111"
       }
 
     ]
