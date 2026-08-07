@@ -230,15 +230,12 @@ const publications = [
     venue: "arXiv 2026",
     year: 2026,
     citations: null,
-    citationFile: "./citations/mugen.bib",
+    citationFile: "",
     selected: true,
     image: "./Figure/mugen.jpg",
     area: ["Foundation Models and Edge AI"],
     links: [
-      { label: "Project Page", href: "https://jye16.github.io/mugen-page/" },
-      { label: "arXiv", href: "https://arxiv.org/abs/2607.27581" },
-      { label: "Code", href: "https://github.com/JYe16/MUGEN" },
-      { label: "Model", href: "https://huggingface.co/zy22b/MUGEN" }
+      { label: "Project Page", href: "https://jye16.github.io/mugen-page/" }
     ]
   },
 
