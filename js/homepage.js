@@ -224,6 +224,25 @@ const publications = [
   // },
 
     {
+    title: "MUGEN: A Unified Framework for Efficient Motion Understanding and Generation",
+    href: "./publication/26arxiv_mugen.pdf",
+    authors: "Zhankai Ye, Yukai Jin, Bingyang Wei, Bofan Li, Yusen Wu, Fangyi Li, Shangqian Gao, Xin Liu",
+    venue: "arXiv 2026",
+    year: 2026,
+    citations: null,
+    citationFile: "./citations/mugen.bib",
+    selected: true,
+    image: "./Figure/mugen.jpg",
+    area: ["Foundation Models and Edge AI"],
+    links: [
+      { label: "Project Page", href: "https://jye16.github.io/mugen-page/" },
+      { label: "arXiv", href: "https://arxiv.org/abs/2607.27581" },
+      { label: "Code", href: "https://github.com/JYe16/MUGEN" },
+      { label: "Model", href: "https://huggingface.co/zy22b/MUGEN" }
+    ]
+  },
+
+    {
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
     href: "https://arxiv.org/abs/2601.07632",
     authors: "Zhankai Ye, Bofan Li, Yukai Jin, Shuoqiu Li, Wei Wang, Yanfu Zhang, Shangqian Gao, Xin Liu",
