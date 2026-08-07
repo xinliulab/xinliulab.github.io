@@ -281,7 +281,7 @@ const publications = [
     citationFile: "./citations/arise.bib",
     selected: false,
     image: "./Figure/arise.png",
-    area: ["Integrated Sensing and Communication", "Physical AI for Human Motion and Health"]
+    area: ["Physical AI for Human Motion and Health"]
   },
 
 
@@ -295,7 +295,7 @@ const publications = [
     citationFile: "./citations/hyperedit.bib",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
-    area: ["Physical AI for Human Motion and Health"]
+    area: []
   },
   
   {
@@ -452,7 +452,7 @@ const publications = [
     citationFile: "./citations/lightthief.bib",
     selected: true,
     image: "./Figure/LightThief.png",
-    area: ["Battery-Free IoT", "Integrated Sensing and Communication", "Security & Privacy"],
+    area: "Security & Privacy",
     links: [
       { label: "Code", href: "https://github.com/xinliulab/23Security_LightThief" },
       { label: "Presentation", href: "https://www.usenix.org/conference/usenixsecurity23/presentation/liu-xin" }
