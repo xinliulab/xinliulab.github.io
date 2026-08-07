@@ -233,7 +233,7 @@ const publications = [
     citationFile: "",
     selected: true,
     image: "./Figure/mugen.jpg",
-    area: ["Foundation Models and Edge AI"],
+    area: ["Physical AI for Human Motion and Health"],
     links: [
       { label: "Project Page", href: "https://jye16.github.io/mugen-page/" }
     ]
@@ -249,7 +249,7 @@ const publications = [
     citationFile: "",
     selected: true,
     image: "./Figure/geomotiongpt.png",
-    area: ["Foundation Models and Edge AI"],
+    area: ["Physical AI for Human Motion and Health"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/JYe16/GeoMotionGPT" }
     ]
@@ -268,7 +268,7 @@ const publications = [
   //   citationFile: "",
   //   selected: false,
   //   image: "./Figure/Fresco.png",
-  //   area: ["Security & Privacy", "Foundation Models and Edge AI"]
+  //   area: ["Security & Privacy", "Physical AI for Human Motion and Health"]
   // },
 
     {
@@ -281,7 +281,7 @@ const publications = [
     citationFile: "./citations/arise.bib",
     selected: false,
     image: "./Figure/arise.png",
-    area: ["Integrated Sensing and Communication", "Foundation Models and Edge AI"]
+    area: ["Integrated Sensing and Communication", "Physical AI for Human Motion and Health"]
   },
 
 
@@ -295,7 +295,7 @@ const publications = [
     citationFile: "./citations/hyperedit.bib",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
-    area: ["Foundation Models and Edge AI"]
+    area: ["Physical AI for Human Motion and Health"]
   },
   
   {
@@ -635,7 +635,7 @@ const publications = [
 
 const orderedAreas = [
   "Integrated Sensing and Communication",
-  "Foundation Models and Edge AI",
+  "Physical AI for Human Motion and Health",
   "Millimeter Wave",
   "Battery-Free IoT",
   "Spectrum Sharing & Management",
