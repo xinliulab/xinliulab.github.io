@@ -192,11 +192,15 @@ const students = [
     initialPosition: "Postdoctoral Scholar, Arizona State University",
     publications: [
       {
+        title: "UbiComp'26 Issue 3",
+        href: "https://doi.org/10.1145/3832009"
+      },
+      {
         title: "S&P'26",
         href: "https://doi.org/10.1109/SP63933.2026.00087"
       },
       {
-        title: "UbiComp'26 Issue 2",
+        title: "UbiComp'26 Issue 1",
         href: "https://doi.org/10.1145/3790111"
       }
 
