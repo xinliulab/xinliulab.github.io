@@ -38,6 +38,17 @@ const newsItems = [
   {
     date: "Apr 2026",
     icon: "award",
+    text: "Congratulations to Bofan Li for receiving the Graduate Student Research Award 2026 from the FSU Computer Science Department.",
+    images: [
+      {
+        src: "./Figure/graduate_student_research_award_2026.jpg",
+        alt: "Bofan Li's Graduate Student Research Award 2026 certificate"
+      }
+    ]
+  },
+  {
+    date: "Apr 2026",
+    icon: "award",
     text: "Glad to see Bofan receive the Best Poster Award and Zhankai receive the Honorable Mention Presentation Award at FSU CS Expo 2026.",
     links: [
       {
@@ -56,17 +67,7 @@ const newsItems = [
       }
     ]
   },
-  {
-    date: "Apr 2026",
-    icon: "award",
-    text: "Congratulations to Bofan Li for receiving the Graduate Student Research Award 2026 from the FSU Computer Science Department.",
-    images: [
-      {
-        src: "./Figure/graduate_student_research_award_2026.jpg",
-        alt: "Bofan Li's Graduate Student Research Award 2026 certificate"
-      }
-    ]
-  },
+  
   {
     date: "Apr 2026",
     icon: "paper",
