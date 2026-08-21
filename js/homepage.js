@@ -1,4 +1,11 @@
 const newsItems = [
+
+
+  {
+    date: "August 2026",
+    icon: "paper",
+    text: "Congratulations to Zhankai Ye and our collaborators! Our GeoMotionGPT paper has been accepted to EMNLP 2026, marking an exciting step toward Physical AI."
+  },
   {
     date: "June 2026",
     icon: "degree",
