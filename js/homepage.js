@@ -248,7 +248,7 @@ const publications = [
     title: "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
     href: "https://arxiv.org/abs/2601.07632",
     authors: "Zhankai Ye, Bofan Li, Yukai Jin, Shuoqiu Li, Wei Wang, Yanfu Zhang, Shangqian Gao, Xin Liu",
-    venue: "arXiv 2026",
+    venue: "EMNLP 2026",
     year: 2026,
     citations: null,
     citationFile: "",
