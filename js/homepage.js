@@ -182,7 +182,7 @@ const students = [
     initialPosition: "",
     publications: [
       {
-        title: "ICCCN'26",
+        title: "EMNLP'26",
         href: ""
       },
       {
