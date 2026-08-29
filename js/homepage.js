@@ -186,6 +186,10 @@ const students = [
         href: ""
       },
       {
+        title: "ICCCN'26",
+        href: ""
+      },
+      {
         title: "FG'26",
         href: "https://doi.org/10.1109/FG67764.2026.11557074"
       }
