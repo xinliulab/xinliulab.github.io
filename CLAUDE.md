@@ -18,7 +18,19 @@ Treat sync as part of every task, not a separate request:
    descriptive message, and `git push origin master`.
 
 Do not ask for permission to pull, commit, or push — the user has given
-standing authorization for this repo. Just report what was pushed.
+standing authorization for this repo.
+
+**Always report both sync steps explicitly**, in this order, so the user can
+see the state of the hub without asking:
+
+- Before the edit: say that the local checkout was synced from the remote, and
+  whether anything came down (e.g. "已从远端同步,拉下 3 个 commit" / "已是最新").
+- After the edit: say what was changed, that it was committed, and that it was
+  pushed to the remote (with the commit hash and message).
+
+Never leave either step silent, even when the pull was a no-op — "已是最新,
+无新内容" is the report in that case. The user asked for this confirmation
+specifically ("要同步告诉我").
 
 Only stop and ask if something is genuinely ambiguous:
 - `--ff-only` fails (real divergence, or an uncommitted local change conflicts)
