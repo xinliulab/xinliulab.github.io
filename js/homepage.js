@@ -856,13 +856,13 @@ function renderNews() {
   container.innerHTML = newsItems
     .map((item) => {
       const links = (item.links || [])
-        .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label}</a>`)
-        .join(" | ");
+        .map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`)
+        .join(" ");
       const images = renderNewsImages(item.images);
       return `
         <article class="timeline-item news-item">
           ${renderNewsIcon(item.icon)}
-          <div class="news-copy"><strong>[${item.date}]</strong> ${item.text}${links ? ` (${links})` : ""}${images}</div>
+          <div class="news-copy"><strong>[${item.date}]</strong> ${item.text}${links ? ` ${links}` : ""}${images}</div>
         </article>
       `;
     })
@@ -1240,20 +1240,27 @@ function renderPublicationCard(pub) {
   const imageSrc = pub.thumbnail || pub.image;
   const paperHref = typeof pub.href === "string" ? pub.href.trim() : "";
   const citationFile = typeof pub.citationFile === "string" ? pub.citationFile.trim() : "";
+  // Display order: Project Page, Paper, Code / Dataset, everything else, Citation.
   const linkOrder = (label) => {
     const normalized = String(label || "").toLowerCase();
     if (normalized.includes("project")) return 0;
-    if (normalized.includes("code") || normalized.includes("dataset")) return 1;
-    return 2;
+    if (normalized.includes("code") || normalized.includes("dataset")) return 2;
+    return 3;
   };
-  const linkItems = (pub.links || [])
+  const renderPubLink = (link) => (
+    link.href
+      ? `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`
+      : `<span class="pub-link-placeholder">[${link.label}]</span>`
+  );
+  const sortedLinks = (pub.links || [])
     .map((link, index) => ({ link, index }))
-    .sort((a, b) => linkOrder(a.link.label) - linkOrder(b.link.label) || a.index - b.index)
-    .map(({ link }) => (
-      link.href
-        ? `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`
-        : `<span class="pub-link-placeholder">[${link.label}]</span>`
-    ));
+    .sort((a, b) => linkOrder(a.link.label) - linkOrder(b.link.label) || a.index - b.index);
+  const projectLinkItems = sortedLinks
+    .filter(({ link }) => linkOrder(link.label) === 0)
+    .map(({ link }) => renderPubLink(link));
+  const otherLinkItems = sortedLinks
+    .filter(({ link }) => linkOrder(link.label) !== 0)
+    .map(({ link }) => renderPubLink(link));
 
   const paperLink = paperHref
     ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">[Paper]</a>`
@@ -1266,7 +1273,7 @@ function renderPublicationCard(pub) {
   const citationButton = citationFile
     ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
-  const resourceLinks = [...linkItems, paperLink, citationButton].filter(Boolean).join(" ");
+  const resourceLinks = [...projectLinkItems, paperLink, ...otherLinkItems, citationButton].filter(Boolean).join(" ");
   const awardLabel = pub.award ? `<span class="award-label">${pub.award}</span>` : "";
   const awardOfficialLink = pub.award && pub.awardHref
     ? `<a class="award-official-link" href="${pub.awardHref}" target="_blank" rel="noopener noreferrer">[Official]</a>`
