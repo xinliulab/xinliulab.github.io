@@ -1240,12 +1240,24 @@ function renderPublicationCard(pub) {
   const imageSrc = pub.thumbnail || pub.image;
   const paperHref = typeof pub.href === "string" ? pub.href.trim() : "";
   const citationFile = typeof pub.citationFile === "string" ? pub.citationFile.trim() : "";
+  const linkOrder = (label) => {
+    const normalized = String(label || "").toLowerCase();
+    if (normalized.includes("project")) return 0;
+    if (normalized.includes("code") || normalized.includes("dataset")) return 1;
+    return 2;
+  };
   const linkItems = (pub.links || [])
-    .map((link) => (
+    .map((link, index) => ({ link, index }))
+    .sort((a, b) => linkOrder(a.link.label) - linkOrder(b.link.label) || a.index - b.index)
+    .map(({ link }) => (
       link.href
         ? `<a href="${link.href}" target="_blank" rel="noopener noreferrer">[${link.label}]</a>`
         : `<span class="pub-link-placeholder">[${link.label}]</span>`
     ));
+
+  const paperLink = paperHref
+    ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">[Paper]</a>`
+    : "";
 
   const badges = (pub.badges || [])
     .map((badgePath) => `<img src="${badgePath}" alt="Research artifact badge">`)
@@ -1254,11 +1266,10 @@ function renderPublicationCard(pub) {
   const citationButton = citationFile
     ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
-  const resourceLinks = [...linkItems, citationButton].filter(Boolean).join(" ");
-  const awardLabel = pub.award
-    ? pub.awardHref
-      ? `<a class="award-label" href="${pub.awardHref}" target="_blank" rel="noopener noreferrer">${pub.award}</a>`
-      : `<span class="award-label">${pub.award}</span>`
+  const resourceLinks = [...linkItems, paperLink, citationButton].filter(Boolean).join(" ");
+  const awardLabel = pub.award ? `<span class="award-label">${pub.award}</span>` : "";
+  const awardOfficialLink = pub.award && pub.awardHref
+    ? `<a class="award-official-link" href="${pub.awardHref}" target="_blank" rel="noopener noreferrer">[Official]</a>`
     : "";
 
   return `
@@ -1271,14 +1282,14 @@ function renderPublicationCard(pub) {
         ` : ""}
       </div>
       <div class="pub-content">
-        <div class="pub-title">${paperHref ? `<a href="${paperHref}" target="_blank" rel="noopener noreferrer">${pub.title}</a>` : pub.title}</div>
+        <div class="pub-title">${pub.title}</div>
         <div class="pub-authors">${formattedAuthors}</div>
         <div class="pub-meta-row">
           <div class="pub-venue">${pub.venue}</div>
           ${badges ? `<div class="badge-row">${badges}</div>` : ""}
           ${resourceLinks ? `<div class="pub-links">${resourceLinks}</div>` : ""}
         </div>
-        ${awardLabel ? `<div class="pub-award-row">${awardLabel}</div>` : ""}
+        ${awardLabel ? `<div class="pub-award-row">${awardLabel}${awardOfficialLink}</div>` : ""}
       </div>
     </article>
   `;

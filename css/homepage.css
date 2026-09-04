@@ -975,6 +975,12 @@ a {
   text-decoration: underline;
 }
 
+.award-official-link {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .pub-links a,
 .pub-link-placeholder,
 .pub-citation-open {
