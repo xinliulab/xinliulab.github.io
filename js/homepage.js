@@ -373,6 +373,7 @@ const publications = [
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" }
     ],
+    patentHref: "https://patents.google.com/patent/WO2025235714A1/en"
   },
   {
     title: "Energy-Efficient Paging for Duty-Cycled LTE Backscatter",
@@ -428,7 +429,8 @@ const publications = [
     area: "Millimeter Wave",
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
-    ]
+    ],
+    patentHref: "https://patents.google.com/patent/WO2025235721A1/en"
   },
   {
     title: "Efficient Two-Way Edge Backscatter with Commodity Bluetooth",
@@ -472,7 +474,8 @@ const publications = [
     links: [
       { label: "Code", href: "https://github.com/xinliulab/23Security_LightThief" },
       { label: "Presentation", href: "https://www.usenix.org/conference/usenixsecurity23/presentation/liu-xin" }
-    ]
+    ],
+    patentHref: "https://patents.google.com/patent/WO2026089771A2/en"
   },
   {
     title: " A Secured Protocol for IoT Devices in Tactical Networks",
@@ -1273,7 +1276,11 @@ function renderPublicationCard(pub) {
   const citationButton = citationFile
     ? `<button class="pub-citation-open" type="button" data-citation-file="${escapeHtml(citationFile)}">[Citation]</button>`
     : "";
-  const resourceLinks = [...projectLinkItems, paperLink, ...otherLinkItems, citationButton].filter(Boolean).join(" ");
+  const patentHref = typeof pub.patentHref === "string" ? pub.patentHref.trim() : "";
+  const patentLink = patentHref
+    ? `<a href="${patentHref}" target="_blank" rel="noopener noreferrer">[Patent]</a>`
+    : "";
+  const resourceLinks = [...projectLinkItems, paperLink, ...otherLinkItems, citationButton, patentLink].filter(Boolean).join(" ");
   const awardLabel = pub.award ? `<span class="award-label">${pub.award}</span>` : "";
   const awardOfficialLink = pub.award && pub.awardHref
     ? `<a class="award-official-link" href="${pub.awardHref}" target="_blank" rel="noopener noreferrer">[Official]</a>`
