@@ -375,7 +375,7 @@ a {
 }
 
 .research-axis-down {
-  color: #009b7a;
+  color: #1f5fbf;
 }
 
 .research-axis-arrow::before {
@@ -435,10 +435,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 76px;
+  width: 104px;
   padding: 4px 0;
   background: transparent;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0;
   line-height: 1;
@@ -640,7 +640,7 @@ a {
   border-radius: 50%;
   background: color-mix(in srgb, var(--paper-color) 18%, white);
   padding: 7px;
-  color: var(--accent-deep);
+  color: var(--paper-color);
   font: inherit;
   font-size: var(--paper-font-size, 0.62rem);
   font-weight: 800;
@@ -2079,7 +2079,7 @@ a {
     width: auto;
     gap: 14px;
     transform: translate(-50%, -50%);
-    font-size: 0.68rem;
+    font-size: 0.85rem;
   }
 
   .research-axis-arrow span b + b::before {

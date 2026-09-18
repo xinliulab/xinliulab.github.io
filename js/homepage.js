@@ -1450,7 +1450,7 @@ function setupResearchMap() {
       const driftY = (index % 3 === 0 ? -1 : 1) * (7 + (index % 5));
       const duration = 7.4 + (index % 7) * 0.72;
       const delay = -(index % 7) * 0.8;
-      const fontSize = Math.min(0.7, 0.54 + (size - 48) * 0.0033);
+      const fontSize = (size * 0.0105).toFixed(3);
       const style = `--paper-size:${size}px;--paper-color:${color};--paper-drift-x:${driftX}px;--paper-drift-y:${driftY}px;--paper-duration:${duration}s;--paper-delay:${delay}s;--paper-font-size:${fontSize}rem`;
 
       return `
