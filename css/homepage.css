@@ -544,7 +544,7 @@ a {
 .research-map-layer h4 {
   margin: 0;
   padding: 10px 8px 3px;
-  color: var(--accent-deep);
+  color: var(--layer-color);
   font-family: "Merriweather", serif;
   font-size: 0.82rem;
   font-weight: 900;
@@ -919,7 +919,7 @@ a {
 
 .xl-stack-band > h4 {
   margin: 0 0 11px;
-  color: var(--accent-deep);
+  color: var(--stack-color);
   font-family: "Merriweather", serif;
   font-size: 1.12rem;
   font-weight: 900;
