@@ -12,13 +12,15 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xin Liu</title>
+  <title>Xin Liu | Physical AI, Multimodal Sensing, IoT &amp; NextG</title>
+  <meta name="description" content="Xin Liu leads XL-Stack Lab at Florida State University, with research spanning physical AI, multimodal sensing, foundation models, human motion, IoT, edge intelligence, cyber-physical systems, integrated sensing and communication, NextG wireless networks, and trustworthy sensing.">
+  <meta name="keywords" content="Xin Liu, physical AI, multimodal sensing, wireless sensing, WiFi sensing, RF sensing, foundation models, generative AI, human motion understanding, human motion generation, IoT, edge intelligence, cyber-physical systems, integrated sensing and communication, ISAC, NextG, wireless networks, trustworthy sensing, battery-free IoT">
   <link rel="icon" type="image/png" href="Figure/headshot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/homepage.css?v=20260620-news-scroll">
+  <link rel="stylesheet" href="css/homepage.css?v=20260917-axis-dot-tight">
 </head>
 <body>
   <div class="site-shell">
@@ -74,7 +76,7 @@
         <div class="hero-content">
           <audio id="name-audio" src="Figure/name_pronun.mp3"></audio>
           <p class="hero-lead">
-            I lead XL-Stack Lab, where we architect full-stack integration across ISAC, RAN, and Foundation Models to build Physical AI systems. Our goal is to evolve NextG into a self-evolving neural infrastructure that seamlessly bridges the digital and physical worlds.
+            I lead XL-Stack Lab, where we develop multimodal sensing, communication, and AI technologies that enable intelligent systems to perceive, understand, and interact with the physical world. Our research spans human-centered physical AI, foundation models for motion, integrated sensing and communication (ISAC), intelligent cyber-physical systems, edge AI, NextG wireless networks, and trustworthy IoT.
           </p>
           <div class="contact-grid">
             <div>
@@ -98,18 +100,287 @@
           <h2>About Me</h2>
         </div>
         <p>
-          Before joining FSU, I was a Postdoctoral Scholar at the
-          <a href="https://aiedge.osu.edu/" target="_blank" rel="noopener noreferrer">NSF AI-EDGE Institute</a>
-          at The Ohio State University (OSU), working with Prof. Ness Shroff, Prof. Eylem Ekici, and Prof. Kannan Srinivasan. My postdoctoral research focused on integrating machine learning with next-generation wireless networks.
-          I completed my Ph.D. at the University of Maryland, Baltimore County (UMBC), mentored by Prof. Ting Zhu (now at OSU), where I focused on wireless communication, networking, sensing, and security.
-        </p>
-        <p>
-          My background is highly interdisciplinary. Beyond my academic research, I have many years of hands-on experience developing high-precision measurement instruments and related products. This work spans the full stack of instrument development, from high-speed and high-power circuit design, embedded development on platforms such as MCUs, FPGAs, DSPs, and ARMs, to sensor integration, laser-based measurement and projection, and motor and mechanical control. This broad practical experience allows me to connect my current research with real-world cyber-physical systems.
-        </p>
-        <p>
-          I welcome collaborators and students from diverse backgrounds. If your interests lie in these areas or at the intersection of multiple fields, please feel free to contact me.
+          My research bridges AI and the physical world. I build sensing, learning, communication, and networking systems that turn heterogeneous signals into reliable physical intelligence. A recurring theme is full-stack co-design: connecting foundation models and generative AI with multimodal sensing, edge intelligence, cyber-physical systems, and NextG infrastructure.
         </p>
 
+        <div class="research-constellation" aria-labelledby="research-map-title">
+          <div class="research-map-heading">
+            <div>
+              <h3 id="research-map-title">XL-Stack Research Map</h3>
+              <p>Explore how each project connects ideas across the computing stack.</p>
+            </div>
+          </div>
+          <div class="research-map-focus" aria-live="polite">
+            <span class="research-map-prompt">Select a paper to trace its contributions across layers.</span>
+          </div>
+          <div class="research-map-layout">
+            <div class="research-map-axis" aria-label="Cross-stack design objectives">
+              <div class="research-axis-arrow research-axis-up">
+                <span><b>Efficient</b><b>Adaptive</b><b>Security</b><b>Trustworthy</b></span>
+              </div>
+              <div class="research-axis-arrow research-axis-down">
+                <span><b>Accuracy</b><b>Latency</b><b>Energy</b><b>Safety</b></span>
+              </div>
+            </div>
+            <div class="research-map-canvas" id="research-map-canvas">
+              <svg class="research-map-links" aria-hidden="true"></svg>
+              <div class="research-map-layers" id="research-map-layers"></div>
+              <div class="research-paper-cloud" id="research-paper-cloud" aria-label="Interactive publication map"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="xl-stack-figure" aria-labelledby="xl-stack-title" hidden aria-hidden="true">
+          <div class="xl-stack-heading">
+            <div>
+              <h3 id="xl-stack-title">XL-Stack Research Architecture</h3>
+              <p>From physical systems to physical intelligence, and from application intent back to implementation.</p>
+            </div>
+            <div class="xl-stack-objectives" aria-label="Cross-stack objectives">
+              <span>Efficient</span>
+              <span>Adaptive</span>
+              <span>Secure</span>
+              <span>Trustworthy</span>
+            </div>
+          </div>
+
+          <div class="xl-stack-diagram">
+            <aside class="xl-stack-flow xl-stack-flow-up" aria-label="Bottom-up capability synthesis">
+              <div class="xl-flow-end xl-flow-end-top">
+                <strong>Efficient · Adaptive<br>Secure · Trustworthy</strong>
+              </div>
+              <svg viewBox="0 0 150 720" preserveAspectRatio="none" aria-hidden="true">
+                <path class="xl-flow-track" d="M132 682 C24 622 24 98 132 38"></path>
+                <path class="xl-flow-motion" d="M132 682 C24 622 24 98 132 38"></path>
+                <path class="xl-flow-leaf-tail" d="M132 682 C104 654 80 671 96 704 C108 728 128 710 132 682 Z"></path>
+                <path class="xl-flow-arrowhead" d="M132 18 L96 72 L124 60 L139 91 L147 82 Z"></path>
+              </svg>
+              <div class="xl-flow-copy">
+                <strong>Bottom-Up<br>Co-Design</strong>
+              </div>
+              <div class="xl-flow-end xl-flow-end-bottom">
+                <strong>Physical Systems</strong>
+              </div>
+            </aside>
+
+            <div class="xl-stack-core">
+              <article class="xl-stack-band xl-stack-layer-6">
+                <h4>Applications of Physical AI &amp; Security</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>Human-Centered Physical AI</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="mugen">MUGEN <small>(arXiv 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="geomotiongpt">GeoMotionGPT <small>(EMNLP 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="arise">ARiSE <small>(IEEE FG 2026)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Cyber &amp; Physical Security</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="2fia">2FiA <small>(IEEE S&amp;P 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="lightthief">LightThief <small>(USENIX Security 2023)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="i can see the light">Invisible-Light Attacks <small>(ACM CCS 2021)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Trustworthy IoT</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="key establishment">Key Establishment <small>(ACM ASIACCS 2024)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="secured protocol">Tactical IoT Security <small>(IEEE MILCOM 2022)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="countering cross-technology">Cross-Technology Jamming <small>(ACM WiSec 2020)</small></button>
+                      <span class="stack-paper-entry">Fresco <small>(IEEE ICCCN 2026)</small></span>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Smart Health &amp; Human Sensing</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="mural-fi">MURAL-Fi <small>(ACM UbiComp 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="ear:">EAR <small>(ACM SenSys 2018)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="xl-stack-band xl-stack-layer-5">
+                <h4>Models &amp; AI Intelligence</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>Foundation &amp; Generative AI</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="mugen">MUGEN <small>(arXiv 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="geomotiongpt">GeoMotionGPT <small>(EMNLP 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="hyperedit">HyperEdit <small>(2025)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Geometry &amp; Motion Intelligence</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="arise">ARiSE <small>(IEEE FG 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="mugen">MUGEN <small>(arXiv 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="geomotiongpt">GeoMotionGPT <small>(EMNLP 2026)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Multimodal &amp; Edge AI</strong>
+                    <div class="xl-stack-work-list">
+                      <span class="stack-paper-entry">BFMScan <small>(ACM UbiComp 2026)</small></span>
+                      <button type="button" class="stack-paper-link" data-publication-query="arise">ARiSE <small>(IEEE FG 2026)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="xl-stack-band xl-stack-layer-4">
+                <h4>Networks, Edge &amp; Control</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>MAC, Scheduling &amp; Resources</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="energy-efficient paging">Energy-Efficient Paging <small>(IEEE INFOCOM 2025)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="chiron">Chiron <small>(ACM MobiSys 2018)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Heterogeneous IoT &amp; Edge</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="parallel inclusive">PIC <small>(ACM SenSys 2019)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="crf:">CRF <small>(IEEE INFOCOM 2019)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="exploiting wi-fi ap">Wi-Fi / ZigBee Dissemination <small>(IEEE ICNP 2021)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Spectrum &amp; Concurrent Networking</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="ect:">ECT <small>(IEEE INFOCOM 2018)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="countering cross-technology">Cross-Technology Jamming <small>(ACM WiSec 2020)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="o-jrc">O-JRC <small>(Computer Networks 2025)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="xl-stack-band xl-stack-layer-3">
+                <h4>Sensing &amp; Communication</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>Wi-Fi &amp; RF Sensing</strong>
+                    <div class="xl-stack-work-list">
+                      <span class="stack-paper-entry">BFMScan <small>(ACM UbiComp 2026)</small></span>
+                      <button type="button" class="stack-paper-link" data-publication-query="2fia">2FiA <small>(IEEE S&amp;P 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="mural-fi">MURAL-Fi <small>(ACM UbiComp 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="ear:">EAR <small>(ACM SenSys 2018)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>ISAC &amp; Radar-Communication</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="o-jrc">O-JRC <small>(Computer Networks 2025)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="aegis:">Aegis <small>(IEEE INFOCOM 2018)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Cross-Technology &amp; Sustainable Links</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="hydrochirp">HydroChirp <small>(IEEE INFOCOM 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="passive-zigbee">Passive-ZigBee <small>(ACM SenSys 2018)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="efficient two-way">Bluetooth Backscatter <small>(IEEE INFOCOM 2024)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="xl-stack-band xl-stack-layer-2">
+                <h4>Signals, Channels &amp; Wireless PHY</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>mmWave &amp; Beamforming</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="0cal">0cal <small>(ACM SenSys 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="ftp:">FTP <small>(IEEE INFOCOM 2024)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="fast and optimal">Swift <small>(ACM MobiWac 2023)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Waveforms &amp; Channels</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="hydrochirp">HydroChirp <small>(IEEE INFOCOM 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="verification and redesign">TScatter <small>(USENIX NSDI 2021)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="leveraging ambient lte">LScatter <small>(ACM SIGCOMM 2020)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Multi-Radio PHY</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="vmscatter">VMscatter <small>(USENIX NSDI 2020)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="efficient two-way">Bluetooth Backscatter <small>(IEEE INFOCOM 2024)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="aegis:">Aegis <small>(IEEE INFOCOM 2018)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="xl-stack-band xl-stack-layer-1">
+                <h4>Wearables, Physical World, Devices, Circuits &amp; Chips</h4>
+                <div class="xl-stack-topic-grid">
+                  <section class="xl-stack-topic">
+                    <strong>Battery-Free Devices &amp; Circuits</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="vmscatter">VMscatter <small>(USENIX NSDI 2020)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="verification and redesign">TScatter <small>(USENIX NSDI 2021)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="leveraging ambient lte">LScatter <small>(ACM SIGCOMM 2020)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="passive-zigbee">Passive-ZigBee <small>(ACM SenSys 2018)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Wireless &amp; Optical Interfaces</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="lightthief">LightThief <small>(USENIX Security 2023)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="0cal">0cal <small>(ACM SenSys 2026)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="o-jrc">O-JRC <small>(Computer Networks 2025)</small></button>
+                    </div>
+                  </section>
+                  <section class="xl-stack-topic">
+                    <strong>Embedded, Wearable &amp; Edge Hardware</strong>
+                    <div class="xl-stack-work-list">
+                      <button type="button" class="stack-paper-link" data-publication-query="efficient two-way">Bluetooth Backscatter <small>(IEEE INFOCOM 2024)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="energy-efficient paging">Energy-Efficient Paging <small>(IEEE INFOCOM 2025)</small></button>
+                      <button type="button" class="stack-paper-link" data-publication-query="arise">ARiSE <small>(IEEE FG 2026)</small></button>
+                    </div>
+                  </section>
+                </div>
+              </article>
+            </div>
+
+            <aside class="xl-stack-flow xl-stack-flow-down" aria-label="Top-down system guidance">
+              <div class="xl-flow-end xl-flow-end-top">
+                <strong>Application Goals</strong>
+                <span>Task · Accuracy · Latency · Energy · Safety</span>
+              </div>
+              <svg viewBox="0 0 150 720" preserveAspectRatio="none" aria-hidden="true">
+                <path class="xl-flow-track" d="M18 38 C126 98 126 622 18 682"></path>
+                <path class="xl-flow-motion" d="M18 38 C126 98 126 622 18 682"></path>
+                <path class="xl-flow-leaf-tail" d="M18 38 C46 10 70 27 54 60 C42 84 22 66 18 38 Z"></path>
+                <path class="xl-flow-arrowhead" d="M18 702 L54 648 L26 660 L11 629 L3 638 Z"></path>
+              </svg>
+              <div class="xl-flow-copy">
+                <strong>Top-Down<br>Optimization</strong>
+              </div>
+              <div class="xl-flow-end xl-flow-end-bottom">
+                <strong>Co-Optimized<br>Implementation</strong>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <p>
+          Before joining FSU, I was a Postdoctoral Scholar at the
+          <a href="https://aiedge.osu.edu/" target="_blank" rel="noopener noreferrer">NSF AI-EDGE Institute</a>
+          at The Ohio State University (OSU), working with Prof. Ness Shroff, Prof. Eylem Ekici, and Prof. Kannan Srinivasan. I completed my Ph.D. at the University of Maryland, Baltimore County (UMBC), mentored by Prof. Ting Zhu (now at OSU).
+        </p>
+        <p>
+          I welcome interdisciplinary collaborations across computing, engineering, health, and the sciences, especially projects that need AI and sensing to understand or interact with the physical world. Prospective students and collaborators are encouraged to get in touch.
+        </p>
 
       </section>
 
@@ -127,7 +398,7 @@
         </div>
 
         <div class="pub-controls">
-          <div class="pub-filter-title">Browse by research area</div>
+          <div class="pub-filter-title">Browse publications by research area</div>
           <div id="pub-filters" class="pub-filters" aria-label="Publication Filters"></div>
           <div id="pub-result-meta" class="pub-result-meta"></div>
         </div>
@@ -165,7 +436,7 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-  <script src="js/homepage.js?v=20260807-area-cleanup"></script>
+  <script src="js/homepage.js?v=20260917-axis-dot-tight"></script>
   <div style="display: none;" aria-hidden="true">
     <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=RX6JZVxpvzyAHlsWxTEyKE_hWPQXmGtbEacN4FuhKgY&cl=ffffff&w=a"></script>
   </div>

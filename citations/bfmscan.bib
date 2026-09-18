@@ -1,0 +1,17 @@
+@article{bfmscan,
+  author = {Li, Bofan and Liu, Zhuoyuan and Ye, Zhankai and Yu, Weikuan and Liu, Xin},
+  title = {{BFMScan}: Enabling Explicit Angle-Resolved Sensing via Beamforming Feedback Matrix},
+  year = {2026},
+  issue_date = {September 2026},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {10},
+  number = {3},
+  url = {https://doi.org/10.1145/3832009},
+  doi = {10.1145/3832009},
+  abstract = {Commodity Wi-Fi sensing has gained significant traction by leveraging the Beamforming Feedback Matrix (BFM) available on standard devices. However, existing BFM-based approaches suffer from a fundamental limitation: they primarily rely on relative temporal variations contributed by the overall environment (e.g., amplitude/phase variations of BFM ratios) instead of explicitly extracting physically grounded parameters. Consequently, these methods are intrinsically motion-dependent, rendering them blind to static targets, and spatially under-constrained, necessitating strong initialization priors (e.g., known starting positions), multi-device coordination, or data-driven learning to resolve spatial ambiguity. In this paper, we present BFMScan, the first sensing framework to achieve explicit angle-resolved sensing using only the downlink BFM from a single commodity Wi-Fi device pair. Rather than relying on indirect temporal variations for spatial inference, we mathematically derive the subspace structure from compressed BFM. This theoretical foundation enables a subspace-based algorithm that reconstructs high-fidelity Angle-of-Departure (AoD) profiles from BFM, achieving absolute spatial observability. This capability allows BFMScan to detect both static and moving targets and resolve their spatial directions without requiring external initial position. Furthermore, we extend this angle-domain separability to the spatiotemporal domain to robustly distinguish multiple concurrent targets motions. We implement BFMScan on a single pair of commercial off-the-shelf (COTS) Wi-Fi devices and evaluate it across diverse scenarios, including single-user device-based angular tracking, two-user human interaction, and three-user respiration monitoring. Experimental results demonstrate that BFMScan enables accurate angle-resolved sensing from BFM, supports multiple targets, and achieves robust performance across complex real-world environments.},
+  journal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
+  month = sep,
+  articleno = {122},
+  numpages = {25}
+}

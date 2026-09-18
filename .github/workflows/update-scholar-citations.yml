@@ -1,0 +1,36 @@
+name: Update Google Scholar citations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh citation cache
+        run: node scripts/update-scholar-citations.mjs
+
+      - name: Commit updated counts
+        run: |
+          if git diff --quiet -- data/scholar-citations.json; then
+            echo "Citation counts are unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar-citations.json
+          git commit -m "chore: update Google Scholar citations"
+          git push

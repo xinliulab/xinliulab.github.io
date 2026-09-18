@@ -233,7 +233,7 @@ const publications = [
   //   citationFile: "",
   //   selected: true,
   //   image: "./Figure/BFMScan.png",
-  //   area: ["Integrated Sensing and Communication"],
+  //   area: ["Multimodal Sensing & ISAC", "IoT, Edge Intelligence & CPS"],
   //   links: [
   //     { label: "Code / Dataset: to appear", href: "" }
   //   ]
@@ -249,7 +249,7 @@ const publications = [
     citationFile: "",
     selected: true,
     image: "./Figure/mugen.jpg",
-    area: ["Physical AI for Human Motion and Health"],
+    area: ["Physical AI & Human-Centered Intelligence", "Foundation Models & Generative AI"],
     links: [
       { label: "Project Page", href: "https://jye16.github.io/mugen-page/" }
     ]
@@ -265,7 +265,7 @@ const publications = [
     citationFile: "",
     selected: true,
     image: "./Figure/geomotiongpt.png",
-    area: ["Physical AI for Human Motion and Health"],
+    area: ["Physical AI & Human-Centered Intelligence", "Foundation Models & Generative AI"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/JYe16/GeoMotionGPT" }
     ]
@@ -284,7 +284,7 @@ const publications = [
   //   citationFile: "",
   //   selected: false,
   //   image: "./Figure/Fresco.png",
-  //   area: ["Security & Privacy", "Physical AI for Human Motion and Health"]
+  //   area: ["Trustworthy AI, Sensing & Security", "Foundation Models & Generative AI"]
   // },
 
     {
@@ -297,7 +297,7 @@ const publications = [
     citationFile: "./citations/arise.bib",
     selected: false,
     image: "./Figure/arise.png",
-    area: ["Physical AI for Human Motion and Health"]
+    area: ["Multimodal Sensing & ISAC", "Physical AI & Human-Centered Intelligence", "IoT, Edge Intelligence & CPS"]
   },
 
 
@@ -311,7 +311,7 @@ const publications = [
     citationFile: "./citations/hyperedit.bib",
     selected: null,
     image: "./Figure/HyperEdit.jpeg",
-    area: []
+    area: ["Foundation Models & Generative AI"]
   },
   
   {
@@ -324,7 +324,7 @@ const publications = [
     citationFile: "./citations/hydrochirp.bib",
     selected: null,
     image: "./Figure/hydrochirp.png",
-    area: ["Integrated Sensing and Communication"]
+    area: ["NextG Wireless & Networked Systems"]
   },
   {
     title: "2FiA: <u>To</u>wards Wi<u>Fi</u> Sensing-Based <u>A</u>uthentication with Unique Biometrics",
@@ -336,7 +336,7 @@ const publications = [
     citationFile: "./citations/2fia.bib",
     selected: true,
     image: "./Figure/2FiA.png",
-    area: ["Integrated Sensing and Communication", "Security & Privacy"],
+    area: ["Multimodal Sensing & ISAC", "Physical AI & Human-Centered Intelligence", "Trustworthy AI, Sensing & Security"],
     links: [
       { label: "Code / Dataset", href: "https://zenodo.org/records/17361618" }
     ],
@@ -357,7 +357,7 @@ const publications = [
     citations: true,
     citationFile: "./citations/muralfi.bib",
     image: "./Figure/muralfi.png",
-    area: "Integrated Sensing and Communication"
+    area: ["Multimodal Sensing & ISAC", "Physical AI & Human-Centered Intelligence", "Trustworthy AI, Sensing & Security"]
   },
   {
     title: "0cal:  <u>Zero</u>-Cost <u>Cal</u>ibration for mmWave Networks",
@@ -369,7 +369,7 @@ const publications = [
     citationFile: "./citations/0cal.bib",
     selected: true,
     image: "./Figure/0cal.png",
-    area: "Millimeter Wave",
+    area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/26SenSys_0cal" }
     ],
@@ -385,7 +385,7 @@ const publications = [
     citationFile: "./citations/pscatter.bib",
     selected: false,
     image: "./Figure/pscatter.png",
-    area: "Battery-Free IoT"
+    area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"]
     // links: [
     //   { label: "Code / Dataset", href: "" }
     // ]
@@ -400,7 +400,7 @@ const publications = [
     citationFile: "./citations/ojrc.bib",
     selected: true,
     image: "./Figure/ojrc.png",
-    area: ["Integrated Sensing and Communication", "Millimeter Wave"], 
+    area: ["Multimodal Sensing & ISAC", "NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
       { label: "Project Page", href: "https://u.osu.edu/ekici/jrc-testbed/" },
       { label: "Code", href: "https://github.com/mmWave-MIMO-Testbed/O-JRC" }
@@ -415,7 +415,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/kep.bib",
     image: "./Figure/kep.png",
-    area: ["Spectrum Sharing & Management", "Security & Privacy"]
+    area: ["NextG Wireless & Networked Systems", "Trustworthy AI, Sensing & Security"]
   },
   {
     title: "FTP: Enabling <u>F</u>ast Beam-<u>T</u>raining for O<u>p</u>timal mmWave Beamforming",
@@ -426,7 +426,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/ftp.bib",
     image: "./Figure/ftp.png",
-    area: "Millimeter Wave",
+    area: ["NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"],
     links: [
       { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
     ],
@@ -441,7 +441,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/effblue.bib",
     image: "./Figure/effblue.png",
-    area: "Battery-Free IoT"
+    area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"]
     // links: [
     //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP" }
     // ]
@@ -455,7 +455,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/swift.bib",
     image: "./Figure/swift.png",
-    area: "Millimeter Wave"
+    area: ["NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"]
     // links: [
     //   { label: "Code / Dataset", href: "https://github.com/xinliulab/24InfoCom_FTP"}
     // ]
@@ -470,7 +470,7 @@ const publications = [
     citationFile: "./citations/lightthief.bib",
     selected: true,
     image: "./Figure/LightThief.png",
-    area: "Security & Privacy",
+    area: ["Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"],
     links: [
       { label: "Code", href: "https://github.com/xinliulab/23Security_LightThief" },
       { label: "Presentation", href: "https://www.usenix.org/conference/usenixsecurity23/presentation/liu-xin" }
@@ -486,7 +486,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/milcom.bib",
     image: "./Figure/milcom.png",
-    area: ["Spectrum Sharing & Management", "Security & Privacy"]
+    area: ["NextG Wireless & Networked Systems", "Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"]
   },
   {
     title: "I Can See the Light: Attacks on Autonomous Vehicles Using Invisible Lights",
@@ -497,7 +497,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/icsl.bib",
     image: "./Figure/ICSL.png",
-    area: "Security & Privacy"
+    area: ["Trustworthy AI, Sensing & Security", "IoT, Edge Intelligence & CPS"]
   },
   {
     title: "Exploiting Wi-Fi AP for Simultaneous Data Dissemination among Wi-Fi and ZigBee Devices",
@@ -508,7 +508,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/etc.bib",
     image: "./Figure/etc.png",
-    area: ["Spectrum Sharing & Management"]
+    area: ["NextG Wireless & Networked Systems", "IoT, Edge Intelligence & CPS"]
   },
   {
     title: "Verification and Redesign of OFDM Backscatter",
@@ -520,7 +520,7 @@ const publications = [
     citationFile: "./citations/tscatter.bib",
     selected: true,
     image: "./Figure/TScatter.png",
-    area: "Battery-Free IoT",
+    area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
       { label: "Code", href: "https://github.com/EMDCYY/TScatter" },
       // { label: "Circuit", href: "https://github.com/pengyuzhang/HitchHike" },
@@ -536,7 +536,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/wisec20.bib",
     image: "Figure/WiSec20.png",
-    area: ["Spectrum Sharing & Management", "Security & Privacy"],
+    area: ["NextG Wireless & Networked Systems", "Trustworthy AI, Sensing & Security"],
   }, 
   {
     title: "VMscatter: A <u>V</u>ersatile <u>M</u>IMO Back<u>scatter</u>",
@@ -548,7 +548,7 @@ const publications = [
     citationFile: "./citations/vmscatter.bib",
     selected: true,
     image: "./Figure/VMscatter.png",
-    area: "Battery-Free IoT",
+    area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
     links: [
       { label: "Code", href: "https://github.com/EMDCYY/VMscatter" },
       // { label: "Circuit", href: "https://github.com/EMDCYY/VMscatter" },
@@ -565,7 +565,7 @@ const publications = [
     citationFile: "./citations/lscatter.bib",
     selected: true,
     image: "./Figure/LScatter.png",
-    area: "Battery-Free IoT",
+    area: ["Battery-Free & Sustainable IoT", "NextG Wireless & Networked Systems"],
   },
   {
     title: "Parallel Inclusive Communication for Connecting Heterogeneous IoT Devices at the Edge",
@@ -577,7 +577,7 @@ const publications = [
     citationFile: "./citations/pic.bib",
     selected: null,
     image: "./Figure/PIC.png",
-    area: "Spectrum Sharing & Management",
+    area: ["IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
     award: "Best Paper Award Candidate"
   },
   {
@@ -589,7 +589,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/crf.bib",
     image: "./Figure/CRF.png",
-    area: "Spectrum Sharing & Management",
+    area: ["IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
   },
   {
     title: "Passive-ZigBee: Enabling ZigBee Communication in IoT Networks with 1000X+ Less Power Consumption",
@@ -601,7 +601,7 @@ const publications = [
     citationFile: "./citations/passivezigbee.bib",
     selected: null,
     image: "./Figure/PassiveZigbee.png",
-    area: ["Battery-Free IoT", "Spectrum Sharing & Management"],
+    area: ["Battery-Free & Sustainable IoT", "IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
     award: "Best Paper Runner-up Award"
   },
   {
@@ -613,7 +613,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/ear.bib",
     image: "./Figure/EAR.png",
-    area: "Integrated Sensing and Communication",
+    area: ["Multimodal Sensing & ISAC", "Physical AI & Human-Centered Intelligence"],
   },
   {
     title: "Chiron: <u>C</u>oncurrent <u>Hi</u>gh Th<u>ro</u>ughput Commu<u>n</u>ication for IoT Devices",
@@ -624,7 +624,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/chiron.bib",
     image: "./Figure/Chiron.png",
-    area: "Spectrum Sharing & Management"
+    area: ["IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"]
   },
 
   {
@@ -636,7 +636,7 @@ const publications = [
     citations: null,
     citationFile: "./citations/ect.bib",
     image: "./Figure/ECT.png",
-    area: ["Spectrum Sharing & Management"],
+    area: ["IoT, Edge Intelligence & CPS", "NextG Wireless & Networked Systems"],
   },
 
    {
@@ -648,17 +648,115 @@ const publications = [
     citations: null,
     citationFile: "./citations/aegis.bib",
     image: "./Figure/aegis.png",
-    area: ["Integrated Sensing and Communication", "Security & Privacy"],
+    area: ["Multimodal Sensing & ISAC", "Trustworthy AI, Sensing & Security"],
   }
 ];
 
+const researchMapLayers = [
+  {
+    id: "applications",
+    title: "Applications of Physical AI & Security",
+    concepts: [
+      ["physical-ai", "Physical AI"],
+      ["cyber-physical-security", "Cyber & Physical Security"],
+      ["smart-health", "Smart Health"],
+      ["trustworthy-iot", "Trustworthy IoT"]
+    ]
+  },
+  {
+    id: "models",
+    title: "Models & AI Intelligence",
+    concepts: [
+      ["motion-intelligence", "Geometry & Motion Intelligence"],
+      ["edge-ai", "Edge AI"],
+      ["generative-ai", "Foundation & Generative AI"],
+      ["multimodal-learning", "Multimodal Learning"]
+    ]
+  },
+  {
+    id: "networks",
+    title: "Networks, Edge & Control",
+    concepts: [
+      ["spectrum-networking", "Spectrum & Concurrent Networking"],
+      ["mac-scheduling", "MAC & Scheduling"],
+      ["resource-allocation", "Resource Allocation"],
+      ["heterogeneous-edge", "Heterogeneous IoT & Edge"]
+    ]
+  },
+  {
+    id: "sensing",
+    title: "Sensing & Communication",
+    concepts: [
+      ["sustainable-links", "Sustainable & Underwater Links"],
+      ["isac-radar", "ISAC & Radar"],
+      ["wifi-sensing", "Wi-Fi & RF Sensing"],
+      ["human-sensing", "Human & Health Sensing"]
+    ]
+  },
+  {
+    id: "signals",
+    title: "Signals, Channels & Wireless PHY",
+    concepts: [
+      ["waveforms-channels", "Waveforms & Channels"],
+      ["mmwave-beamforming", "mmWave & Beamforming"],
+      ["multi-radio-phy", "Multi-Radio PHY"],
+      ["cross-technology-phy", "Cross-Technology PHY"]
+    ]
+  },
+  {
+    id: "physical",
+    title: "Wearables, Physical World, Devices, Circuits & Chips",
+    concepts: [
+      ["wireless-optical-frontends", "Wireless & Optical Frontends"],
+      ["battery-free-hardware", "Battery-Free Hardware"],
+      ["devices-circuits-chips", "Devices, Circuits & Chips"],
+      ["embedded-wearable", "Embedded & Wearable Platforms"]
+    ]
+  }
+];
+
+const researchMapPapers = [
+  { id: "mugen", label: "MUGEN", query: "mugen", primary: "physical-ai", path: ["physical-ai", "generative-ai", "motion-intelligence"] },
+  { id: "geomotiongpt", label: "GeoMotionGPT", query: "geomotiongpt", primary: "physical-ai", path: ["physical-ai", "generative-ai", "motion-intelligence"] },
+  { id: "arise", label: "ARiSE", query: "arise", primary: "physical-ai", path: ["physical-ai", "edge-ai", "human-sensing", "embedded-wearable"] },
+  { id: "2fia", label: "2FiA", query: "2fia", primary: "cyber-physical-security", path: ["cyber-physical-security", "multimodal-learning", "wifi-sensing", "waveforms-channels"] },
+  { id: "lightthief", label: "LightThief", query: "lightthief", primary: "cyber-physical-security", path: ["cyber-physical-security", "waveforms-channels", "wireless-optical-frontends"] },
+  { id: "invisible-light", label: "Invisible-Light", query: "i can see the light", primary: "cyber-physical-security", path: ["cyber-physical-security", "isac-radar", "wireless-optical-frontends"] },
+  { id: "key-establishment", label: "Key Establishment", query: "key establishment", primary: "trustworthy-iot", path: ["trustworthy-iot", "heterogeneous-edge", "cross-technology-phy"] },
+  { id: "tactical-iot", label: "Tactical IoT", query: "secured protocol", primary: "trustworthy-iot", path: ["trustworthy-iot", "heterogeneous-edge"] },
+  { id: "fresco", label: "Fresco", primary: "trustworthy-iot", path: ["trustworthy-iot", "edge-ai", "heterogeneous-edge"] },
+  { id: "mural-fi", label: "MURAL-Fi", query: "mural-fi", primary: "smart-health", path: ["smart-health", "multimodal-learning", "wifi-sensing", "human-sensing"] },
+  { id: "ear", label: "EAR", query: "ear:", primary: "smart-health", path: ["smart-health", "human-sensing", "heterogeneous-edge"] },
+  { id: "hyperedit", label: "HyperEdit", query: "hyperedit", primary: "generative-ai", path: ["generative-ai"] },
+  { id: "bfmscan", label: "BFMScan", primary: "multimodal-learning", path: ["multimodal-learning", "wifi-sensing", "mmwave-beamforming"] },
+  { id: "energy-paging", label: "Energy Paging", query: "energy-efficient paging", primary: "mac-scheduling", path: ["mac-scheduling", "resource-allocation", "battery-free-hardware"] },
+  { id: "chiron", label: "Chiron", query: "chiron", primary: "mac-scheduling", path: ["mac-scheduling", "spectrum-networking", "embedded-wearable"] },
+  { id: "pic", label: "PIC", query: "parallel inclusive", primary: "heterogeneous-edge", path: ["heterogeneous-edge", "cross-technology-phy"] },
+  { id: "crf", label: "CRF", query: "crf:", primary: "heterogeneous-edge", path: ["heterogeneous-edge", "spectrum-networking"] },
+  { id: "wifi-zigbee", label: "Wi-Fi / ZigBee", query: "exploiting wi-fi ap", primary: "heterogeneous-edge", path: ["heterogeneous-edge", "cross-technology-phy"] },
+  { id: "ect", label: "ECT", query: "ect:", primary: "spectrum-networking", path: ["spectrum-networking", "cross-technology-phy"] },
+  { id: "cross-jamming", label: "Cross-Tech Jamming", query: "countering cross-technology", primary: "spectrum-networking", path: ["cyber-physical-security", "spectrum-networking", "cross-technology-phy"] },
+  { id: "ojrc", label: "O-JRC", query: "o-jrc", primary: "isac-radar", path: ["isac-radar", "mmwave-beamforming", "wireless-optical-frontends"] },
+  { id: "aegis", label: "Aegis", query: "aegis:", primary: "isac-radar", path: ["cyber-physical-security", "isac-radar", "multi-radio-phy"] },
+  { id: "hydrochirp", label: "HydroChirp", query: "hydrochirp", primary: "sustainable-links", path: ["sustainable-links", "waveforms-channels", "embedded-wearable"] },
+  { id: "passive-zigbee", label: "Passive-ZigBee", query: "passive-zigbee", primary: "sustainable-links", path: ["sustainable-links", "cross-technology-phy", "battery-free-hardware"] },
+  { id: "bluetooth-backscatter", label: "Bluetooth Backscatter", query: "efficient two-way", primary: "sustainable-links", path: ["sustainable-links", "multi-radio-phy", "battery-free-hardware"] },
+  { id: "0cal", label: "0cal", query: "0cal", primary: "mmwave-beamforming", path: ["mmwave-beamforming", "wireless-optical-frontends"] },
+  { id: "ftp", label: "FTP", query: "ftp:", primary: "mmwave-beamforming", path: ["resource-allocation", "mmwave-beamforming"] },
+  { id: "swift", label: "Swift", query: "fast and optimal", primary: "mmwave-beamforming", path: ["resource-allocation", "mmwave-beamforming"] },
+  { id: "tscatter", label: "TScatter", query: "verification and redesign", primary: "waveforms-channels", path: ["waveforms-channels", "battery-free-hardware"] },
+  { id: "lscatter", label: "LScatter", query: "leveraging ambient lte", primary: "waveforms-channels", path: ["sustainable-links", "waveforms-channels", "battery-free-hardware"] },
+  { id: "vmscatter", label: "VMscatter", query: "vmscatter", primary: "multi-radio-phy", path: ["multi-radio-phy", "battery-free-hardware", "devices-circuits-chips"] }
+];
+
 const orderedAreas = [
-  "Integrated Sensing and Communication",
-  "Physical AI for Human Motion and Health",
-  "Millimeter Wave",
-  "Battery-Free IoT",
-  "Spectrum Sharing & Management",
-  "Security & Privacy"
+  "Multimodal Sensing & ISAC",
+  "Physical AI & Human-Centered Intelligence",
+  "Foundation Models & Generative AI",
+  "IoT, Edge Intelligence & CPS",
+  "NextG Wireless & Networked Systems",
+  "Trustworthy AI, Sensing & Security",
+  "Battery-Free & Sustainable IoT"
 ];
 
 const publicationOrder = new Map(publications.map((pub, index) => [pub.title, index]));
@@ -803,6 +901,642 @@ function getCitationFileName(citationFile) {
 
 function getPublicationId(pub) {
   return `publication-${pub.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+}
+
+function getPlainPublicationTitle(title) {
+  const container = document.createElement("div");
+  container.innerHTML = title;
+  return container.textContent.toLowerCase();
+}
+
+function getResearchPaperTitle(paper) {
+  if (!paper.query) {
+    return paper.label;
+  }
+
+  const publication = publications.find((pub) => getPlainPublicationTitle(pub.title).includes(paper.query));
+  if (!publication) {
+    return paper.label;
+  }
+
+  const container = document.createElement("div");
+  container.innerHTML = publication.title;
+  return container.textContent.trim();
+}
+
+function getResearchPaperVenue(paper) {
+  const manualVenues = {
+    bfmscan: "UbiComp '26",
+    fresco: "ICCCN '26"
+  };
+
+  if (manualVenues[paper.id]) {
+    return manualVenues[paper.id];
+  }
+
+  const publication = paper.query
+    ? publications.find((pub) => getPlainPublicationTitle(pub.title).includes(paper.query))
+    : null;
+
+  if (!publication) {
+    return "Work in progress";
+  }
+
+  return publication.venue
+    .replace(/^IEEE\s+/, "")
+    .replace(/^ACM\s+/, "")
+    .replace(/^USENIX\s+/, "")
+    .replace("Computer Networks", "CompNet")
+    .replace(/\b20(\d{2})\b/, "'$1");
+}
+
+let scholarCitationCounts = new Map();
+
+function normalizeResearchTitle(title) {
+  return String(title)
+    .toLowerCase()
+    .replace(/<[^>]+>/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+async function loadScholarCitationCache() {
+  try {
+    const response = await fetch("./data/scholar-citations.json", { cache: "no-store" });
+    if (!response.ok) {
+      return;
+    }
+    const data = await response.json();
+    scholarCitationCounts = new Map(
+      Object.entries(data.papers || {}).map(([title, citations]) => [normalizeResearchTitle(title), Number(citations) || 0])
+    );
+  } catch (error) {
+    console.info("Scholar citation cache is unavailable; using venue, authorship, and recency weights.");
+  }
+}
+
+function getResearchPublication(paper) {
+  if (!paper.query) {
+    return null;
+  }
+  return publications.find((publication) => getPlainPublicationTitle(publication.title).includes(paper.query)) || null;
+}
+
+function getResearchVenueScore(venue) {
+  const normalizedVenue = venue.toLowerCase();
+  const topSystemsAndSecurity = ["nsdi", "sigcomm", "sensys", "mobisys", "s&p", "security", "ccs"];
+  const majorVenues = ["infocom", "ubicomp", "imwut", "icnp", "wisec", "emnlp", "acl", "fg"];
+
+  if (topSystemsAndSecurity.some((name) => normalizedVenue.includes(name))) {
+    return 1;
+  }
+  if (majorVenues.some((name) => normalizedVenue.includes(name))) {
+    return 0.76;
+  }
+  if (normalizedVenue.includes("arxiv") || normalizedVenue.includes("progress")) {
+    return 0.35;
+  }
+  return 0.56;
+}
+
+function getResearchAuthorScore(publication) {
+  if (!publication) {
+    return 0.62;
+  }
+
+  const authors = publication.authors.replace(/\s*\([^)]*\)\s*/g, "").split(",").map((author) => author.trim());
+  const position = authors.findIndex((author) => author === "Xin Liu" || author === "Xing Liu");
+  if (position === 0) {
+    return 1;
+  }
+  if (position === authors.length - 1) {
+    return 0.94;
+  }
+  if (position >= 0) {
+    return publication.authors.includes("co-primary") ? 0.96 : 0.68;
+  }
+  return 0.4;
+}
+
+function getResearchPaperScore(paper) {
+  const publication = getResearchPublication(paper);
+  const venue = publication?.venue || getResearchPaperVenue(paper);
+  const year = publication?.year || Number(venue.match(/(?:20)?(\d{2})\b/)?.[1]) + 2000 || new Date().getFullYear();
+  const titleKey = normalizeResearchTitle(publication ? getResearchPaperTitle(paper) : paper.label);
+  const citationCount = scholarCitationCounts.get(titleKey);
+  const maximumCitations = Math.max(1, ...scholarCitationCounts.values());
+  const citationScore = Number.isFinite(citationCount)
+    ? Math.log1p(citationCount) / Math.log1p(maximumCitations)
+    : 0.12;
+  const venueScore = getResearchVenueScore(venue);
+  const authorScore = getResearchAuthorScore(publication);
+  const age = Math.max(0, new Date().getFullYear() - year);
+  const recencyScore = Math.exp(-age / 5);
+
+  // Area score = 32% citation impact + 28% venue tier + 24% author role + 16% recency.
+  return 0.32 * citationScore + 0.28 * venueScore + 0.24 * authorScore + 0.16 * recencyScore;
+}
+
+const researchPaperClusters = {
+  ai: ["mugen", "geomotiongpt", "arise", "hyperedit"],
+  security: ["2fia", "lightthief", "invisible-light", "key-establishment", "tactical-iot", "fresco", "cross-jamming"],
+  sensing: ["mural-fi", "ear", "bfmscan", "ojrc", "aegis"],
+  edge: ["energy-paging", "chiron", "pic", "crf", "wifi-zigbee", "ect"],
+  wireless: ["hydrochirp", "passive-zigbee", "bluetooth-backscatter", "0cal", "ftp", "swift", "tscatter", "lscatter", "vmscatter"]
+};
+
+function getResearchPaperCluster(paperId) {
+  return Object.entries(researchPaperClusters).find(([, paperIds]) => paperIds.includes(paperId))?.[0] || "sensing";
+}
+
+function getResearchPaperSize(paper) {
+  const score = Math.max(0, Math.min(1, getResearchPaperScore(paper)));
+  const minimumDiameter = 48;
+  const maximumDiameter = 96;
+  const minimumArea = Math.PI * (minimumDiameter / 2) ** 2;
+  const maximumArea = Math.PI * (maximumDiameter / 2) ** 2;
+  const area = minimumArea + score * (maximumArea - minimumArea);
+  return Math.round(2 * Math.sqrt(area / Math.PI));
+}
+
+function layoutResearchPaperCloud(paperCloud) {
+  const width = paperCloud.clientWidth;
+  const height = paperCloud.clientHeight;
+
+  if (!width || !height) {
+    return;
+  }
+
+  const centers = {
+    ai: [0.28, 0.17],
+    security: [0.72, 0.2],
+    edge: [0.27, 0.5],
+    sensing: [0.72, 0.5],
+    wireless: [0.5, 0.8]
+  };
+  const clusterCounts = {};
+  const nodes = researchMapPapers.map((paper, index) => {
+    const element = paperCloud.querySelector(`[data-paper="${paper.id}"]`);
+    const cluster = getResearchPaperCluster(paper.id);
+    const localIndex = clusterCounts[cluster] || 0;
+    clusterCounts[cluster] = localIndex + 1;
+    const [centerX, centerY] = centers[cluster];
+    const angle = localIndex * 2.38 + Object.keys(centers).indexOf(cluster) * 0.63;
+    const radius = localIndex === 0 ? 0 : 22 + Math.floor((localIndex - 1) / 5) * 20;
+    const size = getResearchPaperSize(paper);
+
+    return {
+      element,
+      centerX: centerX * width,
+      centerY: centerY * height,
+      x: centerX * width + Math.cos(angle) * radius,
+      y: centerY * height + Math.sin(angle) * radius,
+      radius: size / 2,
+      index
+    };
+  });
+
+  for (let iteration = 0; iteration < 220; iteration += 1) {
+    nodes.forEach((node) => {
+      node.x += (node.centerX - node.x) * 0.0035;
+      node.y += (node.centerY - node.y) * 0.0035;
+    });
+
+    for (let first = 0; first < nodes.length; first += 1) {
+      for (let second = first + 1; second < nodes.length; second += 1) {
+        const a = nodes[first];
+        const b = nodes[second];
+        let dx = b.x - a.x;
+        let dy = b.y - a.y;
+        let distance = Math.hypot(dx, dy);
+        const desired = (a.radius + b.radius) * 1.06 + 4;
+
+        if (distance < 0.01) {
+          dx = (second % 2 ? 1 : -1) * 0.1;
+          dy = 0.1;
+          distance = Math.hypot(dx, dy);
+        }
+
+        if (distance < desired) {
+          const push = (desired - distance) * 0.5;
+          const unitX = dx / distance;
+          const unitY = dy / distance;
+          a.x -= unitX * push;
+          a.y -= unitY * push;
+          b.x += unitX * push;
+          b.y += unitY * push;
+        }
+      }
+    }
+
+    nodes.forEach((node) => {
+      const padding = node.radius + 16;
+      node.x = Math.max(padding, Math.min(width - padding, node.x));
+      node.y = Math.max(padding, Math.min(height - padding, node.y));
+    });
+  }
+
+  nodes.forEach((node) => {
+    node.element.style.setProperty("--paper-x", `${node.x}px`);
+    node.element.style.setProperty("--paper-y", `${node.y}px`);
+  });
+}
+
+function getResearchConceptLabel(conceptId) {
+  for (const layer of researchMapLayers) {
+    const concept = layer.concepts.find(([id]) => id === conceptId);
+    if (concept) {
+      return concept[1];
+    }
+  }
+
+  return conceptId;
+}
+
+function getResearchPaperPreviewHtml(paper) {
+  const publication = getResearchPublication(paper);
+  const title = publication?.title || escapeHtml(getResearchPaperTitle(paper));
+  const authors = publication ? formatPublicationAuthors(publication.authors) : "";
+  const venue = publication?.venue || escapeHtml(getResearchPaperVenue(paper));
+  const paperHref = typeof publication?.href === "string" ? publication.href.trim() : "";
+  const paperLink = paperHref
+    ? `<a class="research-preview-action" href="${escapeHtml(paperHref)}" target="_blank" rel="noopener noreferrer">Paper</a>`
+    : "";
+  const publicationButton = publication
+    ? `<button class="research-preview-action research-preview-publication" type="button" data-paper="${escapeHtml(paper.id)}">Publication</button>`
+    : "";
+  const extraLinks = (publication?.links || [])
+    .filter((link) => link.href)
+    .slice(0, 2)
+    .map((link) => `<a class="research-preview-action" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`)
+    .join("");
+
+  return `
+    <aside class="research-paper-preview" data-preview-paper="${escapeHtml(paper.id)}">
+      <div class="research-preview-title">${title}</div>
+      ${authors ? `<div class="research-preview-authors">${authors}</div>` : ""}
+      <div class="research-preview-venue">${venue}</div>
+      <div class="research-preview-actions">${[paperLink, publicationButton, extraLinks].filter(Boolean).join("")}</div>
+    </aside>
+  `;
+}
+
+function positionResearchPaperPreview(paper) {
+  const canvas = document.getElementById("research-map-canvas");
+  const paperCloud = document.getElementById("research-paper-cloud");
+  const paperNode = canvas?.querySelector(`[data-paper="${paper.id}"]`);
+  const preview = canvas?.querySelector(`[data-preview-paper="${paper.id}"]`);
+
+  if (!paperCloud || !paperNode || !preview) {
+    return;
+  }
+
+  const cloudRect = paperCloud.getBoundingClientRect();
+  const nodeRect = paperNode.getBoundingClientRect();
+  const previewRect = preview.getBoundingClientRect();
+  const gap = 14;
+  const padding = 10;
+  const nodeCenterY = nodeRect.top - cloudRect.top + nodeRect.height / 2;
+  const rightX = nodeRect.right - cloudRect.left + gap;
+  const leftX = nodeRect.left - cloudRect.left - previewRect.width - gap;
+  const fitsRight = rightX + previewRect.width <= cloudRect.width - padding;
+  const x = fitsRight ? rightX : Math.max(padding, leftX);
+  const y = Math.max(padding, Math.min(cloudRect.height - previewRect.height - padding, nodeCenterY - previewRect.height / 2));
+
+  preview.dataset.side = fitsRight ? "right" : "left";
+  preview.style.setProperty("--preview-x", `${x}px`);
+  preview.style.setProperty("--preview-y", `${y}px`);
+}
+
+function renderResearchPaperPreview(paper) {
+  const paperCloud = document.getElementById("research-paper-cloud");
+
+  if (!paperCloud) {
+    return;
+  }
+
+  paperCloud.querySelector(".research-paper-preview")?.remove();
+  paperCloud.insertAdjacentHTML("beforeend", getResearchPaperPreviewHtml(paper));
+  requestAnimationFrame(() => positionResearchPaperPreview(paper));
+}
+
+function jumpToResearchPublication(paperId) {
+  const paper = researchMapPapers.find((entry) => entry.id === paperId);
+  const publication = paper ? getResearchPublication(paper) : null;
+
+  if (!publication) {
+    return;
+  }
+
+  setActiveArea("All");
+  const publicationId = getPublicationId(publication);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const target = document.getElementById(publicationId);
+      if (!target) {
+        return;
+      }
+
+      target.scrollIntoView({
+        behavior: "auto",
+        block: "center"
+      });
+      target.classList.add("pub-item-map-focus");
+      window.setTimeout(() => target.classList.remove("pub-item-map-focus"), 1800);
+    });
+  });
+}
+
+function drawResearchPaperPath(paper) {
+  const canvas = document.getElementById("research-map-canvas");
+  const svg = canvas?.querySelector(".research-map-links");
+
+  if (!canvas || !svg || !paper) {
+    return;
+  }
+
+  const canvasRect = canvas.getBoundingClientRect();
+  const points = paper.path
+    .map((conceptId) => canvas.querySelector(`[data-concept="${conceptId}"]`))
+    .filter(Boolean)
+    .map((node) => {
+      const rect = node.getBoundingClientRect();
+      const layerRect = node.closest(".research-map-layer").getBoundingClientRect();
+      return {
+        left: rect.left - canvasRect.left,
+        right: rect.right - canvasRect.left,
+        top: rect.top - canvasRect.top,
+        bottom: rect.bottom - canvasRect.top,
+        centerX: rect.left - canvasRect.left + rect.width / 2,
+        centerY: rect.top - canvasRect.top + rect.height / 2,
+        layerLeft: layerRect.left - canvasRect.left,
+        layerRight: layerRect.right - canvasRect.left,
+        layerTop: layerRect.top - canvasRect.top,
+        layerBottom: layerRect.bottom - canvasRect.top
+      };
+    })
+    .sort((a, b) => a.centerY - b.centerY || a.centerX - b.centerX);
+
+  svg.setAttribute("viewBox", `0 0 ${canvasRect.width} ${canvasRect.height}`);
+  svg.replaceChildren();
+
+  if (points.length < 2) {
+    return;
+  }
+
+  const namespace = "http://www.w3.org/2000/svg";
+  let pathData = "";
+  for (let index = 1; index < points.length; index += 1) {
+    const previous = points[index - 1];
+    const point = points[index];
+    const sameRow = Math.abs(point.centerY - previous.centerY) < 34;
+
+    if (sameRow) {
+      const previousIsLeft = previous.centerX <= point.centerX;
+      const startX = previousIsLeft ? previous.right : previous.left;
+      const endX = previousIsLeft ? point.left : point.right;
+      const startY = previous.centerY;
+      const endY = point.centerY;
+      const horizontalDistance = endX - startX;
+      pathData += ` M ${startX} ${startY} C ${startX + horizontalDistance * 0.42} ${startY}, ${endX - horizontalDistance * 0.42} ${endY}, ${endX} ${endY}`;
+    } else {
+      const startX = previous.centerX;
+      const startY = previous.bottom;
+      const endX = point.centerX;
+      const endY = point.top;
+      const verticalDistance = endY - startY;
+      pathData += ` M ${startX} ${startY} C ${startX} ${startY + verticalDistance * 0.43}, ${endX} ${endY - verticalDistance * 0.43}, ${endX} ${endY}`;
+    }
+  }
+
+  ["research-map-path-shadow", "research-map-path"].forEach((className) => {
+    const path = document.createElementNS(namespace, "path");
+    path.setAttribute("class", className);
+    path.setAttribute("d", pathData);
+    svg.appendChild(path);
+  });
+}
+
+function clearResearchMapSelection() {
+  const canvas = document.getElementById("research-map-canvas");
+  const focus = document.querySelector(".research-map-focus");
+
+  if (!canvas || !focus) {
+    return;
+  }
+
+  canvas.classList.remove("has-selection", "has-concept-selection");
+  canvas.removeAttribute("data-selected-paper");
+  canvas.querySelectorAll(".is-layer-active").forEach((layer) => layer.classList.remove("is-layer-active"));
+  canvas.querySelectorAll(".is-active, .is-related").forEach((node) => {
+    node.classList.remove("is-active", "is-related");
+  });
+  canvas.querySelector(".research-map-links")?.replaceChildren();
+  canvas.querySelector(".research-paper-preview")?.remove();
+  focus.textContent = "Select a paper to trace its contributions across layers.";
+}
+
+function selectResearchPaper(paperId) {
+  const paper = researchMapPapers.find((entry) => entry.id === paperId);
+  const canvas = document.getElementById("research-map-canvas");
+  const focus = document.querySelector(".research-map-focus");
+
+  if (!paper || !canvas || !focus) {
+    return;
+  }
+
+  if (canvas.dataset.selectedPaper === paper.id) {
+    clearResearchMapSelection();
+    return;
+  }
+
+  canvas.classList.add("has-selection");
+  canvas.classList.remove("has-concept-selection");
+  canvas.dataset.selectedPaper = paper.id;
+  canvas.querySelectorAll(".is-layer-active").forEach((layer) => layer.classList.remove("is-layer-active"));
+  canvas.querySelectorAll(".is-active, .is-related").forEach((node) => {
+    node.classList.remove("is-active", "is-related");
+  });
+  canvas.querySelector(`[data-paper="${paper.id}"]`)?.classList.add("is-active");
+  paper.path.forEach((conceptId) => {
+    const conceptNode = canvas.querySelector(`[data-concept="${conceptId}"]`);
+    conceptNode?.classList.add("is-active");
+    conceptNode?.closest(".research-map-layer")?.classList.add("is-layer-active");
+  });
+
+  const labels = paper.path.map(getResearchConceptLabel);
+  focus.replaceChildren();
+  const title = document.createElement("strong");
+  title.textContent = paper.label;
+  focus.appendChild(title);
+  focus.append(` connects ${labels.join(" · ")}`);
+  renderResearchPaperPreview(paper);
+  requestAnimationFrame(() => {
+    drawResearchPaperPath(paper);
+    positionResearchPaperPreview(paper);
+  });
+}
+
+function selectResearchConcept(conceptId) {
+  const canvas = document.getElementById("research-map-canvas");
+  const focus = document.querySelector(".research-map-focus");
+
+  if (!canvas || !focus) {
+    return;
+  }
+
+  const relatedPapers = researchMapPapers.filter((paper) => paper.path.includes(conceptId));
+  canvas.classList.remove("has-selection");
+  canvas.classList.add("has-concept-selection");
+  canvas.removeAttribute("data-selected-paper");
+  canvas.querySelectorAll(".is-layer-active").forEach((layer) => layer.classList.remove("is-layer-active"));
+  canvas.querySelectorAll(".is-active, .is-related").forEach((node) => {
+    node.classList.remove("is-active", "is-related");
+  });
+  canvas.querySelector(`[data-concept="${conceptId}"]`)?.classList.add("is-active");
+  relatedPapers.forEach((paper) => {
+    canvas.querySelector(`[data-paper="${paper.id}"]`)?.classList.add("is-related");
+  });
+  canvas.querySelector(".research-map-links")?.replaceChildren();
+  canvas.querySelector(".research-paper-preview")?.remove();
+  focus.textContent = `${getResearchConceptLabel(conceptId)} · ${relatedPapers.map((paper) => paper.label).join(" · ")}`;
+}
+
+function setupResearchMap() {
+  const layersContainer = document.getElementById("research-map-layers");
+  const paperCloud = document.getElementById("research-paper-cloud");
+  const canvas = document.getElementById("research-map-canvas");
+
+  if (!layersContainer || !paperCloud || !canvas) {
+    return;
+  }
+
+  const conceptLayer = new Map();
+  const layerColors = {
+    applications: "#d1342f",
+    models: "#c07f00",
+    networks: "#5c9e31",
+    sensing: "#0f9488",
+    signals: "#1f7ac2",
+    physical: "#8a5a2b"
+  };
+  researchMapLayers.forEach((layer) => {
+    layer.concepts.forEach(([conceptId]) => conceptLayer.set(conceptId, layer.id));
+  });
+
+  layersContainer.innerHTML = researchMapLayers
+    .map((layer) => {
+      const concepts = layer.concepts
+        .map(([conceptId, label]) => `<button type="button" class="research-concept-node" data-concept="${conceptId}">${label}</button>`)
+        .join("");
+
+      return `
+        <section class="research-map-layer" data-layer="${layer.id}">
+          <h4>${layer.title}</h4>
+          <div class="research-map-network">
+            <div class="research-map-concepts">${concepts}</div>
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+
+  paperCloud.innerHTML = researchMapPapers
+    .map((paper, index) => {
+      const layerId = conceptLayer.get(paper.primary);
+      const color = layerColors[layerId] || "#1f7ac2";
+      const size = getResearchPaperSize(paper);
+      const driftX = (index % 2 === 0 ? 1 : -1) * (9 + (index % 4) * 2);
+      const driftY = (index % 3 === 0 ? -1 : 1) * (7 + (index % 5));
+      const duration = 7.4 + (index % 7) * 0.72;
+      const delay = -(index % 7) * 0.8;
+      const fontSize = Math.min(0.7, 0.54 + (size - 48) * 0.0033);
+      const style = `--paper-size:${size}px;--paper-color:${color};--paper-drift-x:${driftX}px;--paper-drift-y:${driftY}px;--paper-duration:${duration}s;--paper-delay:${delay}s;--paper-font-size:${fontSize}rem`;
+
+      return `
+        <button type="button" class="research-paper-node" data-paper="${paper.id}" style="${style}" title="${escapeHtml(getResearchPaperTitle(paper))}">
+          <span>${escapeHtml(paper.label)}</span>
+          <small class="research-paper-venue">${escapeHtml(getResearchPaperVenue(paper))}</small>
+        </button>
+      `;
+    })
+    .join("");
+
+  requestAnimationFrame(() => layoutResearchPaperCloud(paperCloud));
+  const resizeObserver = new ResizeObserver(() => layoutResearchPaperCloud(paperCloud));
+  resizeObserver.observe(paperCloud);
+
+  canvas.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+
+    const publicationButton = target.closest(".research-preview-publication");
+    const paperButton = target.closest(".research-paper-node");
+    const conceptButton = target.closest(".research-concept-node");
+
+    if (publicationButton) {
+      jumpToResearchPublication(publicationButton.dataset.paper);
+    } else if (paperButton) {
+      selectResearchPaper(paperButton.dataset.paper);
+    } else if (conceptButton) {
+      selectResearchConcept(conceptButton.dataset.concept);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const selectionIsVisible = canvas.classList.contains("has-selection") || canvas.classList.contains("has-concept-selection");
+    const clickedSelectable = target instanceof Element && target.closest(".research-paper-node, .research-concept-node, .research-paper-preview");
+
+    if (selectionIsVisible && !clickedSelectable) {
+      clearResearchMapSelection();
+    }
+  });
+
+  let resizeFrame;
+  window.addEventListener("resize", () => {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => {
+      const selectedPaper = researchMapPapers.find((paper) => paper.id === canvas.dataset.selectedPaper);
+      if (selectedPaper) {
+        drawResearchPaperPath(selectedPaper);
+        positionResearchPaperPreview(selectedPaper);
+      }
+    });
+  });
+}
+
+function setupStackPaperLinks() {
+  const stack = document.querySelector(".xl-stack-figure");
+
+  if (!stack) {
+    return;
+  }
+
+  stack.addEventListener("click", (event) => {
+    const button = event.target.closest(".stack-paper-link");
+
+    if (!button) {
+      return;
+    }
+
+    const query = button.dataset.publicationQuery?.toLowerCase();
+    const publication = publications.find((pub) => getPlainPublicationTitle(pub.title).includes(query));
+
+    if (!publication) {
+      return;
+    }
+
+    setActiveArea("All");
+    requestAnimationFrame(() => {
+      document.getElementById(getPublicationId(publication))?.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+  });
 }
 
 function copyTextToClipboard(text) {
@@ -1619,7 +2353,7 @@ function setupAudioButton() {
   });
 }
 
-function init() {
+async function init() {
   renderNews();
   setupNewsImageViewer();
   renderTeaching();
@@ -1632,6 +2366,8 @@ function init() {
   setupCitationModal();
   setupNavHighlight();
   setupAudioButton();
+  await loadScholarCitationCache();
+  setupResearchMap();
 }
 
 document.addEventListener("DOMContentLoaded", init);
