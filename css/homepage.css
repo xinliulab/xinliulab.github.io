@@ -362,6 +362,13 @@ a {
 }
 
 .research-map-axis {
+  /* Same six layer colors, positioned at each layer's centre so the axis
+     gradient lines up with the stack beside it. */
+  --axis-stops:
+    #007aff 0%, #007aff 8.33%, #32ade6 25%, #30b0c7 41.67%,
+    #00c7be 58.33%, #34c759 75%, #ff9500 91.67%, #ff9500 100%;
+  --axis-top: #007aff;
+  --axis-bottom: #ff9500;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
@@ -374,10 +381,6 @@ a {
   color: #1d1d1f;
 }
 
-.research-axis-down {
-  color: #1d1d1f;
-}
-
 .research-axis-arrow::before {
   content: "";
   position: absolute;
@@ -386,9 +389,8 @@ a {
   bottom: 20px;
   width: 5px;
   border-radius: 999px;
-  background: currentColor;
+  background: linear-gradient(180deg in oklch, var(--axis-stops));
   transform: translateX(-50%);
-  opacity: 0.92;
 }
 
 .research-axis-up::before {
@@ -417,13 +419,13 @@ a {
   border-top: 0;
   border-right-width: 11px;
   border-left-width: 11px;
-  border-bottom: 18px solid currentColor;
+  border-bottom: 18px solid var(--axis-top);
 }
 
 .research-axis-down::after {
   left: 50%;
   bottom: 2px;
-  border-top: 18px solid currentColor;
+  border-top: 18px solid var(--axis-bottom);
 }
 
 .research-axis-arrow span {
@@ -445,28 +447,23 @@ a {
   white-space: nowrap;
 }
 
+/* Opaque panel-colored labels cut the line into segments: it stops before
+   each word and picks up again after it. */
 .research-axis-arrow span b {
   position: relative;
   display: block;
-  padding: 1px 3px;
+  padding: 5px 7px;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--panel-bg);
   font: inherit;
   text-align: center;
 }
 
-.research-axis-arrow span b + b::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -8px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-  box-shadow: 0 0 0 4px #ffffff;
-  transform: translate(-50%, -50%);
-}
+/* Apple's accessible light-mode variants of the same four layer hues. */
+.research-axis-arrow span b:nth-child(1) { color: #0040dd; }
+.research-axis-arrow span b:nth-child(2) { color: #0071a4; }
+.research-axis-arrow span b:nth-child(3) { color: #248a3d; }
+.research-axis-arrow span b:nth-child(4) { color: #c93400; }
 
 .research-axis-up span,
 .research-axis-down span {
@@ -2074,6 +2071,7 @@ a {
     bottom: auto;
     width: auto;
     height: 4px;
+    background: linear-gradient(90deg in oklch, var(--axis-stops));
     transform: translateY(-50%);
   }
 
@@ -2086,7 +2084,7 @@ a {
   .research-axis-up::after {
     left: 2px;
     border-top: 9px solid transparent;
-    border-right: 15px solid currentColor;
+    border-right: 15px solid var(--axis-top);
     border-bottom: 9px solid transparent;
     border-left: 0;
   }
@@ -2097,7 +2095,7 @@ a {
     border-top: 9px solid transparent;
     border-right: 0;
     border-bottom: 9px solid transparent;
-    border-left: 15px solid currentColor;
+    border-left: 15px solid var(--axis-bottom);
   }
 
   .research-axis-arrow span,
@@ -2109,12 +2107,6 @@ a {
     gap: 14px;
     transform: translate(-50%, -50%);
     font-size: 0.85rem;
-  }
-
-  .research-axis-arrow span b + b::before {
-    left: -7px;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .xl-stack-diagram {
