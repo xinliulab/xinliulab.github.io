@@ -946,6 +946,7 @@ function getResearchPaperVenue(paper) {
     .replace(/^IEEE\s+/, "")
     .replace(/^ACM\s+/, "")
     .replace(/^USENIX\s+/, "")
+    .replace(/IMWUT\s*\/\s*UbiComp/i, "UbiComp")
     .replace("Computer Networks", "CompNet")
     .replace(/\b20(\d{2})\b/, "'$1");
 }
