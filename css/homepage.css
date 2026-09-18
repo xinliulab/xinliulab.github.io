@@ -371,11 +371,11 @@ a {
 .research-axis-arrow {
   position: relative;
   min-width: 0;
-  color: #1f5fbf;
+  color: #1d1d1f;
 }
 
 .research-axis-down {
-  color: #1f5fbf;
+  color: #1d1d1f;
 }
 
 .research-axis-arrow::before {
@@ -474,13 +474,14 @@ a {
 }
 
 .research-map-canvas {
+  --map-accent: #0071e3;
   position: relative;
   display: grid;
   grid-template-columns: minmax(340px, 0.4fr) minmax(0, 0.6fr);
   min-width: 0;
   min-height: 680px;
   overflow: hidden;
-  border-block: 1px solid #b8c4d2;
+  border-block: 1px solid #d2d2d7;
   background: #ffffff;
 }
 
@@ -506,7 +507,7 @@ a {
 }
 
 .research-map-path {
-  stroke: #1155cc;
+  stroke: #0071e3;
   stroke-width: 3.5;
   stroke-dasharray: 9 7;
   animation: research-path-flow 1.7s linear infinite;
@@ -517,16 +518,18 @@ a {
   z-index: 2;
   grid-column: 1;
   min-width: 0;
-  border-right: 1px solid #d6dee8;
+  border-right: 1px solid #d2d2d7;
 }
 
+/* Apple-style neutral system: one ink color, one accent, layers separated
+   by a lightness ramp (deeper toward the hardware base) rather than hues. */
 .research-map-layer {
-  --layer-color: #1f7ac2;
-  --layer-tint: #e6f1fa;
+  --layer-color: #1d1d1f;
+  --layer-tint: #f5f5f7;
   display: flex;
   flex-direction: column;
   min-height: 113.33px;
-  border-top: 1px solid color-mix(in srgb, var(--layer-color) 28%, transparent);
+  border-top: 1px solid #d2d2d7;
   background: var(--layer-tint);
 }
 
@@ -534,12 +537,12 @@ a {
   border-top: 0;
 }
 
-.research-map-layer[data-layer="applications"] { --layer-color: #d1342f; --layer-tint: #fcebea; }
-.research-map-layer[data-layer="models"] { --layer-color: #c07f00; --layer-tint: #f9f1dd; }
-.research-map-layer[data-layer="networks"] { --layer-color: #5c9e31; --layer-tint: #eef6e4; }
-.research-map-layer[data-layer="sensing"] { --layer-color: #0f9488; --layer-tint: #def3f1; }
-.research-map-layer[data-layer="signals"] { --layer-color: #1f7ac2; --layer-tint: #e6f1fa; }
-.research-map-layer[data-layer="physical"] { --layer-color: #8a5a2b; --layer-tint: #f3ece2; }
+.research-map-layer[data-layer="applications"] { --layer-tint: #ffffff; }
+.research-map-layer[data-layer="models"] { --layer-tint: #fafafc; }
+.research-map-layer[data-layer="networks"] { --layer-tint: #f5f5f7; }
+.research-map-layer[data-layer="sensing"] { --layer-tint: #efeff2; }
+.research-map-layer[data-layer="signals"] { --layer-tint: #e8e8ed; }
+.research-map-layer[data-layer="physical"] { --layer-tint: #e1e1e6; }
 
 .research-map-layer h4 {
   margin: 0;
@@ -584,7 +587,7 @@ a {
   min-height: 26px;
   padding: 5px 7px 5px 9px;
   border: 0;
-  border-left: 3px solid color-mix(in srgb, var(--layer-color) 72%, transparent);
+  border-left: 3px solid #c7c7cc;
   border-radius: 2px;
   background: transparent;
   color: var(--layer-color);
@@ -600,7 +603,8 @@ a {
 
 .research-concept-node:hover,
 .research-concept-node:focus-visible {
-  color: var(--accent-deep);
+  color: var(--map-accent);
+  border-left-color: var(--map-accent);
   scale: 1.04;
 }
 
@@ -618,7 +622,7 @@ a {
 }
 
 .research-paper-node {
-  --paper-color: #1f7ac2;
+  --paper-color: #0071e3;
   --paper-x: 50%;
   --paper-y: 50%;
   --paper-drift-x: 8px;
@@ -636,42 +640,44 @@ a {
   min-height: 0;
   translate: -50% -50%;
   appearance: none;
-  border: 1px solid color-mix(in srgb, var(--paper-color) 48%, white);
+  border: 1px solid #d2d2d7;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--paper-color) 18%, white);
+  background: #ffffff;
   padding: 7px;
-  color: var(--paper-color);
+  color: #1d1d1f;
   font: inherit;
   font-size: var(--paper-font-size, 0.62rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--paper-color) 24%, transparent);
-  transition: opacity 0.25s ease, color 0.2s ease, scale 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: opacity 0.25s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease, scale 0.2s ease, box-shadow 0.2s ease;
   animation: research-paper-float var(--paper-duration, 8s) ease-in-out var(--paper-delay, 0s) infinite alternate;
 }
 
 .research-paper-venue {
   display: block;
   margin-top: 3px;
-  color: color-mix(in srgb, var(--paper-color) 78%, #233047);
+  color: #6e6e73;
   font-size: max(0.5rem, calc(var(--paper-font-size, 0.62rem) - 0.08rem));
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
+  transition: color 0.2s ease;
 }
 
 .research-paper-node:hover,
 .research-paper-node:focus-visible {
   z-index: 8;
+  border-color: var(--paper-color);
   color: var(--paper-color);
   scale: 1.1;
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--paper-color) 34%, transparent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .research-paper-node:focus-visible,
 .research-concept-node:focus-visible {
-  outline: 2px solid var(--paper-color, var(--layer-color));
+  outline: 2px solid var(--map-accent);
   outline-offset: 2px;
 }
 
@@ -688,7 +694,7 @@ a {
 
 .research-map-canvas.has-selection .research-map-layer.is-layer-active h4 {
   opacity: 1;
-  color: var(--layer-color);
+  color: var(--map-accent);
 }
 
 .research-map-canvas.has-selection .research-paper-node.is-active,
@@ -698,21 +704,30 @@ a {
   opacity: 1;
 }
 
+.research-map-canvas.has-concept-selection .research-paper-node.is-related {
+  border-color: var(--paper-color);
+  color: var(--paper-color);
+}
+
 .research-paper-node.is-active {
   z-index: 9;
   border-color: var(--paper-color);
-  background: color-mix(in srgb, var(--paper-color) 28%, white);
-  color: var(--paper-color);
+  background: var(--paper-color);
+  color: #ffffff;
   scale: 1.16;
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--paper-color) 22%, transparent), 0 10px 28px color-mix(in srgb, var(--paper-color) 36%, transparent);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--paper-color) 18%, transparent), 0 10px 28px color-mix(in srgb, var(--paper-color) 32%, transparent);
+}
+
+.research-paper-node.is-active .research-paper-venue {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .research-concept-node.is-active {
-  color: var(--accent-deep);
+  color: var(--map-accent);
   scale: 1.08;
-  border-left-color: var(--layer-color);
-  background: color-mix(in srgb, var(--layer-color) 22%, white);
-  box-shadow: 0 5px 14px color-mix(in srgb, var(--layer-color) 24%, transparent);
+  border-left-color: var(--map-accent);
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .research-map-canvas.has-selection .research-paper-node {
@@ -890,11 +905,12 @@ a {
 }
 
 .xl-stack-band {
-  --stack-color: #1f7ac2;
-  --stack-tint: #e6f1fa;
+  --stack-color: #1d1d1f;
+  --stack-accent: #0071e3;
+  --stack-tint: #f5f5f7;
   padding: 15px 16px 16px;
-  border-top: 7px solid var(--stack-color);
-  border-bottom: 1px solid rgba(80, 96, 120, 0.3);
+  border-top: 1px solid #d2d2d7;
+  border-bottom: 0;
   background: var(--stack-tint);
   transition: filter 0.18s ease;
 }
@@ -910,12 +926,12 @@ a {
   filter: saturate(1.12);
 }
 
-.xl-stack-layer-6 { --stack-color: #d1342f; --stack-tint: #fcebea; }
-.xl-stack-layer-5 { --stack-color: #c07f00; --stack-tint: #f9f1dd; }
-.xl-stack-layer-4 { --stack-color: #5c9e31; --stack-tint: #eef6e4; }
-.xl-stack-layer-3 { --stack-color: #0f9488; --stack-tint: #def3f1; }
-.xl-stack-layer-2 { --stack-color: #1f7ac2; --stack-tint: #e6f1fa; }
-.xl-stack-layer-1 { --stack-color: #8a5a2b; --stack-tint: #f3ece2; }
+.xl-stack-layer-6 { --stack-tint: #ffffff; }
+.xl-stack-layer-5 { --stack-tint: #fafafc; }
+.xl-stack-layer-4 { --stack-tint: #f5f5f7; }
+.xl-stack-layer-3 { --stack-tint: #efeff2; }
+.xl-stack-layer-2 { --stack-tint: #e8e8ed; }
+.xl-stack-layer-1 { --stack-tint: #e1e1e6; }
 
 .xl-stack-band > h4 {
   margin: 0 0 11px;
@@ -935,9 +951,9 @@ a {
 .xl-stack-topic {
   min-width: 0;
   padding: 9px 10px 10px;
-  border: 1px solid color-mix(in srgb, var(--stack-color) 30%, transparent);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid #d2d2d7;
+  border-radius: 6px;
+  background: #ffffff;
 }
 
 .xl-stack-topic > strong {
@@ -996,12 +1012,12 @@ a {
 }
 
 .stack-paper-link:hover {
-  color: var(--stack-color);
+  color: var(--stack-accent);
   text-decoration: underline;
 }
 
 .stack-paper-link:focus-visible {
-  outline: 2px solid var(--stack-color);
+  outline: 2px solid var(--stack-accent);
   outline-offset: 2px;
 }
 
