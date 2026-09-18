@@ -1412,14 +1412,14 @@ function setupResearchMap() {
   }
 
   const conceptLayer = new Map();
-  // Single accent (Apple system blue); layers are distinguished by tint, not hue.
+  // Apple HIG system colors, mirrored in the CSS layer gradient.
   const layerColors = {
-    applications: "#0071e3",
-    models: "#0071e3",
-    networks: "#0071e3",
-    sensing: "#0071e3",
-    signals: "#0071e3",
-    physical: "#0071e3"
+    applications: "#007aff",
+    models: "#32ade6",
+    networks: "#30b0c7",
+    sensing: "#00c7be",
+    signals: "#34c759",
+    physical: "#ff9500"
   };
   researchMapLayers.forEach((layer) => {
     layer.concepts.forEach(([conceptId]) => conceptLayer.set(conceptId, layer.id));
@@ -1445,7 +1445,7 @@ function setupResearchMap() {
   paperCloud.innerHTML = researchMapPapers
     .map((paper, index) => {
       const layerId = conceptLayer.get(paper.primary);
-      const color = layerColors[layerId] || "#0071e3";
+      const color = layerColors[layerId] || "#007aff";
       const size = getResearchPaperSize(paper);
       const driftX = (index % 2 === 0 ? 1 : -1) * (9 + (index % 4) * 2);
       const driftY = (index % 3 === 0 ? -1 : 1) * (7 + (index % 5));
